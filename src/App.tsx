@@ -652,6 +652,7 @@ function Folding({ live }: { live: LiveResponse | null }) {
 
   async function runFold() {
     if (running) return;
+    const seqLen = seq.length;
     setRunning(true);
     setProgress(0);
     setPerTokenLatency(null);
@@ -737,7 +738,7 @@ function Folding({ live }: { live: LiveResponse | null }) {
     setAssessment(isToxin ? SAMPLES.Toxin.assessment : SAMPLES.GFP.assessment);
     setThreat(isToxin ? "red" : "green");
     setTimeout(() => renderProtein(), 50);
-    drawHeatmap(embeddings, seqLen);
+    if (embeddings) drawHeatmap(embeddings, seqLen);
 
     // Seal this fold result as an FCO so it joins the cross-device FCG.
     try {
@@ -923,7 +924,7 @@ function Folding({ live }: { live: LiveResponse | null }) {
           <button
             onClick={speakBiln}
             className="btn btn-primary"
-            disabled={!liveTranscript.length || speaking}
+            disabled={!transcriptLines.length || speaking}
             style={{ flex: 1, fontSize: 12, padding: "10px 8px" }}
             title="Real-time BILN transcript → ElevenLabs voice (sauna-main narrator)"
           >
