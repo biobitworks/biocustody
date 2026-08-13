@@ -84,3 +84,15 @@ curl -s https://biocustody-n6iqdjsn.sauna.new/llms.txt
 
 ---
 *Built for the Stanford × DeepMind Hackathon, July 19, 2026. Author: Byron P. Lee. Deployed via Sauna.*
+
+## License And Data-Use Boundary
+
+Repository source code is licensed under the Apache License, Version 2.0. See
+`LICENSE` and `NOTICE`.
+
+This does not relicense third-party datasets, public database records, provider
+outputs, API responses, credentials, or source evidence. Those materials remain
+subject to their original terms and the stricter repository rules in
+`DATA_POLICY.md`. Provider outputs from systems such as onepot, Rowan, muni,
+Convoke, Boltz, or similar services should be treated as local-only or redacted
+until their usage and redistribution rights have been checked.

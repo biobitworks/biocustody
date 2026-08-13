@@ -37,19 +37,33 @@
   - candidate profiles evaluated in sweep: `260`
 - Kaggle result FCO verifies and tamper demo fails verification.
 - Streamlit UI now prefers `runs/kaggle_output/cpjump1_best_result.json`, then `runs/kaggle/cpjump1_best_result.json`, then local CPJUMP1, then synthetic fallback.
+- Browser smoke test passed on 2026-08-13 from the active checkout:
+  - URL: `http://127.0.0.1:8501`
+  - loaded source: `runs/kaggle_output/cpjump1_best_result.json`
+  - visible perturbation: `COMT`
+  - visible state: `TRANSITION`
+  - visible claim ceiling: `PREDICTED_PHENOTYPIC_RESTORATION`
+  - visible FCO verification: `True`
+  - visible tamper verification: `False`
 - API readiness note exists at `deliverables/API_READINESS_20260813.md`.
 - Muni live balance checked on 2026-08-13: `12.464793` credits, so Muni credits are not exhausted.
 - Provider incorporation boundary checked on 2026-08-13:
   - Bio-Delta-G CPJUMP1 ranking is driven by public CPJUMP1 morphology profiles and JUMP metadata, not Boltz, Rowan, or OnePot scores.
   - OnePot and Rowan are visible through Muni and can be used as optional chemistry sidecars.
   - Existing Boltz/Rowan/Muni banks live in XenoDisorder/FCO support lanes and are not required for the hack demo ranking.
+- Convoke Bio MCP endpoint is configured in `.mcp.json` as `convoke-bio`.
+- Convoke Bio OAuth-protected resource metadata rechecked on 2026-08-13:
+  - metadata endpoint returned `200`
+  - unauthenticated MCP initialize returned `401`, which is expected until the MCP client completes OAuth or a valid bearer token is present
+- OpenAI SDK auth smoke test passed through `scripts/check_hackathon_integrations.py`.
+- Bright Data setup is operator-reported as available, but this active Codex session has not exposed a Bright Data MCP tool, CLI, or repo smoke test yet. Do not make Bright Data-backed claims until a concrete command/tool is verified.
 
 ## Exact Demo Path
 
 Local demo path:
 
 ```bash
-cd /Users/byron/projects/inbox/biocustody-stateshift-aws-bootstrap-v0.2.0
+cd /Users/byron/projects/active/biocustody
 source .venv/bin/activate
 streamlit run ui/app.py
 ```
@@ -74,9 +88,7 @@ Pull the completed Kaggle outputs again:
 
 ## Missing Blockers
 
-- UI should still be smoke-tested in a browser after the Streamlit server starts.
-- AWS credentials/resources are not yet verified for this package.
-- S3 upload/prefix is not yet configured.
+- Bright Data should be smoke-tested once the intended local MCP tool, CLI, or environment contract is visible.
 - Pathway labels remain a tiny MVP map; unverified rows correctly say `not_verified_in_tiny_mvp`.
 
 ## Datasets Downloaded / Accessed
@@ -113,13 +125,12 @@ Kaggle outputs:
 
 ## AWS Resources Configured
 
-AWS CLI and boto3 are installed in `.venv/`, but AWS credentials are not configured for the current shell.
+AWS is not needed for the current local demo path.
 
 Current status:
 
-- `.venv/bin/aws --version` works.
-- `.venv/bin/aws sts get-caller-identity` returns `Unable to locate credentials`.
-- Do not claim S3 or any other AWS resource is configured until STS succeeds.
+- In this active checkout, `.venv/bin/aws` is not installed.
+- Do not claim S3 or any other AWS resource is configured until STS succeeds in the environment being used for the demo.
 
 Minimum target if time permits:
 
@@ -132,10 +143,17 @@ Optional only after local demo works:
 - AgentCore Policy gate for claim publishing.
 - AgentCore Evaluations for custody/tamper/claim tests.
 
+## Licensing / Redistribution Boundary
+
+- Repository source code: Apache License 2.0, recorded in `LICENSE`, `NOTICE`, `pyproject.toml`, and `package.json`.
+- Restrictive boundary: Apache 2.0 applies to this repo's source code only. It does not relicense third-party datasets, public database records, provider outputs, API responses, credentials, or evidence records.
+- Data/provider rule: follow `DATA_POLICY.md`; provider outputs from onepot, Rowan, muni, Convoke, Boltz, or similar services are local-only/redacted until usage and redistribution rights are verified.
+- Team sharing note: share the GitHub repo freely for code review, but do not publish copied provider output or restricted data unless the source terms have been checked.
+
 ## Commands To Reproduce Locally
 
 ```bash
-cd /Users/byron/projects/inbox/biocustody-stateshift-aws-bootstrap-v0.2.0
+cd /Users/byron/projects/active/biocustody
 /Users/byron/.pyenv/versions/3.12.12/bin/python -m venv .venv
 .venv/bin/pip install -e ".[demo]"
 .venv/bin/pip install kaggle
@@ -143,8 +161,7 @@ cd /Users/byron/projects/inbox/biocustody-stateshift-aws-bootstrap-v0.2.0
 .venv/bin/pytest -q
 .venv/bin/python scripts/demo_synthetic.py
 .venv/bin/python scripts/demo_cpjump1_benchmark.py
-.venv/bin/kaggle kernels status biobitworks/bio-delta-g-cpjump1-sweep
-.venv/bin/kaggle kernels output biobitworks/bio-delta-g-cpjump1-sweep -p runs/kaggle_output -o
+.venv/bin/python scripts/check_hackathon_integrations.py
 .venv/bin/streamlit run ui/app.py
 ```
 
