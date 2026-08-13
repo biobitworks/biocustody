@@ -1,0 +1,69 @@
+{
+  "state_decision": {
+    "decision": "TRANSITION",
+    "distance2": 26.69906914396472,
+    "threshold2": 10.314186179476012,
+    "quantile": 0.95
+  },
+  "ranking": [
+    {
+      "candidate": "candidate_A_known_pair",
+      "opposition_score": 0.9760451892395255,
+      "distance_to_reference": 2.906346437476254,
+      "magnitude_ratio": 1.0745505899905627
+    },
+    {
+      "candidate": "candidate_B_partial",
+      "opposition_score": 0.9333210164426446,
+      "distance_to_reference": 1.5631773168201757,
+      "magnitude_ratio": 0.5779466227390204
+    },
+    {
+      "candidate": "candidate_C_mixed",
+      "opposition_score": 0.7191399285547941,
+      "distance_to_reference": 1.2605904460869244,
+      "magnitude_ratio": 0.4660725198181879
+    },
+    {
+      "candidate": "candidate_E_low_magnitude",
+      "opposition_score": 0.6494586884760254,
+      "distance_to_reference": 0.2855502476889756,
+      "magnitude_ratio": 0.10557522777380424
+    },
+    {
+      "candidate": "candidate_D_same_direction",
+      "opposition_score": -0.9867217413686544,
+      "distance_to_reference": 2.0446272673078836,
+      "magnitude_ratio": 0.7559509795756856
+    }
+  ],
+  "claim_ceiling": "PREDICTED_COUNTER_PERTURBATION",
+  "fco": {
+    "fco_version": "hackday-0.2",
+    "object_type": "candidate_ranking",
+    "payload": {
+      "candidate": "candidate_A_known_pair",
+      "opposition_score": 0.9760451892395255,
+      "reference_state_distance": 2.906346437476254
+    },
+    "source": {
+      "public_data": true,
+      "contains_phi": false,
+      "access_restricted": false,
+      "usage_rights_verified": true,
+      "source": "repo synthetic demo",
+      "source_record_id": "candidate_A_known_pair",
+      "license_or_terms": "generated test data"
+    },
+    "parents": [],
+    "transformation": {
+      "algorithm": "negative cosine opposition",
+      "state_model": "median/MAD -> PCA -> LedoitWolf -> empirical q95"
+    },
+    "claim": {
+      "claim_ceiling": "PREDICTED_COUNTER_PERTURBATION"
+    },
+    "created_at": "2026-08-13T15:17:53.223405+00:00",
+    "digest": "sha256:686d1bc2dd97711081f6e3e12766c35fb31684232641fc8117143732cdaeaf61"
+  }
+}

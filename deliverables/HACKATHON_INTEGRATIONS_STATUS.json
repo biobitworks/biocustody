@@ -1,0 +1,55 @@
+{
+  "schema": "biocustody.hackathon_integrations.v1",
+  "env": [
+    {
+      "name": "OPENAI_API_KEY",
+      "present": true,
+      "length": 164
+    },
+    {
+      "name": "CONVOKE_MCP_TOKEN",
+      "present": false,
+      "length": 24
+    }
+  ],
+  "openai": {
+    "status": "PASS",
+    "model_count": 120,
+    "sample_models": [
+      "gpt-3.5-turbo",
+      "gpt-live-transcribe",
+      "gpt-5.6-luna",
+      "gpt-realtime-2.1",
+      "gpt-realtime-2.1-mini"
+    ]
+  },
+  "convoke_bio_mcp": {
+    "status": "PASS_AUTH_REQUIRED",
+    "endpoint": "https://mcp.convoke.bio/mcp",
+    "resource_metadata_status": 200,
+    "resource_metadata": {
+      "resource": "https://mcp.convoke.bio/mcp",
+      "authorization_servers": [
+        "https://mcp.convoke.bio/"
+      ],
+      "scopes_supported": [
+        "openid",
+        "email",
+        "profile",
+        "offline_access",
+        "user:org:read"
+      ],
+      "bearer_methods_supported": [
+        "header"
+      ]
+    },
+    "resource_metadata_error": null,
+    "mcp_initialize_status": 401,
+    "mcp_initialize_response": {
+      "error": "invalid_token",
+      "error_description": "Authentication failed. The provided bearer token is invalid, expired, or no longer recognized by the server. To resolve: clear authentication tokens in your MCP client and reconnect. Your client should automatically re-register and obtain new tokens."
+    },
+    "token_present": false,
+    "note": "401 without CONVOKE_MCP_TOKEN is expected; MCP clients may complete OAuth automatically."
+  }
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "broad_sample": "BRD-K21528677-001-04-4",
+    "candidate": "desonide|PLA2G1B|BRD-K21528677-001-04-4",
+    "canonical_smiles": "CC1(C)O[C@@H]2C[C@H]3[C@@H]4CCC5=CC(=O)C=C[C@]5(C)[C@H]4[C@@H](O)C[C@]3(C)[C@@]2(O1)C(=O)CO",
+    "chembl_id": "not_locally_verified",
+    "inchikey": null,
+    "pubchem_cid": null,
+    "retrieval": "PubChem PUG REST name lookup",
+    "retrieval_status": "unavailable:HTTPError:HTTP Error 400: PUGREST.BadRequest",
+    "retrieval_ts_utc": "2026-08-13T15:18:33Z",
+    "source_name": "desonide",
+    "source_smiles": "CC1(C)O[C@@H]2C[C@H]3[C@@H]4CCC5=CC(=O)C=C[C@]5(C)[C@H]4[C@@H](O)C[C@]3(C)[C@@]2(O1)C(=O)CO",
+    "transformation": {
+      "canonical_representation_policy": "derived artifact; source SMILES preserved separately",
+      "source_representation": "CPJUMP1 source SMILES",
+      "transformation_version": "PubChem name lookup when available; otherwise identity fallback"
+    }
+  },
+  {
+    "broad_sample": "BRD-K78692225-001-24-5",
+    "candidate": "leflunomide|PTK2B|BRD-K78692225-001-24-5",
+    "canonical_smiles": "Cc1oncc1C(=O)Nc1ccc(cc1)C(F)(F)F",
+    "chembl_id": "not_locally_verified",
+    "inchikey": null,
+    "pubchem_cid": null,
+    "retrieval": "PubChem PUG REST name lookup",
+    "retrieval_status": "unavailable:HTTPError:HTTP Error 400: PUGREST.BadRequest",
+    "retrieval_ts_utc": "2026-08-13T15:18:34Z",
+    "source_name": "leflunomide",
+    "source_smiles": "Cc1oncc1C(=O)Nc1ccc(cc1)C(F)(F)F",
+    "transformation": {
+      "canonical_representation_policy": "derived artifact; source SMILES preserved separately",
+      "source_representation": "CPJUMP1 source SMILES",
+      "transformation_version": "PubChem name lookup when available; otherwise identity fallback"
+    }
+  },
+  {
+    "broad_sample": "BRD-K16472653-001-01-6",
+    "candidate": "SirReal-2|SIRT2|BRD-K16472653-001-01-6",
+    "canonical_smiles": "Cc1cc(C)nc(SCC(=O)Nc2ncc(Cc3cccc4ccccc34)s2)n1",
+    "chembl_id": "not_locally_verified",
+    "inchikey": null,
+    "pubchem_cid": null,
+    "retrieval": "PubChem PUG REST name lookup",
+    "retrieval_status": "unavailable:HTTPError:HTTP Error 400: PUGREST.BadRequest",
+    "retrieval_ts_utc": "2026-08-13T15:18:34Z",
+    "source_name": "SirReal-2",
+    "source_smiles": "Cc1cc(C)nc(SCC(=O)Nc2ncc(Cc3cccc4ccccc34)s2)n1",
+    "transformation": {
+      "canonical_representation_policy": "derived artifact; source SMILES preserved separately",
+      "source_representation": "CPJUMP1 source SMILES",
+      "transformation_version": "PubChem name lookup when available; otherwise identity fallback"
+    }
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "canonical_smiles": {
+      "type": "string"
+    },
+    "compound_id": {
+      "type": "string"
+    },
+    "counter_score": {
+      "type": "number"
+    },
+    "dose_proxy": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "mapping_status": {
+      "enum": [
+        "not_validated",
+        "calibrated",
+        "validated"
+      ]
+    },
+    "schema": {
+      "const": "biocustody.candidate_effect.v0.1"
+    },
+    "source_fco": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "target": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "schema",
+    "compound_id",
+    "canonical_smiles",
+    "counter_score",
+    "mapping_status"
+  ],
+  "title": "BioCustody candidate effect bridge",
+  "type": "object"
+}

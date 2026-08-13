@@ -1,0 +1,9 @@
+Biology changes continuously, but audit systems and AI claims are discrete. BioCustody keeps those questions separate. Every observation receives an exact cryptographic identity, while a versioned statistical model determines whether it remains within the same scientific state.
+
+For this demo, we use Cell Painting perturbation profiles. A genetic perturbation moves outside the reference cloud. We rank independently observed compound profiles by how strongly they oppose that perturbation direction. That makes the top result a predicted counter-perturbation candidate, not an experimental rescue claim.
+
+Small molecules can travel as canonical SMILES, while complex peptides remain in BILN or HELM and produce derived molecular representations under the same custody route.
+
+Every source, transformation, tool result, and claim becomes a linked custody object. Change one upstream value and the route diverges, invalidating dependent claims until they are recomputed.
+
+On AWS, an agent can propose the scientific claim, but deterministic custody and policy decide whether it is admissible.

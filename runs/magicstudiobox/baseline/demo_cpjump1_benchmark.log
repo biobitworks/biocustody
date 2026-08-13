@@ -1,0 +1,34 @@
+
+BIO-DELTA-G CPJUMP1 PHENOTYPIC RESTORATION BENCHMARK
+Dataset: 2020_11_04_CPJUMP1
+Compound plate: BR00116991
+Perturbation/ORF plate: BR00117006
+Perturbed state: KCNN4
+Subset: /Users/byron/projects/inbox/biocustody-stateshift-aws-bootstrap-v0.2.0/data/external/cpjump1_tiny/BR00116991_BR00117006_KCNN4_profiles.csv
+Rows=768 controls=248 features=96
+Perturbation decision: CONTINUOUS
+D=1.453 D^2=2.112 threshold^2=41.535
+
+TOP RANKED COMPOUNDS BY RETURN-TOWARD-REFERENCE SCORE
+                                     candidate target  target_match  restoration_score  candidate_distance  distance_ratio
+           alda-1|ALDH2|BRD-K06890060-001-09-1  ALDH2         False          -0.149591            1.670623        1.149591
+meclofenamic-acid|KCNQ2|BRD-K50398167-236-22-7  KCNQ2         False          -0.182294            1.718148        1.182294
+      H2L-5765834|LPAR1|BRD-K26439554-001-01-3  LPAR1         False          -0.190322            1.729815        1.190322
+         ozagrel|TBXAS1|BRD-K53061490-003-13-9 TBXAS1         False          -0.200840            1.745100        1.200840
+         CYM-5520|S1PR2|BRD-K29151923-001-01-5  S1PR2         False          -0.205431            1.751772        1.205431
+        CVT-10216|ALDH2|BRD-K60659193-001-01-0  ALDH2         False          -0.251292            1.818418        1.251292
+        SirReal-2|SIRT2|BRD-K16472653-001-01-6  SIRT2         False          -0.278225            1.857558        1.278225
+             GNF-5|ABL1|BRD-K87632963-001-03-0   ABL1         False          -0.343506            1.952427        1.343506
+           NS-309|KCNN4|BRD-K37602296-001-01-6  KCNN4          True          -0.353291            1.966647        1.353291
+       fomepizole|ADH1C|BRD-K56810756-003-07-7  ADH1C         False          -0.447370            2.103365        1.447370
+        fludarabine|ADA|BRD-K66788707-001-14-3    ADA         False          -0.488532            2.163183        1.488532
+          TCN201|GRIN2A|BRD-K09787262-001-02-7 GRIN2A         False          -0.503689            2.185209        1.503689
+
+TOP CLAIM
+Claim ceiling: OBSERVED_PROFILE
+FCO: sha256:f0b1ec663b51b2d72796e01c635976c4f03048749b860dc2ef43cbcf2be371a6
+FCO verifies: True
+Tampered FCO verifies: False
+Merkle root: 3e3a7826ca231ad7a87d5bfb00e88f1da6f5cba3d5d9145a7c0dc750b85540e3
+
+Wrote /Users/byron/projects/inbox/biocustody-stateshift-aws-bootstrap-v0.2.0/runs/local/cpjump1_benchmark_result.json

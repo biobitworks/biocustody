@@ -1,0 +1,14 @@
+[{"stream_name":"stdout","time":18.073299697,"data":"Loading ORF plate BR00117006\n"}
+,{"stream_name":"stdout","time":23.162689234,"data":"Loading ORF plate BR00118049\n"}
+,{"stream_name":"stdout","time":28.348500584,"data":"Loading ORF plate BR00118050\n"}
+,{"stream_name":"stdout","time":36.714921057,"data":"Loading ORF plate BR00118039\n"}
+,{"stream_name":"stdout","time":44.189037205,"data":"BIO-DELTA-G CPJUMP1 KAGGLE SWEEP COMPLETE\n"}
+,{"stream_name":"stdout","time":44.189081626,"data":"Best: BR00117006 COMT TRANSITION 0.5004939964057833\n"}
+,{"stream_name":"stdout","time":44.189087797,"data":"Wrote: /kaggle/working\n"}
+,{"stream_name":"stderr","time":47.633690241,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":47.633755406,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":48.128875392,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":48.128923752,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":50.324426738,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":52.541470426,"data":"[NbConvertApp] Writing 463236 bytes to __results__.html\n"}
+]

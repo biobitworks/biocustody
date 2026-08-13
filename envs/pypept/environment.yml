@@ -1,0 +1,11 @@
+name: biocustody-pypept
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - rdkit
+  - biopython
+  - pandas
+  - pip
+  - pip:
+      - git+https://github.com/Boehringer-Ingelheim/pyPept.git

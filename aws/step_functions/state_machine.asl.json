@@ -1,0 +1,48 @@
+{
+  "Comment": "Conceptual BioCustody deterministic adjudication path",
+  "StartAt": "ValidateDataPolicy",
+  "States": {
+    "ClaimGate": {
+      "Choices": [
+        {
+          "BooleanEquals": true,
+          "Next": "Publish",
+          "Variable": "$.claim_within_ceiling"
+        }
+      ],
+      "Default": "Review",
+      "Type": "Choice"
+    },
+    "ComputeFCO": {
+      "Next": "ContinuityTest",
+      "Resource": "PLACEHOLDER_LAMBDA_ARN",
+      "Type": "Task"
+    },
+    "ContinuityTest": {
+      "Next": "ClaimGate",
+      "Resource": "PLACEHOLDER_LAMBDA_ARN",
+      "Type": "Task"
+    },
+    "Publish": {
+      "Type": "Succeed"
+    },
+    "Quarantine": {
+      "Error": "DataPolicyRejected",
+      "Type": "Fail"
+    },
+    "Review": {
+      "Type": "Succeed"
+    },
+    "ValidateDataPolicy": {
+      "Choices": [
+        {
+          "BooleanEquals": true,
+          "Next": "ComputeFCO",
+          "Variable": "$.data_admissible"
+        }
+      ],
+      "Default": "Quarantine",
+      "Type": "Choice"
+    }
+  }
+}

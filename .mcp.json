@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "mcp-openai": {
+      "command": "npx",
+      "args": ["-y", "@mzxrai/mcp-openai@latest"],
+      "env": {
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}"
+      },
+      "description": "OpenAI MCP bridge for hackathon assistant/tool workflows. Reads OPENAI_API_KEY from the local environment."
+    },
+    "convoke-bio": {
+      "url": "https://mcp.convoke.bio/mcp",
+      "description": "Convoke Bio remote MCP endpoint. It advertises OAuth-protected resource metadata and should be connected by an MCP client that can complete OAuth registration."
+    }
+  }
+}

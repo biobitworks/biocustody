@@ -1,0 +1,1170 @@
+{
+  "benchmark": {
+    "batch": "2020_11_04_CPJUMP1",
+    "benchmark_gene": "ALK",
+    "calculation_version": "bio-delta-g-restoration-v0.2-kaggle",
+    "compound_candidate_count": 20,
+    "compound_plates": [
+      "BR00116991"
+    ],
+    "control_rows": 124,
+    "dataset": "CPJUMP1 pilot",
+    "feature_count": 48,
+    "name": "Bio-Delta-G CPJUMP1 Kaggle selection sweep",
+    "perturbation_plate": "BR00117006",
+    "subset_path": "runs/kaggle/cpjump1_best_subset_BR00117006_ALK.csv",
+    "subset_sha256": "sha256:e28e1c90ef2716991fbc7f43343b8e8e4cfcad23de211e1bd412e82472d9a3a5"
+  },
+  "claim_ceiling": "OBSERVED_PROFILE",
+  "evidence_graph": {
+    "edges": [
+      {
+        "evidence": "public CPJUMP1 compound target metadata",
+        "predicate": "annotated_target",
+        "source": "compound:BRD-A23124853-001-01-4",
+        "target": "target:ALK"
+      },
+      {
+        "evidence": "small local demo map; not a comprehensive pathway database",
+        "predicate": "mapped_to_pathway_family",
+        "source": "target:ALK",
+        "target": "pathway:not_verified_in_tiny_mvp"
+      },
+      {
+        "evidence": "small local demo map when available; otherwise not_verified_in_tiny_mvp",
+        "predicate": "mapped_to_pathway_family",
+        "source": "perturbation:ALK",
+        "target": "pathway:not_verified_in_tiny_mvp"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "compound:BRD-A23124853-001-01-4",
+        "label": "PF-06463922",
+        "smiles": "CC1Oc2cc(cnc2N)-c2c(CN(C)C(=O)c3ccc(F)cc13)nn(C)c2C#N",
+        "source": "JUMP-Target-1_compound_metadata_targets.tsv",
+        "type": "compound"
+      },
+      {
+        "id": "target:ALK",
+        "label": "ALK",
+        "source": "JUMP-Target-1_compound_metadata_targets.tsv",
+        "type": "target"
+      },
+      {
+        "id": "pathway:not_verified_in_tiny_mvp",
+        "label": "not_verified_in_tiny_mvp",
+        "source": "tiny Bio-Delta-G MVP map; not comprehensive",
+        "type": "pathway"
+      },
+      {
+        "id": "perturbation:ALK",
+        "label": "ALK",
+        "source": "JUMP-Target-1_orf_metadata.tsv",
+        "type": "orf_perturbation"
+      }
+    ]
+  },
+  "fco": {
+    "claim": {
+      "claim_ceiling": "OBSERVED_PROFILE"
+    },
+    "created_at": "2026-08-13T05:21:47.755025+00:00",
+    "digest": "sha256:ea1c7379961df77e67e4834a5d91e4862c36e519484ccc37968c1ea1e7bc5c03",
+    "fco_version": "hackday-0.2",
+    "object_type": "bio_delta_g_phenotypic_restoration_ranking",
+    "parents": [],
+    "payload": {
+      "benchmark_gene": "ALK",
+      "feature_count": 48,
+      "perturbation_distance": 3.4831696760700943,
+      "plate_count": 2,
+      "subset_rows": 768,
+      "top_candidate": "TG-02|CDK9|BRD-K14560436-001-01-4",
+      "top_candidate_distance": 2.376772884835097,
+      "top_candidate_target": "CDK9",
+      "top_candidate_target_match": false,
+      "top_gene_linked_candidate": "PF-06463922|ALK|BRD-A23124853-001-01-4",
+      "top_gene_linked_candidate_target": "ALK",
+      "top_gene_linked_restoration_score": -0.04821630640148067,
+      "top_restoration_score": 0.317640796782538
+    },
+    "source": {
+      "access_restricted": false,
+      "contains_phi": false,
+      "public_data": true,
+      "records": {
+        "compound_plates": [
+          "BR00116991"
+        ],
+        "perturbation_gene": "ALK",
+        "perturbation_plate": "BR00117006",
+        "top_candidate_wells": [
+          "L21"
+        ]
+      },
+      "source": "Cell Painting Gallery CPJUMP1 pilot public S3",
+      "source_record_id": "2020_11_04_CPJUMP1:BR00117006:ALK",
+      "subset_path": "runs/kaggle/cpjump1_best_subset_BR00117006_ALK.csv",
+      "subset_sha256": "sha256:e28e1c90ef2716991fbc7f43343b8e8e4cfcad23de211e1bd412e82472d9a3a5",
+      "usage_rights_verified": true
+    },
+    "transformation": {
+      "algorithm": "Bio-Delta-G restoration score: 1 - D(candidate, reference) / (D(perturbation, reference) + epsilon)",
+      "benchmark_boundary": "independent morphology restoration-distance ranking only; not measured rescue",
+      "calculation_version": "bio-delta-g-restoration-v0.2-kaggle",
+      "candidate_profiles": "median compound well profiles grouped by broad_sample, pert_iname, target",
+      "perturbed_state": "median ORF profile for ALK",
+      "reference_state": "mean/variance and covariance model of public CPJUMP1 control wells from selected ORF plate",
+      "state_model": "median/MAD scaling -> PCA -> Ledoit-Wolf covariance -> empirical q95 threshold"
+    }
+  },
+  "fco_verifies": true,
+  "merkle_root": "4345a054cedc6112d87ea247a0679c5c850bb4b9e6c690d11098956668e19d0b",
+  "plot_points": {
+    "candidates": [
+      {
+        "label": "TG-02",
+        "restoration_score": 0.317640796782538,
+        "x": -0.2775945173955243,
+        "y": -0.45476343280263604
+      },
+      {
+        "label": "N-alpha-Methylhistamine-dihydrochloride",
+        "restoration_score": 0.30497066924781546,
+        "x": -8.22513611669214,
+        "y": 2.3379500122036294
+      },
+      {
+        "label": "FPS-ZM1",
+        "restoration_score": 0.29678011141711735,
+        "x": -6.083710687476779,
+        "y": 1.9409991725235425
+      },
+      {
+        "label": "CVT-10216",
+        "restoration_score": 0.26329712681437634,
+        "x": -9.031653038501696,
+        "y": 1.3631491600250472
+      },
+      {
+        "label": "ibutilide",
+        "restoration_score": 0.257421608417826,
+        "x": -5.173020445156271,
+        "y": -1.476528480135574
+      },
+      {
+        "label": "DG-172",
+        "restoration_score": 0.2537205067368814,
+        "x": -9.100257213504944,
+        "y": 0.7122221419229227
+      },
+      {
+        "label": "rifamycin",
+        "restoration_score": 0.2379499617176668,
+        "x": -9.727495625857522,
+        "y": -0.4543993046198428
+      },
+      {
+        "label": "methoxsalen",
+        "restoration_score": 0.2126285412022626,
+        "x": -6.075307599882498,
+        "y": -0.7361671586615597
+      },
+      {
+        "label": "sulfinpyrazone",
+        "restoration_score": 0.20918429832887298,
+        "x": -7.945850543745985,
+        "y": 1.7367568189545834
+      },
+      {
+        "label": "dilazep",
+        "restoration_score": 0.2034436986695901,
+        "x": -5.543486917379684,
+        "y": -0.8378650699230644
+      }
+    ],
+    "controls": [
+      {
+        "x": -1.1263941474579595,
+        "y": 1.9838405697068238
+      },
+      {
+        "x": -1.1344634806049423,
+        "y": 0.00498157482653421
+      },
+      {
+        "x": 1.9900955711880346,
+        "y": -0.5851121075243214
+      },
+      {
+        "x": 3.72855128681817,
+        "y": -1.7839800722181485
+      },
+      {
+        "x": 3.2017506112211973,
+        "y": -0.7843914671356125
+      },
+      {
+        "x": 3.7531320742978895,
+        "y": -2.5040536926434154
+      },
+      {
+        "x": 6.179461888222567,
+        "y": 3.1180887765800738
+      },
+      {
+        "x": 3.564267996945161,
+        "y": -0.9258055787567293
+      },
+      {
+        "x": 0.2328985849152858,
+        "y": 0.11546921835949207
+      },
+      {
+        "x": 5.377439356785693,
+        "y": -1.520296953625247
+      },
+      {
+        "x": 3.7322997356811634,
+        "y": 0.94308954760711
+      },
+      {
+        "x": 3.9338754880536753,
+        "y": 1.3778404613197228
+      },
+      {
+        "x": 5.98945441060832,
+        "y": -1.2721413930813252
+      },
+      {
+        "x": 0.6946849103149014,
+        "y": 1.7853318573329475
+      },
+      {
+        "x": 1.4727143454190534,
+        "y": -2.8360654374753516
+      },
+      {
+        "x": 4.188597578465741,
+        "y": -1.0030531029971428
+      },
+      {
+        "x": 4.782152370024685,
+        "y": 4.035834078739752
+      },
+      {
+        "x": 0.5038026070678694,
+        "y": -0.39502202072772535
+      },
+      {
+        "x": 5.383835488369939,
+        "y": -1.1677947433502749
+      },
+      {
+        "x": -0.5061980843817775,
+        "y": -5.5086912927647
+      },
+      {
+        "x": 2.5291690571752445,
+        "y": -2.0154139277087912
+      },
+      {
+        "x": 1.7245011466867912,
+        "y": 2.0073884099006363
+      },
+      {
+        "x": -11.050821323923952,
+        "y": 1.6727552801040102
+      },
+      {
+        "x": -9.512623919975628,
+        "y": 2.275600367396554
+      },
+      {
+        "x": 0.30609731003601237,
+        "y": -2.512823825426579
+      },
+      {
+        "x": -0.3980850529831619,
+        "y": 2.3131301410849208
+      },
+      {
+        "x": 2.2385878885281003,
+        "y": -1.7632119135503208
+      },
+      {
+        "x": 2.1419055984038904,
+        "y": -1.666109599213485
+      },
+      {
+        "x": 5.247887142692688,
+        "y": 0.6066472376087445
+      },
+      {
+        "x": 1.9766301208644586,
+        "y": -0.3293306535806738
+      },
+      {
+        "x": 3.7060639291555844,
+        "y": 0.021961481269062038
+      },
+      {
+        "x": 6.8889802024056515,
+        "y": -0.6981120640170421
+      },
+      {
+        "x": 2.1985600698566143,
+        "y": 0.9522510738957282
+      },
+      {
+        "x": 3.2144294766162234,
+        "y": 0.6667090521000957
+      },
+      {
+        "x": 4.73067686699787,
+        "y": -0.4197139394510813
+      },
+      {
+        "x": 7.353484946491859,
+        "y": -1.2163217386368066
+      },
+      {
+        "x": 3.8317097060276297,
+        "y": -1.9558770051990098
+      },
+      {
+        "x": 0.6690666235288167,
+        "y": -2.4665733623079356
+      },
+      {
+        "x": 1.3607298624548092,
+        "y": -5.377684893076153
+      },
+      {
+        "x": 4.374649096234467,
+        "y": -2.229505855520672
+      },
+      {
+        "x": 1.297471404513497,
+        "y": 4.086935782696847
+      },
+      {
+        "x": 2.266305955762422,
+        "y": -2.822238885078521
+      },
+      {
+        "x": 2.4966490905935155,
+        "y": 0.00702658812636686
+      },
+      {
+        "x": 3.5513027888673756,
+        "y": 0.3163351222707132
+      },
+      {
+        "x": -8.33110728015235,
+        "y": -0.04867169356249265
+      },
+      {
+        "x": -7.36003422891104,
+        "y": 2.7830210923175915
+      },
+      {
+        "x": -9.862689282598064,
+        "y": 1.2021896197550044
+      },
+      {
+        "x": 5.70881176576941,
+        "y": -0.2295633567696168
+      },
+      {
+        "x": 2.3569596701317344,
+        "y": -1.164839977501078
+      },
+      {
+        "x": 3.0487337062297946,
+        "y": 0.6762514923961502
+      },
+      {
+        "x": -0.0805659217049075,
+        "y": -0.8756283137525476
+      },
+      {
+        "x": 10.005254367069655,
+        "y": 7.844222446513093
+      },
+      {
+        "x": 3.329300936092702,
+        "y": -2.1282540868572077
+      },
+      {
+        "x": 5.45453800932735,
+        "y": 1.9254460821662094
+      },
+      {
+        "x": 4.065301245561268,
+        "y": 0.7398286780833885
+      },
+      {
+        "x": 3.780629764467143,
+        "y": 2.89246999909298
+      },
+      {
+        "x": 3.272464735339605,
+        "y": 1.676907908917188
+      },
+      {
+        "x": 3.4218322480151526,
+        "y": -0.7561050757072433
+      },
+      {
+        "x": 3.9155794835565176,
+        "y": -0.8467639731455259
+      },
+      {
+        "x": 5.446576658265954,
+        "y": -1.8918271204891295
+      },
+      {
+        "x": 3.1765373741974265,
+        "y": -3.0360567726274352
+      },
+      {
+        "x": 1.086066692055753,
+        "y": -1.3890743665716743
+      },
+      {
+        "x": 2.9525484367518553,
+        "y": 0.5398741405553676
+      },
+      {
+        "x": -8.757752045246987,
+        "y": -1.5232266578556712
+      },
+      {
+        "x": -8.883542635391203,
+        "y": 0.5456425857521258
+      },
+      {
+        "x": -8.820697691427451,
+        "y": 1.3110687367392564
+      },
+      {
+        "x": -2.76341707330247,
+        "y": -0.8233908585734971
+      },
+      {
+        "x": -1.3781483122276446,
+        "y": 2.1167840636329482
+      },
+      {
+        "x": -3.425137053615404,
+        "y": -0.5500138168350334
+      },
+      {
+        "x": 5.501857989027678,
+        "y": -0.7749668780569403
+      },
+      {
+        "x": 6.084747193417901,
+        "y": -2.027592412026541
+      },
+      {
+        "x": 5.302870010143019,
+        "y": 1.4045492779362616
+      },
+      {
+        "x": 6.706421425460919,
+        "y": 2.9679149111258876
+      },
+      {
+        "x": -2.4075383014197302,
+        "y": -0.47792027422105854
+      },
+      {
+        "x": -2.1431594294612144,
+        "y": -0.49933743726608987
+      },
+      {
+        "x": -4.423354063521927,
+        "y": 0.4758681226070855
+      },
+      {
+        "x": 7.1819747613248754,
+        "y": -0.6587901157261418
+      },
+      {
+        "x": -11.04862980207385,
+        "y": 1.1094992555834902
+      },
+      {
+        "x": -9.800500240247725,
+        "y": -0.23416095838959206
+      },
+      {
+        "x": -11.17233705724403,
+        "y": -0.8618055029988535
+      },
+      {
+        "x": 5.298274399785,
+        "y": 1.9954206831920358
+      },
+      {
+        "x": 1.1510358775254201,
+        "y": -1.7552187102597625
+      },
+      {
+        "x": 1.1098160226409515,
+        "y": 2.1742460819821057
+      },
+      {
+        "x": -3.4085841041810516,
+        "y": 0.8538985449100882
+      },
+      {
+        "x": 2.15786569522213,
+        "y": -2.713285144847194
+      },
+      {
+        "x": 1.9450961672068054,
+        "y": -0.8293995390311214
+      },
+      {
+        "x": 2.5862260502889027,
+        "y": 1.7895301865688826
+      },
+      {
+        "x": 0.8036305137438127,
+        "y": 3.475761395740879
+      },
+      {
+        "x": -3.1475586826757915,
+        "y": -0.4158772443359253
+      },
+      {
+        "x": 2.389985997944239,
+        "y": -3.6819718454781727
+      },
+      {
+        "x": -8.762266955918465,
+        "y": 1.2962365556440905
+      },
+      {
+        "x": 3.167221020085758,
+        "y": 0.3739403564902443
+      },
+      {
+        "x": -1.1035152294154789,
+        "y": -1.4140564312087687
+      },
+      {
+        "x": -3.843007816062747,
+        "y": -3.182764192040596
+      },
+      {
+        "x": 0.7141507040550977,
+        "y": -0.7568732346095303
+      },
+      {
+        "x": -2.1835931639068193,
+        "y": -2.2458403271174303
+      },
+      {
+        "x": -9.130801077742595,
+        "y": -0.40963813206678706
+      },
+      {
+        "x": 3.6100197570473953,
+        "y": 0.9884873525841085
+      },
+      {
+        "x": 4.9255287679529784,
+        "y": 0.2988796252091997
+      },
+      {
+        "x": -10.847747616304792,
+        "y": -1.827080821608653
+      },
+      {
+        "x": -11.917717140838185,
+        "y": -1.7497056049115594
+      },
+      {
+        "x": -6.3315547477329535,
+        "y": 3.967464740660437
+      },
+      {
+        "x": 0.5982185071441938,
+        "y": -1.3283779694079667
+      },
+      {
+        "x": 0.2416859802714998,
+        "y": 0.36133386452419775
+      },
+      {
+        "x": 10.202410098252566,
+        "y": 9.339312059579852
+      },
+      {
+        "x": -1.5210436906076983,
+        "y": 3.349716942062429
+      },
+      {
+        "x": 2.9349956988492867,
+        "y": -1.8936237982111734
+      },
+      {
+        "x": 5.139314147268487,
+        "y": 0.10011621140936942
+      },
+      {
+        "x": -0.9795508645919577,
+        "y": -2.0256905849576676
+      },
+      {
+        "x": 0.6439150594861613,
+        "y": 1.6161066523333807
+      },
+      {
+        "x": -0.9606964289555471,
+        "y": -3.9763552747262403
+      },
+      {
+        "x": -7.660441050343156,
+        "y": 6.114395882275634
+      },
+      {
+        "x": -1.175992930309723,
+        "y": -2.273379409024254
+      },
+      {
+        "x": -0.9849780236860592,
+        "y": -1.121682580295089
+      },
+      {
+        "x": -10.389431501099123,
+        "y": -0.33577686772698667
+      },
+      {
+        "x": -6.19677904258859,
+        "y": 1.7998496541291606
+      },
+      {
+        "x": -7.481954816598911,
+        "y": 6.246076142975617
+      },
+      {
+        "x": -10.188294477117717,
+        "y": -1.8175533905965018
+      },
+      {
+        "x": -8.41332723820259,
+        "y": 1.7893535643845924
+      },
+      {
+        "x": -11.001975907690513,
+        "y": -1.163141747003625
+      },
+      {
+        "x": -1.2822830272796,
+        "y": -1.93853756674803
+      },
+      {
+        "x": -0.8351997718125665,
+        "y": -0.5063394497076186
+      },
+      {
+        "x": -6.258826207136314,
+        "y": 1.2731401952162162
+      },
+      {
+        "x": -3.837951584596932,
+        "y": -1.7865366860515999
+      }
+    ],
+    "perturbation": {
+      "label": "ALK",
+      "x": -8.823285051811407,
+      "y": 0.8548438711665172
+    }
+  },
+  "ranking": [
+    {
+      "broad_sample": "BRD-K14560436-001-01-4",
+      "candidate": "TG-02|CDK9|BRD-K14560436-001-01-4",
+      "candidate_distance": 2.376772884835097,
+      "candidate_distance2": 5.649049346087349,
+      "distance_ratio": 0.682359203217462,
+      "pathway": "not_verified_in_tiny_mvp",
+      "pert_iname": "TG-02",
+      "perturbation_distance": 3.4831696760700943,
+      "plates": [
+        "BR00116991"
+      ],
+      "restoration_score": 0.317640796782538,
+      "smiles": "CN1C\\C=C\\CCOc2cccc(c2)-c2ccnc(Nc3cccc(C1)c3)n2",
+      "target": "CDK9",
+      "target_list": "CDK1|CDK2|CDK7|CDK9|FLT3|JAK2",
+      "target_list_match": false,
+      "target_match": false,
+      "wells": [
+        "L21"
+      ]
+    },
+    {
+      "broad_sample": "BRD-K75390981-300-04-9",
+      "candidate": "N-alpha-Methylhistamine-dihydrochloride|HRH4|BRD-K75390981-300-04-9",
+      "candidate_distance": 2.420905088855996,
+      "candidate_distance2": 5.86078144924886,
+      "distance_ratio": 0.6950293307521845,
+      "pathway": "not_verified_in_tiny_mvp",
+      "pert_iname": "N-alpha-Methylhistamine-dihydrochloride",
+      "perturbation_distance": 3.4831696760700943,
+      "plates": [
+        "BR00116991"
+      ],
+      "restoration_score": 0.30497066924781546,
+      "smiles": "CNCCc1cnc[nH]1",
+      "target": "HRH4",
+      "target_list": "HRH4",
+      "target_list_match": false,
+      "target_match": false,
+      "wells": [
+        "H23"
+      ]
+    },
+    {
+      "broad_sample": "BRD-K87691185-001-01-2",
+      "candidate": "FPS-ZM1|AGER|BRD-K87691185-001-01-2",
+      "candidate_distance": 2.4494341915219904,
+      "candidate_distance2": 5.999727858596986,
+      "distance_ratio": 0.7032198885828826,
+      "pathway": "not_verified_in_tiny_mvp",
+      "pert_iname": "FPS-ZM1",
+      "perturbation_distance": 3.4831696760700943,
+      "plates": [
+        "BR00116991"
+      ],
+      "restoration_score": 0.29678011141711735,
+      "smiles": "Clc1ccc(cc1)C(=O)N(Cc1ccccc1)C1CCCCC1",
+      "target": "AGER",
+      "target_list": "AGER",
+      "target_list_match": false,
+      "target_match": false,
+      "wells": [
+        "K22"
+      ]
+    },
+    {
+      "broad_sample": "BRD-K60659193-001-01-0",
+      "candidate": "CVT-10216|ALDH2|BRD-K60659193-001-01-0",
+      "candidate_distance": 2.566061108154613,
+      "candidate_distance2": 6.58466961078368,
+      "distance_ratio": 0.7367028731856237,
+      "pathway": "not_verified_in_tiny_mvp",
+      "pert_iname": "CVT-10216",
+      "perturbation_distance": 3.4831696760700943,
+      "plates": [
+        "BR00116991"
+      ],
+      "restoration_score": 0.26329712681437634,
+      "smiles": "CS(=O)(=O)Nc1ccc(cc1)-c1coc2cc(OCc3cccc(c3)C(O)=O)ccc2c1=O",
+      "target": "ALDH2",
+      "target_list": "ALDH2",
+      "target_list_match": false,
+      "target_match": false,
+      "wells": [
+        "B20"
+      ]
+    },
+    {
+      "broad_sample": "BRD-A74391928-051-03-9",
+      "candidate": "ibutilide|KCNK1|BRD-A74391928-051-03-9",
+      "candidate_distance": 2.5865265356646754,
+      "candidate_distance2": 6.690119519697507,
+      "distance_ratio": 0.742578391582174,
+      "pathway": "not_verified_in_tiny_mvp",
+      "pert_iname": "ibutilide",
+      "perturbation_distance": 3.4831696760700943,
+      "plates": [
+        "BR00116991"
+      ],
+      "restoration_score": 0.257421608417826,
+      "smiles": "CCCCCCCN(CC)CCCC(O)c1ccc(NS(C)(=O)=O)cc1",
+      "target": "KCNK1",
+      "target_list": "CACNA1C|CACNA2D1|CACNB1|CACNG1|KCNH2|KCNH6|KCNH7|KCNJ11|KCNK1|KCNK6",
+      "target_list_match": false,
+      "target_match": false,
+      "wells": [
+        "H15"
+      ]
+    },
+    {
+      "broad_sample": "BRD-K75748943-300-01-3",
+      "candidate": "DG-172|PPARD|BRD-K75748943-300-01-3",
+      "candidate_distance": 2.5994181008077972,
+      "candidate_distance2": 6.756974462807216,
+      "distance_ratio": 0.7462794932631186,
+      "pathway": "not_verified_in_tiny_mvp",
+      "pert_iname": "DG-172",
+      "perturbation_distance": 3.4831696760700943,
+      "plates": [
+        "BR00116991"
+      ],
+      "restoration_score": 0.2537205067368814,
+      "smiles": "CN1CCN(CC1)c1ccc(cc1)\\C=C(/C#N)c1ccccc1Br",
+      "target": "PPARD",
+      "target_list": "PPARD",
+      "target_list_match": false,
+      "target_match": false,
+      "wells": [
+        "D13"
+      ]
+    },
+    {
+      "broad_sample": "BRD-K38512030-001-01-7",
+      "candidate": "rifamycin|SLCO2B1|BRD-K38512030-001-01-7",
+      "candidate_distance": 2.6543495849938394,
+      "candidate_distance2": 7.0455717193569685,
+      "distance_ratio": 0.7620500382823332,
+      "pathway": "not_verified_in_tiny_mvp",
+      "pert_iname": "rifamycin",
+      "perturbation_distance": 3.4831696760700943,
+      "plates": [
+        "BR00116991"
+      ],
+      "restoration_score": 0.2379499617176668,
+      "smiles": "CO[C@H]1\\C=C\\O[C@@]2(C)Oc3c(C2=O)c2c(O)cc(NC(=O)\\C(C)=C/C=C/[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C)c(O)c2c(O)c3C",
+      "target": "SLCO2B1",
+      "target_list": "SLCO1A2|SLCO1B1|SLCO1B3|SLCO2B1",
+      "target_list_match": false,
+      "target_match": false,
+      "wells": [
+        "J02"
+      ]
+    },
+    {
+      "broad_sample": "BRD-K63430059-001-16-4",
+      "candidate": "methoxsalen|CYP1A2|BRD-K63430059-001-16-4",
+      "candidate_distance": 2.74254838908814,
+      "candidate_distance2": 7.521571666489954,
+      "distance_ratio": 0.7873714587977374,
+      "pathway": "not_verified_in_tiny_mvp",
+      "pert_iname": "methoxsalen",
+      "perturbation_distance": 3.4831696760700943,
+      "plates": [
+        "BR00116991"
+      ],
+      "restoration_score": 0.2126285412022626,
+      "smiles": "COc1c2occc2cc2ccc(=O)oc12",
+      "target": "CYP1A2",
+      "target_list": "CYP1A1|CYP1A2|CYP2A13|CYP2A6|CYP3A4",
+      "target_list_match": false,
+      "target_match": false,
+      "wells": [
+        "M14"
+      ]
+    },
+    {
+      "broad_sample": "BRD-A36217750-001-16-3",
+      "candidate": "sulfinpyrazone|FPR1|BRD-A36217750-001-16-3",
+      "candidate_distance": 2.7545452714217546,
+      "candidate_distance2": 7.587519652311947,
+      "distance_ratio": 0.790815701671127,
+      "pathway": "not_verified_in_tiny_mvp",
+      "pert_iname": "sulfinpyrazone",
+      "perturbation_distance": 3.4831696760700943,
+      "plates": [
+        "BR00116991"
+      ],
+      "restoration_score": 0.20918429832887298,
+      "smiles": "O=C1C(CCS(=O)c2ccccc2)C(=O)N(N1c1ccccc1)c1ccccc1",
+      "target": "FPR1",
+      "target_list": "ABCC1|ABCC2|FPR1|SLC22A12",
+      "target_list_match": false,
+      "target_match": false,
+      "wells": [
+        "F12"
+      ]
+    },
+    {
+      "broad_sample": "BRD-K48722258-300-11-0",
+      "candidate": "dilazep|SLC29A1|BRD-K48722258-300-11-0",
+      "candidate_distance": 2.774540754077433,
+      "candidate_distance2": 7.69807639603657,
+      "distance_ratio": 0.7965563013304099,
+      "pathway": "not_verified_in_tiny_mvp",
+      "pert_iname": "dilazep",
+      "perturbation_distance": 3.4831696760700943,
+      "plates": [
+        "BR00116991"
+      ],
+      "restoration_score": 0.2034436986695901,
+      "smiles": "COc1cc(cc(OC)c1OC)C(=O)OCCCN1CCCN(CCCOC(=O)c2cc(OC)c(OC)c(OC)c2)CC1",
+      "target": "SLC29A1",
+      "target_list": "SLC29A1",
+      "target_list_match": false,
+      "target_match": false,
+      "wells": [
+        "G14"
+      ]
+    },
+    {
+      "broad_sample": "BRD-K08953028-001-09-6",
+      "candidate": "U-0521|COMT|BRD-K08953028-001-09-6",
+      "candidate_distance": 2.810652188584113,
+      "candidate_distance2": 7.8997657251926645,
+      "distance_ratio": 0.8069237074188244,
+      "pathway": "not_verified_in_tiny_mvp",
+      "pert_iname": "U-0521",
+      "perturbation_distance": 3.4831696760700943,
+      "plates": [
+        "BR00116991"
+      ],
+      "restoration_score": 0.19307629258117565,
+      "smiles": "CC(C)C(=O)c1ccc(O)c(O)c1",
+      "target": "COMT",
+      "target_list": "COMT",
+      "target_list_match": false,
+      "target_match": false,
+      "wells": [
+        "O19"
+      ]
+    },
+    {
+      "broad_sample": "BRD-A64173453-015-03-1",
+      "candidate": "octreotide|SSTR2|BRD-A64173453-015-03-1",
+      "candidate_distance": 2.81164705929267,
+      "candidate_distance2": 7.905359186029121,
+      "distance_ratio": 0.8072093296540521,
+      "pathway": "not_verified_in_tiny_mvp",
+      "pert_iname": "octreotide",
+      "perturbation_distance": 3.4831696760700943,
+      "plates": [
+        "BR00116991"
+      ],
+      "restoration_score": 0.19279067034594788,
+      "smiles": "CC(O)C(CO)NC(=O)C1CSSCC(NC(=O)C(N)Cc2ccccc2)C(=O)NC(Cc2ccccc2)C(=O)NC(Cc2c[nH]c3ccccc23)C(=O)NC(CCCCN)C(=O)NC(C(C)O)C(=O)N1",
+      "target": "SSTR2",
+      "target_list": "SSTR1|SSTR2|SSTR3|SSTR5",
+      "target_list_match": false,
+      "target_match": false,
+      "wells": [
+        "I23"
+      ]
+    },
+    {
+      "broad_sample": "BRD-A89164055-001-03-3",
+      "candidate": "sorbinil|AKR1B1|BRD-A89164055-001-03-3",
+      "candidate_distance": 2.8191116782322383,
+      "candidate_distance2": 7.947390654345386,
+      "distance_ratio": 0.8093523831466365,
+      "pathway": "not_verified_in_tiny_mvp",
+      "pert_iname": "sorbinil",
+      "perturbation_distance": 3.4831696760700943,
+      "plates": [
+        "BR00116991"
+      ],
+      "restoration_score": 0.1906476168533635,
+      "smiles": "Fc1ccc2OCCC3(NC(=O)NC3=O)c2c1",
+      "target": "AKR1B1",
+      "target_list": "AKR1B1",
+      "target_list_match": false,
+      "target_match": false,
+      "wells": [
+        "G20"
+      ]
+    },
+    {
+      "broad_sample": "BRD-K16472653-001-01-6",
+      "candidate": "SirReal-2|SIRT2|BRD-K16472653-001-01-6",
+      "candidate_distance": 2.826268513507352,
+      "candidate_distance2": 7.987793710443057,
+      "distance_ratio": 0.8114070735409289,
+      "pathway": "not_verified_in_tiny_mvp",
+      "pert_iname": "SirReal-2",
+      "perturbation_distance": 3.4831696760700943,
+      "plates": [
+        "BR00116991"
+      ],
+      "restoration_score": 0.1885929264590711,
+      "smiles": "Cc1cc(C)nc(SCC(=O)Nc2ncc(Cc3cccc4ccccc34)s2)n1",
+      "target": "SIRT2",
+      "target_list": "SIRT2",
+      "target_list_match": false,
+      "target_match": false,
+      "wells": [
+        "B13"
+      ]
+    },
+    {
+      "broad_sample": "BRD-K76792669-001-08-1",
+      "candidate": "citric-acid|RNASE1|BRD-K76792669-001-08-1",
+      "candidate_distance": 2.858177648042279,
+      "candidate_distance2": 8.169179467768492,
+      "distance_ratio": 0.820568021040598,
+      "pathway": "not_verified_in_tiny_mvp",
+      "pert_iname": "citric-acid",
+      "perturbation_distance": 3.4831696760700943,
+      "plates": [
+        "BR00116991"
+      ],
+      "restoration_score": 0.179431978959402,
+      "smiles": "OC(=O)CC(O)(CC(O)=O)C(O)=O",
+      "target": "RNASE1",
+      "target_list": "AKR1B1|ANG|APRT|BHMT|C8G|CA4|CPB1|CS|CTDSP1|GNMT|HGS|HS3ST3A1|IL4I1|ITPA|LSM6|MDH2|MIF|PDE5A|PKD2L1|PLEKHA1|RNASE1|RNASE3|SRC|TNFSF13B|UCK2",
+      "target_list_match": false,
+      "target_match": false,
+      "wells": [
+        "H12"
+      ]
+    },
+    {
+      "broad_sample": "BRD-A72351335-001-04-5",
+      "candidate": "misoprostol|PTGIR|BRD-A72351335-001-04-5",
+      "candidate_distance": 2.8588219198212954,
+      "candidate_distance2": 8.172862769250717,
+      "distance_ratio": 0.8207529881363564,
+      "pathway": "not_verified_in_tiny_mvp",
+      "pert_iname": "misoprostol",
+      "perturbation_distance": 3.4831696760700943,
+      "plates": [
+        "BR00116991"
+      ],
+      "restoration_score": 0.17924701186364356,
+      "smiles": "CCCCC(C)(O)C\\C=C\\[C@H]1[C@H](O)CC(=O)[C@@H]1CCCCCCC(=O)OC",
+      "target": "PTGIR",
+      "target_list": "PTGER2|PTGER3|PTGER4|PTGIR",
+      "target_list_match": false,
+      "target_match": false,
+      "wells": [
+        "D17"
+      ]
+    },
+    {
+      "broad_sample": "BRD-K26521938-001-07-2",
+      "candidate": "dinoprostone|CATSPER4|BRD-K26521938-001-07-2",
+      "candidate_distance": 2.888084062110286,
+      "candidate_distance2": 8.34102954981545,
+      "distance_ratio": 0.8291539978517365,
+      "pathway": "not_verified_in_tiny_mvp",
+      "pert_iname": "dinoprostone",
+      "perturbation_distance": 3.4831696760700943,
+      "plates": [
+        "BR00116991"
+      ],
+      "restoration_score": 0.1708460021482635,
+      "smiles": "CCCCC[C@H](O)\\C=C\\[C@H]1[C@H](O)CC(=O)[C@@H]1C\\C=C/CCCC(O)=O",
+      "target": "CATSPER4",
+      "target_list": "CATSPER1|CATSPER2|CATSPER3|CATSPER4|PTGDR|PTGDR2|PTGER1|PTGER2|PTGER3|PTGER4|PTGFR|TBXA2R",
+      "target_list_match": false,
+      "target_match": false,
+      "wells": [
+        "O12"
+      ]
+    },
+    {
+      "broad_sample": "BRD-K16810791-001-01-0",
+      "candidate": "LGK-974|PORCN|BRD-K16810791-001-01-0",
+      "candidate_distance": 2.8996578227412235,
+      "candidate_distance2": 8.408015488984372,
+      "distance_ratio": 0.8324767646725572,
+      "pathway": "not_verified_in_tiny_mvp",
+      "pert_iname": "LGK-974",
+      "perturbation_distance": 3.4831696760700943,
+      "plates": [
+        "BR00116991"
+      ],
+      "restoration_score": 0.16752323532744284,
+      "smiles": "Cc1cc(ccn1)-c1ncc(CC(=O)Nc2ccc(cn2)-c2cnccn2)cc1C",
+      "target": "PORCN",
+      "target_list": "PORCN",
+      "target_list_match": false,
+      "target_match": false,
+      "wells": [
+        "K07"
+      ]
+    },
+    {
+      "broad_sample": "BRD-A23124853-001-01-4",
+      "candidate": "PF-06463922|ALK|BRD-A23124853-001-01-4",
+      "candidate_distance": 3.651115252420884,
+      "candidate_distance2": 13.330642586460417,
+      "distance_ratio": 1.0482163064014807,
+      "pathway": "not_verified_in_tiny_mvp",
+      "pert_iname": "PF-06463922",
+      "perturbation_distance": 3.4831696760700943,
+      "plates": [
+        "BR00116991"
+      ],
+      "restoration_score": -0.04821630640148067,
+      "smiles": "CC1Oc2cc(cnc2N)-c2c(CN(C)C(=O)c3ccc(F)cc13)nn(C)c2C#N",
+      "target": "ALK",
+      "target_list": "ALK|FES|ROS1",
+      "target_list_match": true,
+      "target_match": true,
+      "wells": [
+        "N10"
+      ]
+    },
+    {
+      "broad_sample": "BRD-K22149900-001-06-2",
+      "candidate": "ceritinib|ALK|BRD-K22149900-001-06-2",
+      "candidate_distance": 3.7578107582464932,
+      "candidate_distance2": 14.121141694793085,
+      "distance_ratio": 1.0788480343240658,
+      "pathway": "not_verified_in_tiny_mvp",
+      "pert_iname": "ceritinib",
+      "perturbation_distance": 3.4831696760700943,
+      "plates": [
+        "BR00116991"
+      ],
+      "restoration_score": -0.07884803432406584,
+      "smiles": "CC(C)Oc1cc(C2CCNCC2)c(C)cc1Nc1ncc(Cl)c(Nc2ccccc2S(=O)(=O)C(C)C)n1",
+      "target": "ALK",
+      "target_list": "ALK|FLT3|IGF1R|INSR|TSSK1B",
+      "target_list_match": true,
+      "target_match": true,
+      "wells": [
+        "N13"
+      ]
+    }
+  ],
+  "reference_state": {
+    "mean_first_10_features": {
+      "Cells_AreaShape_Area": 4209.107728938629,
+      "Cells_AreaShape_BoundingBoxArea": 7299.901940343286,
+      "Cells_AreaShape_BoundingBoxMaximum_X": 581.5664003707774,
+      "Cells_AreaShape_BoundingBoxMaximum_Y": 588.0381743271045,
+      "Cells_AreaShape_BoundingBoxMinimum_X": 498.7566554720948,
+      "Cells_AreaShape_BoundingBoxMinimum_Y": 504.2504452055234,
+      "Cells_AreaShape_Center_X": 539.6341959283116,
+      "Cells_AreaShape_Center_Y": 545.6465859129441,
+      "Cells_AreaShape_Compactness": 1.8905917465872297,
+      "Cells_AreaShape_Eccentricity": 0.7047852841399519
+    },
+    "replicate_count": 124,
+    "variance_first_10_features": {
+      "Cells_AreaShape_Area": 253278.78385610014,
+      "Cells_AreaShape_BoundingBoxArea": 608414.2388438391,
+      "Cells_AreaShape_BoundingBoxMaximum_X": 652.6640772014099,
+      "Cells_AreaShape_BoundingBoxMaximum_Y": 597.0736931788647,
+      "Cells_AreaShape_BoundingBoxMinimum_X": 666.6860298214896,
+      "Cells_AreaShape_BoundingBoxMinimum_Y": 641.2228118327633,
+      "Cells_AreaShape_Center_X": 655.3313128640367,
+      "Cells_AreaShape_Center_Y": 614.0875032612917,
+      "Cells_AreaShape_Compactness": 0.0015871879597944769,
+      "Cells_AreaShape_Eccentricity": 0.00011017507244187706
+    }
+  },
+  "state_decision": {
+    "decision": "CONTINUOUS",
+    "distance2": 12.132470992294245,
+    "quantile": 0.95,
+    "threshold2": 21.967462687622664
+  },
+  "tamper_demo": {
+    "changed_field": "payload.top_restoration_score",
+    "verifies_after_tamper": false
+  }
+}

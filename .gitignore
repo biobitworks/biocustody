@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.env
+runs/local/*
+!runs/local/.gitkeep
+data/external/*
+!data/external/README.md
+*.mp3
+*.wav
+.DS_Store

@@ -1,0 +1,13 @@
+{
+  "id": "biobitworks/bio-delta-g-cpjump1-sweep",
+  "title": "Bio-Delta-G CPJUMP1 Sweep",
+  "code_file": "kernel.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": []
+}

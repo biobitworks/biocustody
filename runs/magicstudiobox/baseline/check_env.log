@@ -1,0 +1,12 @@
+[OK] python core / numpy
+[OK] pandas
+[OK] sklearn
+[OK] networkx
+[OK] streamlit
+[--] rdkit optional
+[--] pyPept optional
+[--] muni optional
+[--] aws optional
+[--] ONEPOT_API_KEY
+[--] ROWAN_API_KEY
+[--] ELEVENLABS_API_KEY

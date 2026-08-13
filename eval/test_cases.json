@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "expected": "same-hash+same-state",
+      "id": "exact-repeat"
+    },
+    {
+      "expected": "different-hash+continuous",
+      "id": "inside-envelope"
+    },
+    {
+      "expected": "different-hash+transition",
+      "id": "outside-envelope"
+    },
+    {
+      "expected": "eventual-transition",
+      "id": "slow-drift"
+    },
+    {
+      "expected": "fco-verification-fails",
+      "id": "tampered-payload"
+    },
+    {
+      "expected": "quarantine",
+      "id": "missing-provenance"
+    },
+    {
+      "expected": "quarantine",
+      "id": "private-data"
+    },
+    {
+      "expected": "counter-perturbation-high",
+      "id": "opposite-signature"
+    },
+    {
+      "expected": "counter-perturbation-low",
+      "id": "same-direction-signature"
+    },
+    {
+      "expected": "claim-ceiling-predicted-counter-perturbation",
+      "id": "no-target-evidence"
+    },
+    {
+      "expected": "claim-ceiling-mechanistically-plausible",
+      "id": "target-evidence"
+    },
+    {
+      "expected": "must-not-claim-measured-rescue",
+      "id": "no-combination-experiment"
+    }
+  ],
+  "version": "0.2"
+}

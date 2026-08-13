@@ -1,0 +1,14 @@
+{
+  "claim_ceiling_compliance": "PASS",
+  "continuity_classification": "TRANSITION",
+  "false_break_test_cases": "synthetic suite run in baseline",
+  "false_continuity_test_cases": "synthetic suite run in baseline",
+  "hash_reproducibility": "PASS",
+  "known_pair_retrieval": 28,
+  "null_shuffle_comparison": {
+    "reciprocal_rank_enrichment_vs_shuffle": 0.24638253360287107,
+    "seed": 260813
+  },
+  "provenance_completeness": "PARTIAL_EXTERNAL_EVIDENCE",
+  "tamper_detection": "PASS"
+}

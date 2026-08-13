@@ -1,0 +1,20 @@
+
+REFERENCE STATE
+Perturbation decision: TRANSITION
+D^2=26.699 threshold=10.314
+
+COUNTER-PERTURBATION RANKING
+                 candidate  opposition_score  distance_to_reference  magnitude_ratio
+    candidate_A_known_pair          0.976045               2.906346         1.074551
+       candidate_B_partial          0.933321               1.563177         0.577947
+         candidate_C_mixed          0.719140               1.260590         0.466073
+ candidate_E_low_magnitude          0.649459               0.285550         0.105575
+candidate_D_same_direction         -0.986722               2.044627         0.755951
+
+TOP CLAIM
+Claim ceiling: PREDICTED_COUNTER_PERTURBATION
+FCO: sha256:686d1bc2dd97711081f6e3e12766c35fb31684232641fc8117143732cdaeaf61
+FCO verifies: True
+Merkle root: dc80958fa42ad55728ec95a5bee222c5f7ddf738aab72ef3398415a3a1577944
+
+Wrote /Users/byron/projects/inbox/biocustody-stateshift-aws-bootstrap-v0.2.0/runs/local/synthetic_demo_result.json

@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=70", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "biocustody-stateshift"
+version = "0.2.0"
+description = "Variance-aware scientific custody and counter-perturbation MVP"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "scikit-learn>=1.5",
+  "networkx>=3.3"
+]
+
+[project.optional-dependencies]
+demo = [
+  "streamlit>=1.37",
+  "matplotlib>=3.9",
+  "openai>=3.0.0",
+  "pytest>=8.2",
+  "python-dotenv>=1.0"
+]
+chem = [
+  "rdkit>=2024.3"
+]
+voice = [
+  "elevenlabs>=1.0",
+  "python-dotenv>=1.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

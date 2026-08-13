@@ -1,0 +1,1 @@
+desonide -> SMILES preserved -> target PLA2G1B -> target_list NR3C1|PLA2G1B

@@ -1,0 +1,16 @@
+{
+  "after": {
+    "claim_invalid_or_review_required": true,
+    "dependent_route_invalid": true,
+    "source_mismatch": true
+  },
+  "before": {
+    "claim_admissible": true,
+    "route_verified": true,
+    "source_verified": true
+  },
+  "canonical_run_modified": false,
+  "changed_artifact": "duplicate.fcos[2].payload.top_rows[0].restoration_score",
+  "pass": true,
+  "schema": "biocustody.magicstudiobox.tamper_test.v1"
+}

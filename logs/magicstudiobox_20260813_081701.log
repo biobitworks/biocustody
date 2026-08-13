@@ -1,0 +1,48 @@
+MAGICSTUDIOBOX_TRAVEL_QUEUE_START=2026-08-13T15:17:01Z
+MAGICSTUDIOBOX_QUEUE_DONE 2026-08-13T15:18:36Z
+handoff /Users/byron/projects/inbox/biocustody-stateshift-aws-bootstrap-v0.2.0/MAGICSTUDIOBOX_HANDOFF.md
+MAGICSTUDIOBOX_TRAVEL_QUEUE_SCRIPT_RC=0
+[magicstudiobox-repurposing-sweep 23b9f6a] magicstudiobox bounded repurposing sweep
+ 40 files changed, 85802 insertions(+)
+ create mode 100644 MAGICSTUDIOBOX_HANDOFF.md
+ create mode 100644 deliverables/DEMO_SCRIPT_90S_DRAFT.md
+ create mode 100644 deliverables/FINAL_METRICS.json
+ create mode 100644 deliverables/MAGICSTUDIOBOX_RESULTS.md
+ create mode 100644 deliverables/PITCH_DRAFT.md
+ create mode 100644 deliverables/REPURPOSING_EVIDENCE_TABLE.md
+ create mode 100644 deliverables/SLIDE_RESULTS_INSERTS.md
+ create mode 100644 deliverables/text_figures/01_reference_cloud_to_candidate.txt
+ create mode 100644 deliverables/text_figures/02_candidate_smiles_targets.txt
+ create mode 100644 deliverables/text_figures/03_similar_drugs_clinical_progress.txt
+ create mode 100644 deliverables/text_figures/04_fco_route.txt
+ create mode 100644 deliverables/text_figures/05_valid_vs_tampered.txt
+ create mode 100644 deliverables/text_figures/06_problem2_architecture.txt
+ create mode 100644 logs/magicstudiobox_20260813_081701.log
+ create mode 100755 logs/run_biocustody_travel_worker.sh
+ create mode 100644 logs/screen_capture.txt
+ create mode 100644 runs/magicstudiobox/baseline/baseline_results.json
+ create mode 100644 runs/magicstudiobox/baseline/check_env.log
+ create mode 100644 runs/magicstudiobox/baseline/cpjump1_benchmark_result.json
+ create mode 100644 runs/magicstudiobox/baseline/demo_cpjump1_benchmark.log
+ create mode 100644 runs/magicstudiobox/baseline/demo_synthetic.log
+ create mode 100644 runs/magicstudiobox/baseline/pytest.log
+ create mode 100644 runs/magicstudiobox/baseline/synthetic_demo_result.json
+ create mode 100644 runs/magicstudiobox/primary/candidate_ranking.csv
+ create mode 100644 runs/magicstudiobox/primary/clinical_progress.csv
+ create mode 100644 runs/magicstudiobox/primary/clinical_progress.json
+ create mode 100644 runs/magicstudiobox/primary/evaluation.json
+ create mode 100644 runs/magicstudiobox/primary/evaluation_sanity_checks.json
+ create mode 100644 runs/magicstudiobox/primary/fco_route.json
+ create mode 100644 runs/magicstudiobox/primary/merkle_receipt.json
+ create mode 100644 runs/magicstudiobox/primary/molecular_identity.csv
+ create mode 100644 runs/magicstudiobox/primary/molecular_identity.json
+ create mode 100644 runs/magicstudiobox/primary/perturbation_state.json
+ create mode 100644 runs/magicstudiobox/primary/repurposing_evidence_table.csv
+ create mode 100644 runs/magicstudiobox/primary/similar_drug_evidence_graph.csv
+ create mode 100644 runs/magicstudiobox/primary/similar_drug_evidence_graph.json
+ create mode 100644 runs/magicstudiobox/primary/state_model.json
+ create mode 100644 runs/magicstudiobox/primary/tamper_test.json
+ create mode 100644 runs/magicstudiobox/selection_sweep.csv
+ create mode 100644 runs/magicstudiobox/selection_sweep.json
+MAGICSTUDIOBOX_TRAVEL_QUEUE_EXIT_RC=0
+MAGICSTUDIOBOX_TRAVEL_QUEUE_DONE=2026-08-13T15:18:36Z

@@ -1,0 +1,14 @@
+# Merge carefully with your existing Codex config.
+# Current HCLS toolkit documentation exposes these public endpoints.
+
+[mcp_servers.pubmed]
+type = "http"
+url = "https://pubmed.mcp.claude.com/mcp"
+
+[mcp_servers.open-targets]
+type = "http"
+url = "https://mcp.platform.opentargets.org/mcp"
+
+[mcp_servers.chembl]
+type = "http"
+url = "https://mcp.deepsense.ai/chembl/mcp"

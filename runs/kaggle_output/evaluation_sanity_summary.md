@@ -1,0 +1,8 @@
+```csv
+check,status,detail
+public_input_only,PASS,Streams public Cell Painting Gallery CPJUMP1 profiles from S3.
+result_schema,PASS,"Result includes reference state, perturbation decision, ranking, graph, and FCO."
+fco_verifies,PASS,sha256:c5cfc97b6e90f0ab30b85f33be9f13a312faa4d84ecdfbdb42467ab8e418d4b2
+tamper_failure,PASS,Modified top_restoration_score fails verification.
+claim_ceiling,PASS,PREDICTED_PHENOTYPIC_RESTORATION
+```

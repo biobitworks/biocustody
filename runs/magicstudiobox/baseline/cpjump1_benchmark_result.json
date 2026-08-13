@@ -1,0 +1,1715 @@
+{
+  "benchmark": {
+    "name": "Bio-Delta-G CPJUMP1 phenotypic restoration MVP",
+    "dataset": "CPJUMP1 pilot",
+    "batch": "2020_11_04_CPJUMP1",
+    "compound_plate": "BR00116991",
+    "perturbation_plate": "BR00117006",
+    "benchmark_gene": "KCNN4",
+    "subset_path": "data/external/cpjump1_tiny/BR00116991_BR00117006_KCNN4_profiles.csv",
+    "subset_sha256": "sha256:861a5af0f765716c15abbbe9845f8ac03e6d78856b09b80ddfcc83bbcafa86f8",
+    "subset_rows": 768,
+    "control_rows": 248,
+    "compound_candidate_count": 50,
+    "feature_count": 96,
+    "calculation_version": "bio-delta-g-restoration-v0.1"
+  },
+  "reference_state": {
+    "replicate_count": 248,
+    "mean_first_10_features": {
+      "Cells_AreaShape_Area": 3964.5125259284773,
+      "Cells_AreaShape_BoundingBoxArea": 6999.97610846815,
+      "Cells_AreaShape_BoundingBoxMaximum_X": 575.36142165102,
+      "Cells_AreaShape_BoundingBoxMaximum_Y": 586.9614995886436,
+      "Cells_AreaShape_BoundingBoxMinimum_X": 494.41634735258333,
+      "Cells_AreaShape_BoundingBoxMinimum_Y": 505.0518688251144,
+      "Cells_AreaShape_Center_X": 534.3594905513363,
+      "Cells_AreaShape_Center_Y": 545.5027833023059,
+      "Cells_AreaShape_Compactness": 1.90492558982417,
+      "Cells_AreaShape_Eccentricity": 0.70919736796382
+    },
+    "variance_first_10_features": {
+      "Cells_AreaShape_Area": 337819.7496412043,
+      "Cells_AreaShape_BoundingBoxArea": 1020454.4110470256,
+      "Cells_AreaShape_BoundingBoxMaximum_X": 606.7691933594439,
+      "Cells_AreaShape_BoundingBoxMaximum_Y": 540.0689321126205,
+      "Cells_AreaShape_BoundingBoxMinimum_X": 599.6107908204152,
+      "Cells_AreaShape_BoundingBoxMinimum_Y": 577.1801236793275,
+      "Cells_AreaShape_Center_X": 596.2198029234883,
+      "Cells_AreaShape_Center_Y": 549.9950302380224,
+      "Cells_AreaShape_Compactness": 0.012534968071213124,
+      "Cells_AreaShape_Eccentricity": 0.0005301820538838581
+    }
+  },
+  "state_decision": {
+    "decision": "CONTINUOUS",
+    "distance2": 2.1118853353940725,
+    "threshold2": 41.53494575731409,
+    "quantile": 0.95
+  },
+  "ranking": [
+    {
+      "candidate": "alda-1|ALDH2|BRD-K06890060-001-09-1",
+      "candidate_distance": 1.6706226219028943,
+      "candidate_distance2": 2.790979944813701,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -0.14959056462874254,
+      "distance_ratio": 1.1495905646287425,
+      "broad_sample": "BRD-K06890060-001-09-1",
+      "pert_iname": "alda-1",
+      "target": "ALDH2",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "B07"
+      ],
+      "smiles": "Clc1cccc(Cl)c1C(=O)NCc1ccc2OCOc2c1",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "meclofenamic-acid|KCNQ2|BRD-K50398167-236-22-7",
+      "candidate_distance": 1.718148404220217,
+      "candidate_distance2": 2.9520339389244783,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -0.18229405505937168,
+      "distance_ratio": 1.1822940550593717,
+      "broad_sample": "BRD-K50398167-236-22-7",
+      "pert_iname": "meclofenamic-acid",
+      "target": "KCNQ2",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "B08"
+      ],
+      "smiles": "Cc1ccc(Cl)c(Nc2ccccc2C(O)=O)c1Cl",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "H2L-5765834|LPAR1|BRD-K26439554-001-01-3",
+      "candidate_distance": 1.7298150863485253,
+      "candidate_distance2": 2.9922602329589565,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -0.19032214441922313,
+      "distance_ratio": 1.1903221444192231,
+      "broad_sample": "BRD-K26439554-001-01-3",
+      "pert_iname": "H2L-5765834",
+      "target": "LPAR1",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "B01"
+      ],
+      "smiles": "OC(=O)c1ccc2C(=O)N(C(=O)c2c1)c1cccc(Oc2ccc(cc2)[N+]([O-])=O)c1",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "ozagrel|TBXAS1|BRD-K53061490-003-13-9",
+      "candidate_distance": 1.74509950192184,
+      "candidate_distance2": 3.045372271607854,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -0.200839672255003,
+      "distance_ratio": 1.200839672255003,
+      "broad_sample": "BRD-K53061490-003-13-9",
+      "pert_iname": "ozagrel",
+      "target": "TBXAS1",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "B18"
+      ],
+      "smiles": "OC(=O)\\C=C\\c1ccc(Cn2ccnc2)cc1",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "CYM-5520|S1PR2|BRD-K29151923-001-01-5",
+      "candidate_distance": 1.7517722822520265,
+      "candidate_distance2": 3.0687061288664736,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -0.20543135274995827,
+      "distance_ratio": 1.2054313527499583,
+      "broad_sample": "BRD-K29151923-001-01-5",
+      "pert_iname": "CYM-5520",
+      "target": "S1PR2",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "B05"
+      ],
+      "smiles": "Cc1cc(C(=O)Cn2cc(ccc2=O)C#N)c(C)n1Cc1ccccc1",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "CVT-10216|ALDH2|BRD-K60659193-001-01-0",
+      "candidate_distance": 1.818417908799349,
+      "candidate_distance2": 3.306643691042198,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -0.251291610146273,
+      "distance_ratio": 1.251291610146273,
+      "broad_sample": "BRD-K60659193-001-01-0",
+      "pert_iname": "CVT-10216",
+      "target": "ALDH2",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "B20"
+      ],
+      "smiles": "CS(=O)(=O)Nc1ccc(cc1)-c1coc2cc(OCc3cccc(c3)C(O)=O)ccc2c1=O",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "SirReal-2|SIRT2|BRD-K16472653-001-01-6",
+      "candidate_distance": 1.8575582924467975,
+      "candidate_distance2": 3.450522809837862,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -0.2782249313806069,
+      "distance_ratio": 1.2782249313806069,
+      "broad_sample": "BRD-K16472653-001-01-6",
+      "pert_iname": "SirReal-2",
+      "target": "SIRT2",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "B13"
+      ],
+      "smiles": "Cc1cc(C)nc(SCC(=O)Nc2ncc(Cc3cccc4ccccc34)s2)n1",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "GNF-5|ABL1|BRD-K87632963-001-03-0",
+      "candidate_distance": 1.9524265984645766,
+      "candidate_distance2": 3.8119696223919566,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -0.34350580813308884,
+      "distance_ratio": 1.3435058081330888,
+      "broad_sample": "BRD-K87632963-001-03-0",
+      "pert_iname": "GNF-5",
+      "target": "ABL1",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "B09"
+      ],
+      "smiles": "OCCNC(=O)c1cccc(c1)-c1ncnc(Nc2ccc(cc2)OC(F)(F)F)c1",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "NS-309|KCNN4|BRD-K37602296-001-01-6",
+      "candidate_distance": 1.9666466927974278,
+      "candidate_distance2": 3.8676992142910604,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -0.3532909541372511,
+      "distance_ratio": 1.353290954137251,
+      "broad_sample": "BRD-K37602296-001-01-6",
+      "pert_iname": "NS-309",
+      "target": "KCNN4",
+      "target_match": true,
+      "plate": "BR00116991",
+      "wells": [
+        "B10"
+      ],
+      "smiles": "ON=C1C(=O)Nc2c1ccc(Cl)c2Cl",
+      "pathway": "potassium ion transport / calcium-activated potassium channel activity",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "fomepizole|ADH1C|BRD-K56810756-003-07-7",
+      "candidate_distance": 2.1033650627831157,
+      "candidate_distance2": 4.42414458733662,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -0.44736974014575526,
+      "distance_ratio": 1.4473697401457553,
+      "broad_sample": "BRD-K56810756-003-07-7",
+      "pert_iname": "fomepizole",
+      "target": "ADH1C",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "B22"
+      ],
+      "smiles": "Cc1cn[nH]c1",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "fludarabine|ADA|BRD-K66788707-001-14-3",
+      "candidate_distance": 2.1631834564615797,
+      "candidate_distance2": 4.679362666309068,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -0.4885320350066271,
+      "distance_ratio": 1.4885320350066271,
+      "broad_sample": "BRD-K66788707-001-14-3",
+      "pert_iname": "fludarabine",
+      "target": "ADA",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "B06"
+      ],
+      "smiles": "Nc1nc(F)nc2n(cnc12)[C@@H]1O[C@H](CO)[C@@H](O)[C@@H]1O",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "TCN201|GRIN2A|BRD-K09787262-001-02-7",
+      "candidate_distance": 2.1852094025482183,
+      "candidate_distance2": 4.7751401329851415,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -0.5036885517844136,
+      "distance_ratio": 1.5036885517844136,
+      "broad_sample": "BRD-K09787262-001-02-7",
+      "pert_iname": "TCN201",
+      "target": "GRIN2A",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "B21"
+      ],
+      "smiles": "Fc1ccc(cc1Cl)S(=O)(=O)NCc1ccc(cc1)C(=O)NNC(=O)c1ccccc1",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "AK-7|SIRT2|BRD-K09143580-001-01-0",
+      "candidate_distance": 2.199265341721258,
+      "candidate_distance2": 4.836768043296322,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -0.5133607391704056,
+      "distance_ratio": 1.5133607391704056,
+      "broad_sample": "BRD-K09143580-001-01-0",
+      "pert_iname": "AK-7",
+      "target": "SIRT2",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "B11"
+      ],
+      "smiles": "Brc1cccc(NC(=O)c2cccc(c2)S(=O)(=O)N2CCCCCC2)c1",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "benzamil|SCNN1G|BRD-K87158025-003-08-7",
+      "candidate_distance": 2.219151243159403,
+      "candidate_distance2": 4.924632240015924,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -0.5270446462136309,
+      "distance_ratio": 1.527044646213631,
+      "broad_sample": "BRD-K87158025-003-08-7",
+      "pert_iname": "benzamil",
+      "target": "SCNN1G",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "B23"
+      ],
+      "smiles": "NC(NCc1ccccc1)=NC(=O)c1nc(Cl)c(N)nc1N",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "BVT-948|PTPN2|BRD-A22713669-001-04-3",
+      "candidate_distance": 2.3900102335061715,
+      "candidate_distance2": 5.7121489162642245,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -0.6446163111782248,
+      "distance_ratio": 1.6446163111782248,
+      "broad_sample": "BRD-A22713669-001-04-3",
+      "pert_iname": "BVT-948",
+      "target": "PTPN2",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "B12"
+      ],
+      "smiles": "CC1(C)C2C(=NC1=O)c1ccccc1C(=O)C2=O",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "apatinib|CSK|BRD-K25244359-066-02-6",
+      "candidate_distance": 2.401898241477097,
+      "candidate_distance2": 5.769115162410772,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -0.6527966995055665,
+      "distance_ratio": 1.6527966995055665,
+      "broad_sample": "BRD-K25244359-066-02-6",
+      "pert_iname": "apatinib",
+      "target": "CSK",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "A11"
+      ],
+      "smiles": "O=C(Nc1ccc(cc1)C1(CCCC1)C#N)c1cccnc1NCc1ccncc1",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "CYM-5442|S1PR1|BRD-A43005764-003-01-5",
+      "candidate_distance": 2.4551075514754745,
+      "candidate_distance2": 6.0275530893119,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -0.6894111448761597,
+      "distance_ratio": 1.6894111448761597,
+      "broad_sample": "BRD-A43005764-003-01-5",
+      "pert_iname": "CYM-5442",
+      "target": "S1PR1",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "B19"
+      ],
+      "smiles": "CCOc1ccc(cc1OCC)-c1nc(no1)-c1cccc2C(CCc12)NCCO",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "ethoxzolamide|CA5A|BRD-K18131774-001-18-4",
+      "candidate_distance": 2.516689817063518,
+      "candidate_distance2": 6.333727635311205,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -0.7317871970978391,
+      "distance_ratio": 1.7317871970978391,
+      "broad_sample": "BRD-K18131774-001-18-4",
+      "pert_iname": "ethoxzolamide",
+      "target": "CA5A",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "A12"
+      ],
+      "smiles": "CCOc1ccc2nc(sc2c1)S(N)(=O)=O",
+      "pathway": "carbonic anhydrase / pH homeostasis",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "lercanidipine|CACNG1|BRD-A18992208-003-02-7",
+      "candidate_distance": 2.6303832126527062,
+      "candidate_distance2": 6.918915845405173,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -0.8100220139358041,
+      "distance_ratio": 1.810022013935804,
+      "broad_sample": "BRD-A18992208-003-02-7",
+      "pert_iname": "lercanidipine",
+      "target": "CACNG1",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "B24"
+      ],
+      "smiles": "COC(=O)C1=C(C)NC(C)=C(C1c1cccc(c1)[N+]([O-])=O)C(=O)OC(C)(C)CN(C)CCC(c1ccccc1)c1ccccc1",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "BAN-ORL-24|OPRL1|BRD-K47049295-300-03-1",
+      "candidate_distance": 2.7104938997085224,
+      "candidate_distance2": 7.346777180357113,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -0.8651478626809825,
+      "distance_ratio": 1.8651478626809825,
+      "broad_sample": "BRD-K47049295-300-03-1",
+      "pert_iname": "BAN-ORL-24",
+      "target": "OPRL1",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "A15"
+      ],
+      "smiles": "O=C(NCCCN1CCC2(CC1)OCc1ccccc21)[C@H]1CCCN1Cc1ccccc1",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "flupirtine|KCNQ2|BRD-K50720187-051-03-1",
+      "candidate_distance": 3.008068842150925,
+      "candidate_distance2": 9.048478159119208,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -1.0699154395213322,
+      "distance_ratio": 2.069915439521332,
+      "broad_sample": "BRD-K50720187-051-03-1",
+      "pert_iname": "flupirtine",
+      "target": "KCNQ2",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "A19"
+      ],
+      "smiles": "CCOC(=O)Nc1ccc(NCc2ccc(F)cc2)nc1N",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "GNF-5837|NTRK1|BRD-K19975102-001-01-2",
+      "candidate_distance": 3.012738422798905,
+      "candidate_distance2": 9.076592804208833,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -1.0731286761813124,
+      "distance_ratio": 2.0731286761813124,
+      "broad_sample": "BRD-K19975102-001-01-2",
+      "pert_iname": "GNF-5837",
+      "target": "NTRK1",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "A10"
+      ],
+      "smiles": "Cc1ccc(NC(=O)Nc2cc(ccc2F)C(F)(F)F)cc1Nc1ccc2c(NC(=O)\\C2=C/c2ccc[nH]2)c1",
+      "pathway": "neurotrophin receptor signaling",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "dexamethasone|ANXA1|BRD-K38775274-001-22-1",
+      "candidate_distance": 3.124371960204505,
+      "candidate_distance2": 9.76170014571214,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -1.1499460612777934,
+      "distance_ratio": 2.1499460612777934,
+      "broad_sample": "BRD-K38775274-001-22-1",
+      "pert_iname": "dexamethasone",
+      "target": "ANXA1",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "A21"
+      ],
+      "smiles": "C[C@@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@@]1(O)C(=O)CO",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "ascorbic-acid|P3H1|BRD-A85242401-001-11-5",
+      "candidate_distance": 3.255987007080662,
+      "candidate_distance2": 10.601451390278086,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -1.240513143315543,
+      "distance_ratio": 2.240513143315543,
+      "broad_sample": "BRD-A85242401-001-11-5",
+      "pert_iname": "ascorbic-acid",
+      "target": "P3H1",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "A13"
+      ],
+      "smiles": "OC[C@H](O)[C@H]1OC(=O)C(=O)C1O",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    },
+    {
+      "candidate": "ZK811752|CCR1|BRD-K91825936-001-03-9",
+      "candidate_distance": 3.381503446638232,
+      "candidate_distance2": 11.434565559626243,
+      "perturbation_distance": 1.4532327189387364,
+      "restoration_score": -1.3268836453843003,
+      "distance_ratio": 2.3268836453843003,
+      "broad_sample": "BRD-K91825936-001-03-9",
+      "pert_iname": "ZK811752",
+      "target": "CCR1",
+      "target_match": false,
+      "plate": "BR00116991",
+      "wells": [
+        "A20"
+      ],
+      "smiles": "C[C@@H]1CN(Cc2ccc(F)cc2)CCN1C(=O)COc1ccc(Cl)cc1NC(N)=O",
+      "pathway": "target annotation present; pathway not curated in tiny MVP map",
+      "benchmark_gene": "KCNN4"
+    }
+  ],
+  "evidence_graph": {
+    "nodes": [
+      {
+        "id": "compound:BRD-K06890060-001-09-1",
+        "type": "compound",
+        "label": "alda-1",
+        "smiles": "Clc1cccc(Cl)c1C(=O)NCc1ccc2OCOc2c1",
+        "source": "JUMP-Target-1_compound_metadata_targets.tsv"
+      },
+      {
+        "id": "target:ALDH2",
+        "type": "target",
+        "label": "ALDH2",
+        "source": "JUMP-Target-1_compound_metadata_targets.tsv"
+      },
+      {
+        "id": "pathway:target annotation present; pathway not curated in tiny MVP map",
+        "type": "pathway",
+        "label": "target annotation present; pathway not curated in tiny MVP map",
+        "source": "tiny local Bio-Delta-G MVP pathway map"
+      },
+      {
+        "id": "perturbation:KCNN4",
+        "type": "orf_perturbation",
+        "label": "KCNN4",
+        "source": "JUMP-Target-1_orf_metadata.tsv"
+      }
+    ],
+    "edges": [
+      {
+        "source": "compound:BRD-K06890060-001-09-1",
+        "target": "target:ALDH2",
+        "predicate": "annotated_target",
+        "evidence": "public CPJUMP1 compound target metadata"
+      },
+      {
+        "source": "target:ALDH2",
+        "target": "pathway:target annotation present; pathway not curated in tiny MVP map",
+        "predicate": "mapped_to_pathway_family",
+        "evidence": "small local demo map; not a comprehensive pathway database"
+      },
+      {
+        "source": "perturbation:KCNN4",
+        "target": "pathway:potassium ion transport / calcium-activated potassium channel activity",
+        "predicate": "mapped_to_pathway_family",
+        "evidence": "small local demo map; not a comprehensive pathway database"
+      }
+    ]
+  },
+  "plot_points": {
+    "controls": [
+      {
+        "x": -5.9604903189039575,
+        "y": 17.613203859435224
+      },
+      {
+        "x": -6.178931215632588,
+        "y": 8.212495081583526
+      },
+      {
+        "x": -1.8032186579656062,
+        "y": -1.2632240735233635
+      },
+      {
+        "x": -3.2919351398430265,
+        "y": 2.568195689385607
+      },
+      {
+        "x": -2.707482659827749,
+        "y": -1.5153696224417237
+      },
+      {
+        "x": -5.686627605997856,
+        "y": 20.392350057021087
+      },
+      {
+        "x": -2.7650643013579366,
+        "y": 13.205150298061078
+      },
+      {
+        "x": 25.39371140060862,
+        "y": 22.256708707967952
+      },
+      {
+        "x": 0.1248233601081794,
+        "y": 0.8204647075346867
+      },
+      {
+        "x": 40.93413267234457,
+        "y": -3.4345175804867996
+      },
+      {
+        "x": 1.4998236232935804,
+        "y": -2.6089687493453786
+      },
+      {
+        "x": -0.24905813583267433,
+        "y": -2.7018674568297563
+      },
+      {
+        "x": 0.40798611229960535,
+        "y": -1.3134090059527486
+      },
+      {
+        "x": -1.5508244881107975,
+        "y": 1.9084629142331604
+      },
+      {
+        "x": 0.2778260614657371,
+        "y": 0.7109917572356119
+      },
+      {
+        "x": -2.915274759888069,
+        "y": -0.6222086122622955
+      },
+      {
+        "x": 34.908991756471835,
+        "y": -0.35817423437642204
+      },
+      {
+        "x": -1.8643216362739106,
+        "y": -1.4520262936722526
+      },
+      {
+        "x": -2.951004698362248,
+        "y": -0.7499371576413931
+      },
+      {
+        "x": 11.671270672957347,
+        "y": -5.75435205132859
+      },
+      {
+        "x": 0.41382178290498417,
+        "y": -1.7726280455568588
+      },
+      {
+        "x": 0.18117982385217601,
+        "y": -1.34380251218449
+      },
+      {
+        "x": -6.1362033369361715,
+        "y": 14.285165511883022
+      },
+      {
+        "x": 31.098767667881194,
+        "y": 16.044347865320642
+      },
+      {
+        "x": -4.570824519009697,
+        "y": 14.320148695061174
+      },
+      {
+        "x": -2.822444782183707,
+        "y": 3.947787681343684
+      },
+      {
+        "x": -0.832075420885148,
+        "y": -2.7403386596655555
+      },
+      {
+        "x": 9.708079118943687,
+        "y": -1.7691037378882566
+      },
+      {
+        "x": -2.144414306929581,
+        "y": -2.409524966714027
+      },
+      {
+        "x": -1.2278811179512708,
+        "y": -1.6409975295369241
+      },
+      {
+        "x": -1.637873477612533,
+        "y": -2.7546718809697186
+      },
+      {
+        "x": 17.08897379403581,
+        "y": 0.6712891449065759
+      },
+      {
+        "x": 0.3297328243672164,
+        "y": -2.261808210714464
+      },
+      {
+        "x": -1.9117075632523401,
+        "y": -2.2466555317368635
+      },
+      {
+        "x": -3.6507457111899253,
+        "y": 3.418467986021129
+      },
+      {
+        "x": -0.15871165477325277,
+        "y": 0.841678935239353
+      },
+      {
+        "x": -1.9229899457399402,
+        "y": 0.23658384679030942
+      },
+      {
+        "x": -1.1231662685957347,
+        "y": -0.39032893281006564
+      },
+      {
+        "x": -1.544382244148188,
+        "y": -0.6384638177564048
+      },
+      {
+        "x": 1.068109753924516,
+        "y": -4.278038125131221
+      },
+      {
+        "x": -4.263735619318965,
+        "y": -0.8992236908998021
+      },
+      {
+        "x": -1.6979433281379543,
+        "y": -1.5975832882246812
+      },
+      {
+        "x": -5.799836736024833,
+        "y": 27.325326849749484
+      },
+      {
+        "x": -2.0193689572460567,
+        "y": 1.6880982766262576
+      },
+      {
+        "x": -0.3308891956289758,
+        "y": 0.2617529931511424
+      },
+      {
+        "x": -0.8218084447730121,
+        "y": -1.6199402587983585
+      },
+      {
+        "x": -3.372856790161625,
+        "y": -3.986824026459049
+      },
+      {
+        "x": -0.30916701068867947,
+        "y": -1.6262770675102711
+      },
+      {
+        "x": 6.613778253633869,
+        "y": -3.4377237572128205
+      },
+      {
+        "x": -3.1181327210890752,
+        "y": -1.5790944926584056
+      },
+      {
+        "x": -2.261807769521184,
+        "y": 1.2417242619285953
+      },
+      {
+        "x": 3.3091462658338844,
+        "y": -1.4010843701590097
+      },
+      {
+        "x": -1.4120120447515623,
+        "y": -2.1696915106019117
+      },
+      {
+        "x": -2.077355086475201,
+        "y": -0.48441476122515326
+      },
+      {
+        "x": -1.1841055762902195,
+        "y": 0.43511881329926827
+      },
+      {
+        "x": -1.176358433592144,
+        "y": -1.1807533721076169
+      },
+      {
+        "x": -1.0957543734220263,
+        "y": -2.0860941950129064
+      },
+      {
+        "x": -0.6836930727254154,
+        "y": -1.6098012298467448
+      },
+      {
+        "x": 31.795065999731992,
+        "y": 4.408527315460844
+      },
+      {
+        "x": -2.1638949309167486,
+        "y": -2.3569042761622985
+      },
+      {
+        "x": -4.5442604077777755,
+        "y": 16.777726412003357
+      },
+      {
+        "x": 1.5259897169777656,
+        "y": 20.696290615206134
+      },
+      {
+        "x": -1.0649857993437877,
+        "y": 32.016647789926765
+      },
+      {
+        "x": -3.6908069309437233,
+        "y": 1.3263158325981421
+      },
+      {
+        "x": -2.508547630379354,
+        "y": 0.5572246784679775
+      },
+      {
+        "x": 20.945176989518206,
+        "y": -0.3479466696144984
+      },
+      {
+        "x": -4.396976363362121,
+        "y": -3.476153653967029
+      },
+      {
+        "x": -12.538324080595947,
+        "y": -4.5917715804775545
+      },
+      {
+        "x": -9.47901745911251,
+        "y": -7.281332900538548
+      },
+      {
+        "x": 1.384806976843688,
+        "y": -3.0201405983761047
+      },
+      {
+        "x": -0.43572298630705353,
+        "y": -0.8041129941574815
+      },
+      {
+        "x": -1.26095684454562,
+        "y": 2.2938953408750447
+      },
+      {
+        "x": -1.4018632633506147,
+        "y": -0.4542271352610434
+      },
+      {
+        "x": -2.8071789298693357,
+        "y": 0.035374825907320995
+      },
+      {
+        "x": -0.4349072977325893,
+        "y": -0.6619589332771001
+      },
+      {
+        "x": -1.2123462028174339,
+        "y": -7.587958176538663
+      },
+      {
+        "x": -1.942924994894613,
+        "y": -1.9740855431677744
+      },
+      {
+        "x": 5.579352879308868,
+        "y": -3.6378785737272263
+      },
+      {
+        "x": 1.004165938118974,
+        "y": -2.305687923321984
+      },
+      {
+        "x": -0.8847780878485607,
+        "y": -2.4117227820141482
+      },
+      {
+        "x": -10.148255982326873,
+        "y": 15.518210492650681
+      },
+      {
+        "x": -5.350828385741941,
+        "y": 18.20196813959078
+      },
+      {
+        "x": -4.67270413429992,
+        "y": 22.432190469764528
+      },
+      {
+        "x": -6.444734856645352,
+        "y": 41.81168533642662
+      },
+      {
+        "x": -2.6772432828497816,
+        "y": 0.44718222172199185
+      },
+      {
+        "x": 10.295862143238319,
+        "y": 3.686521224505175
+      },
+      {
+        "x": -3.225058586549341,
+        "y": 0.37323251431747817
+      },
+      {
+        "x": -0.7947911325198989,
+        "y": -1.7646287821555144
+      },
+      {
+        "x": -2.3982068115659194,
+        "y": -1.8018975400124408
+      },
+      {
+        "x": -1.6540326232805898,
+        "y": -1.7698965097957764
+      },
+      {
+        "x": -1.5846213298695937,
+        "y": 1.8263186057435412
+      },
+      {
+        "x": -0.7275814641776,
+        "y": -0.44718950130032087
+      },
+      {
+        "x": -1.5094542359705518,
+        "y": 0.32675252851134795
+      },
+      {
+        "x": -7.1447287981456,
+        "y": -0.44234371342749745
+      },
+      {
+        "x": -1.5702188205505112,
+        "y": -1.1823752501958427
+      },
+      {
+        "x": 38.016069595315,
+        "y": -1.2036677374783327
+      },
+      {
+        "x": -0.95417285728433,
+        "y": -0.2081399521249434
+      },
+      {
+        "x": -0.98002891741929,
+        "y": -0.6764697133906928
+      },
+      {
+        "x": -7.3706108603175515,
+        "y": 17.655175406607476
+      },
+      {
+        "x": -6.481555925272726,
+        "y": 43.92281739261185
+      },
+      {
+        "x": -16.193359417179536,
+        "y": -2.0303779734686267
+      },
+      {
+        "x": 26.650936320054253,
+        "y": 6.815887507994782
+      },
+      {
+        "x": -0.9279379742741045,
+        "y": -2.1888288676656042
+      },
+      {
+        "x": -1.3300888159506923,
+        "y": -2.213702607537405
+      },
+      {
+        "x": 45.389251284597954,
+        "y": 4.612089966846135
+      },
+      {
+        "x": 1.5957992241670689,
+        "y": -2.1166954301178618
+      },
+      {
+        "x": -1.2980488390027216,
+        "y": -1.7370122230897584
+      },
+      {
+        "x": -8.63463318981081,
+        "y": 1.4731303194986065
+      },
+      {
+        "x": -6.167102823406372,
+        "y": -2.898670457854727
+      },
+      {
+        "x": 0.1001671082390374,
+        "y": 1.2812720413628962
+      },
+      {
+        "x": -1.953299550544441,
+        "y": 1.0353027407714297
+      },
+      {
+        "x": -4.613200897668039,
+        "y": -2.0119887002983865
+      },
+      {
+        "x": -1.5074609719367595,
+        "y": -0.2307249629476702
+      },
+      {
+        "x": -2.601893632876083,
+        "y": -1.574564690969593
+      },
+      {
+        "x": -0.39978363868936995,
+        "y": 0.15019815221644328
+      },
+      {
+        "x": -3.679054022377713,
+        "y": -2.395088135842089
+      },
+      {
+        "x": 60.027520019068064,
+        "y": 2.5076121407050125
+      },
+      {
+        "x": 1.1612300636082167,
+        "y": -0.9372725061315763
+      },
+      {
+        "x": -3.0821996671837764,
+        "y": 1.983044022449656
+      },
+      {
+        "x": -0.6111639018842032,
+        "y": -1.9545041045265588
+      },
+      {
+        "x": -6.197075645028214,
+        "y": 40.475028601321455
+      },
+      {
+        "x": -0.2428271416829414,
+        "y": 0.45361465585579386
+      },
+      {
+        "x": -4.701584761972768,
+        "y": 2.5286604540924515
+      },
+      {
+        "x": -3.9946117291609253,
+        "y": 1.6463043797460126
+      },
+      {
+        "x": -2.941983166503767,
+        "y": -2.7917498045868796
+      },
+      {
+        "x": -3.5663757059064194,
+        "y": -2.738654577739164
+      },
+      {
+        "x": -1.2863227872075966,
+        "y": -3.3401752762955375
+      },
+      {
+        "x": -0.12093575056766714,
+        "y": -3.7030632658615086
+      },
+      {
+        "x": 0.004595695410513301,
+        "y": -1.9342819839115604
+      },
+      {
+        "x": -0.46182103181419254,
+        "y": -2.941284266592379
+      },
+      {
+        "x": -1.4789075512715264,
+        "y": -3.8977564247588847
+      },
+      {
+        "x": 0.0025780515069033783,
+        "y": -2.6046621804535817
+      },
+      {
+        "x": -2.2087346044731335,
+        "y": -2.5661326189549003
+      },
+      {
+        "x": -0.04417688167670053,
+        "y": -3.683638743954043
+      },
+      {
+        "x": 0.3309576067009392,
+        "y": -4.371519134615452
+      },
+      {
+        "x": -0.2586712737142244,
+        "y": -4.265150864447776
+      },
+      {
+        "x": -0.11367950463207488,
+        "y": -4.459584712360049
+      },
+      {
+        "x": -1.3587236042368704,
+        "y": -3.5741732663629313
+      },
+      {
+        "x": -1.2856047152970804,
+        "y": -1.2473199953965286
+      },
+      {
+        "x": -0.11956613639672553,
+        "y": -2.593020242191726
+      },
+      {
+        "x": -2.178843070456484,
+        "y": -4.146008360770281
+      },
+      {
+        "x": -0.1123425059274803,
+        "y": -2.558669569145552
+      },
+      {
+        "x": 0.35992503037155865,
+        "y": -3.793395565231991
+      },
+      {
+        "x": -2.3792684596989426,
+        "y": -2.970823552600648
+      },
+      {
+        "x": -0.06505050234738607,
+        "y": -4.088964207048761
+      },
+      {
+        "x": -1.4359212135326564,
+        "y": -4.07122671174508
+      },
+      {
+        "x": -4.804807232060038,
+        "y": -2.8845434490820017
+      },
+      {
+        "x": -3.170121628326058,
+        "y": -4.0348913447371135
+      },
+      {
+        "x": -1.3889376832609548,
+        "y": 0.4829916926082669
+      },
+      {
+        "x": -1.8613070640163125,
+        "y": -0.3650570830803659
+      },
+      {
+        "x": 0.8827888151163119,
+        "y": -2.0448534693730682
+      },
+      {
+        "x": -0.1245681862617748,
+        "y": -2.6414246547181452
+      },
+      {
+        "x": -0.2834410112711504,
+        "y": -3.631828686216762
+      },
+      {
+        "x": 0.08086827477978598,
+        "y": -2.3894675795521185
+      },
+      {
+        "x": 0.9860155781447779,
+        "y": -4.146298262564265
+      },
+      {
+        "x": 0.3469498750557687,
+        "y": -4.4908149611627
+      },
+      {
+        "x": -0.6837380297701656,
+        "y": -3.5227649804131027
+      },
+      {
+        "x": -0.5409896468306851,
+        "y": -3.7690536209868455
+      },
+      {
+        "x": -0.35444408332212196,
+        "y": -3.6738177609648126
+      },
+      {
+        "x": -0.4733442030987268,
+        "y": -4.519934219591872
+      },
+      {
+        "x": 0.7830648926145003,
+        "y": -1.0286011589803208
+      },
+      {
+        "x": -0.6277126964361162,
+        "y": -1.1216084271484639
+      },
+      {
+        "x": -2.1356214250244787,
+        "y": -1.8608657530166715
+      },
+      {
+        "x": -0.21010501748745458,
+        "y": -2.3204430583543467
+      },
+      {
+        "x": -2.185986901064125,
+        "y": -2.4322105464222767
+      },
+      {
+        "x": -0.08632330456308135,
+        "y": -3.8448106202519727
+      },
+      {
+        "x": -0.7483254314233443,
+        "y": -3.8357669218231383
+      },
+      {
+        "x": -0.8330395120080399,
+        "y": -3.7666952394573623
+      },
+      {
+        "x": -3.208415029048645,
+        "y": -1.694604609083358
+      },
+      {
+        "x": -3.129618429166104,
+        "y": -2.9219323377143644
+      },
+      {
+        "x": -4.17708885508894,
+        "y": -2.88252808440787
+      },
+      {
+        "x": -0.20798743737747416,
+        "y": -2.3623716971968682
+      },
+      {
+        "x": 0.3230798798363086,
+        "y": -2.1403203922633907
+      },
+      {
+        "x": -1.494697853662255,
+        "y": -1.7473280243967286
+      },
+      {
+        "x": -1.3514114574834775,
+        "y": -3.2496261600733165
+      },
+      {
+        "x": -1.9233121520384733,
+        "y": -4.701925227807877
+      },
+      {
+        "x": -0.6540647981876315,
+        "y": -3.5260994330258226
+      },
+      {
+        "x": -0.8979332328457855,
+        "y": -4.134786674061394
+      },
+      {
+        "x": 0.9669939428004404,
+        "y": -3.1826272346006217
+      },
+      {
+        "x": 0.5360167729209091,
+        "y": -3.53816461479542
+      },
+      {
+        "x": -2.3951084714107402,
+        "y": -2.363228129526958
+      },
+      {
+        "x": 0.2425052664185312,
+        "y": -2.5534084960063286
+      },
+      {
+        "x": -0.36764718465705604,
+        "y": -2.6408155789430996
+      },
+      {
+        "x": 1.3501706572667684,
+        "y": -3.0936105640522467
+      },
+      {
+        "x": 0.0014358336620945433,
+        "y": -3.6692110749721847
+      },
+      {
+        "x": 0.5380642424096203,
+        "y": -3.1547902499952647
+      },
+      {
+        "x": -0.2846714287977218,
+        "y": -3.646414220930861
+      },
+      {
+        "x": -4.6607665976518655,
+        "y": -1.7543041827089163
+      },
+      {
+        "x": -1.9685264387046009,
+        "y": -1.4913158485969291
+      },
+      {
+        "x": -3.1299692845764566,
+        "y": -2.9602257575751234
+      },
+      {
+        "x": -3.3965097028356737,
+        "y": -1.6062165729615636
+      },
+      {
+        "x": 0.56799312974174,
+        "y": -2.7021281358750704
+      },
+      {
+        "x": -1.813704208880563,
+        "y": -2.397148814331822
+      },
+      {
+        "x": 0.0715802850661289,
+        "y": -2.355642089555792
+      },
+      {
+        "x": 0.992673484411668,
+        "y": -3.931055701221232
+      },
+      {
+        "x": 0.49569312864529813,
+        "y": -4.093477513517587
+      },
+      {
+        "x": -0.3099128827493657,
+        "y": -3.191920752816954
+      },
+      {
+        "x": -1.0899194407044273,
+        "y": -2.8313556354071823
+      },
+      {
+        "x": 0.12133738300410157,
+        "y": -2.486467021898152
+      },
+      {
+        "x": -1.0306766265439073,
+        "y": -1.9422973517176239
+      },
+      {
+        "x": 1.7204908385720996,
+        "y": -4.47985703242477
+      },
+      {
+        "x": -3.8511037551779763,
+        "y": -2.0234871004118204
+      },
+      {
+        "x": -4.708195697727933,
+        "y": -0.3654177851078053
+      },
+      {
+        "x": -4.552223400541796,
+        "y": -1.5634954351634278
+      },
+      {
+        "x": 0.11001198008891522,
+        "y": -2.84886591348253
+      },
+      {
+        "x": -0.8826307894118854,
+        "y": -2.2317709557931464
+      },
+      {
+        "x": -1.091280464438034,
+        "y": -2.013894082711165
+      },
+      {
+        "x": -1.0595809131599372,
+        "y": -2.9617292924698724
+      },
+      {
+        "x": 0.03011930753180292,
+        "y": -2.470256208218906
+      },
+      {
+        "x": -0.48228753483758313,
+        "y": -2.5075425156339213
+      },
+      {
+        "x": -0.5511002566193218,
+        "y": -3.1469458438049984
+      },
+      {
+        "x": -1.9972907326585374,
+        "y": -2.0982321124458054
+      },
+      {
+        "x": -3.591562184946965,
+        "y": -2.276721475653006
+      },
+      {
+        "x": 0.7352123717244987,
+        "y": -0.8061633149678139
+      },
+      {
+        "x": -2.7280541120065633,
+        "y": -1.4645060670365377
+      },
+      {
+        "x": -0.07731152715041256,
+        "y": -2.565800319218157
+      },
+      {
+        "x": -0.009730998923335177,
+        "y": -1.9400334679100433
+      },
+      {
+        "x": 0.4992271946116953,
+        "y": -2.3200178464713463
+      },
+      {
+        "x": -0.052857301906287235,
+        "y": -2.943177992514803
+      },
+      {
+        "x": -0.30778077623939404,
+        "y": -2.4722462325888377
+      },
+      {
+        "x": -4.079276736999403,
+        "y": -0.5225748448158775
+      },
+      {
+        "x": -0.10987096839686816,
+        "y": -2.673246771140139
+      },
+      {
+        "x": -0.17773467811747468,
+        "y": -2.56543911890242
+      },
+      {
+        "x": -4.5457872618736435,
+        "y": -1.48675698948151
+      },
+      {
+        "x": -3.384561294107629,
+        "y": -1.2417950643842615
+      },
+      {
+        "x": -3.7362476611101654,
+        "y": -3.524178096611604
+      },
+      {
+        "x": -0.19771833811003348,
+        "y": -2.5011768832920174
+      },
+      {
+        "x": -0.03450308745247388,
+        "y": -2.443784469869709
+      },
+      {
+        "x": -0.11358681518698699,
+        "y": -4.903981678294913
+      },
+      {
+        "x": -2.301616523461804,
+        "y": -2.551971411975683
+      },
+      {
+        "x": -0.5860896340845294,
+        "y": -3.3148020975774806
+      },
+      {
+        "x": 1.1441290586947925,
+        "y": -3.231537549277869
+      },
+      {
+        "x": -0.30561437152516846,
+        "y": -3.760430520320474
+      },
+      {
+        "x": -1.5288810062520712,
+        "y": -3.3537199785409992
+      },
+      {
+        "x": -0.04011285493815686,
+        "y": -1.6115005932604336
+      },
+      {
+        "x": -0.2428307989828381,
+        "y": -2.394364542721674
+      },
+      {
+        "x": -0.3934640746061612,
+        "y": -1.779176656993156
+      },
+      {
+        "x": -1.2963618956013614,
+        "y": -2.3880791440563285
+      },
+      {
+        "x": -4.194425558600068,
+        "y": -1.347769418651894
+      },
+      {
+        "x": -1.1783105761084098,
+        "y": -3.290910761873245
+      },
+      {
+        "x": -1.8508006157610444,
+        "y": -2.2159916581680603
+      },
+      {
+        "x": -4.418824242248091,
+        "y": -1.0038639479278604
+      },
+      {
+        "x": -3.828930273546131,
+        "y": -3.70923811759407
+      },
+      {
+        "x": -5.120647550881301,
+        "y": -1.2223636393557227
+      },
+      {
+        "x": -1.283517085042651,
+        "y": -2.1241119110155897
+      },
+      {
+        "x": -1.7233001097416722,
+        "y": -2.2759087666940103
+      },
+      {
+        "x": -5.163051588537355,
+        "y": -1.6809656516083507
+      },
+      {
+        "x": -3.7011617372410144,
+        "y": -3.5337072585745988
+      }
+    ],
+    "perturbation": {
+      "x": -1.0133048374444538,
+      "y": -2.127334077219299,
+      "label": "KCNN4"
+    },
+    "candidates": [
+      {
+        "x": -2.570970957483758,
+        "y": 0.23744548184478154,
+        "label": "alda-1",
+        "restoration_score": -0.14959056462874254
+      },
+      {
+        "x": -3.281220277732959,
+        "y": 0.42928526329400385,
+        "label": "meclofenamic-acid",
+        "restoration_score": -0.18229405505937168
+      },
+      {
+        "x": -2.6482769452254997,
+        "y": 2.917322601592732,
+        "label": "H2L-5765834",
+        "restoration_score": -0.19032214441922313
+      },
+      {
+        "x": -2.0624248309416364,
+        "y": -0.45597959784493436,
+        "label": "ozagrel",
+        "restoration_score": -0.200839672255003
+      },
+      {
+        "x": -1.1373048070403826,
+        "y": -0.010900148083869077,
+        "label": "CYM-5520",
+        "restoration_score": -0.20543135274995827
+      },
+      {
+        "x": -1.6480121587137306,
+        "y": -1.6492072192458178,
+        "label": "CVT-10216",
+        "restoration_score": -0.251291610146273
+      },
+      {
+        "x": -2.178301430209218,
+        "y": -2.4026875777887935,
+        "label": "SirReal-2",
+        "restoration_score": -0.2782249313806069
+      },
+      {
+        "x": -3.6406155325806435,
+        "y": 1.1761525598701152,
+        "label": "GNF-5",
+        "restoration_score": -0.34350580813308884
+      },
+      {
+        "x": -1.5334579207814816,
+        "y": -0.4736700405858951,
+        "label": "NS-309",
+        "restoration_score": -0.3532909541372511
+      },
+      {
+        "x": 0.4275757008302845,
+        "y": -0.6651399033814857,
+        "label": "fomepizole",
+        "restoration_score": -0.44736974014575526
+      }
+    ]
+  },
+  "claim_ceiling": "OBSERVED_PROFILE",
+  "fco": {
+    "fco_version": "hackday-0.2",
+    "object_type": "bio_delta_g_phenotypic_restoration_ranking",
+    "payload": {
+      "benchmark_gene": "KCNN4",
+      "top_candidate": "alda-1|ALDH2|BRD-K06890060-001-09-1",
+      "top_candidate_target": "ALDH2",
+      "top_candidate_target_match": false,
+      "top_restoration_score": -0.14959056462874254,
+      "top_candidate_distance": 1.6706226219028943,
+      "perturbation_distance": 1.4532327189387364,
+      "top_target_match": {
+        "candidate": "NS-309|KCNN4|BRD-K37602296-001-01-6",
+        "candidate_distance": 1.9666466927974278,
+        "candidate_distance2": 3.8676992142910604,
+        "perturbation_distance": 1.4532327189387364,
+        "restoration_score": -0.3532909541372511,
+        "distance_ratio": 1.353290954137251,
+        "broad_sample": "BRD-K37602296-001-01-6",
+        "pert_iname": "NS-309",
+        "target": "KCNN4",
+        "target_match": true,
+        "plate": "BR00116991",
+        "wells": [
+          "B10"
+        ],
+        "smiles": "ON=C1C(=O)Nc2c1ccc(Cl)c2Cl",
+        "pathway": "potassium ion transport / calcium-activated potassium channel activity",
+        "benchmark_gene": "KCNN4"
+      },
+      "plate_count": 2,
+      "subset_rows": 768,
+      "feature_count": 96
+    },
+    "source": {
+      "public_data": true,
+      "contains_phi": false,
+      "access_restricted": false,
+      "usage_rights_verified": true,
+      "source": "Cell Painting Gallery CPJUMP1 pilot public S3",
+      "source_record_id": "2020_11_04_CPJUMP1:BR00116991+BR00117006:KCNN4",
+      "license_or_terms": "public Cell Painting Gallery data; terms not reinterpreted by this script",
+      "subset_path": "data/external/cpjump1_tiny/BR00116991_BR00117006_KCNN4_profiles.csv",
+      "subset_sha256": "sha256:861a5af0f765716c15abbbe9845f8ac03e6d78856b09b80ddfcc83bbcafa86f8",
+      "records": {
+        "compound_plate": "BR00116991",
+        "perturbation_plate": "BR00117006",
+        "perturbation_gene": "KCNN4",
+        "top_candidate_wells": [
+          "B07"
+        ]
+      }
+    },
+    "parents": [],
+    "transformation": {
+      "algorithm": "Bio-Delta-G restoration score: 1 - D(candidate, reference) / (D(perturbation, reference) + epsilon)",
+      "reference_state": "mean/variance and covariance model of public CPJUMP1 control wells from selected compound and ORF plates",
+      "perturbed_state": "median ORF profile for KCNN4",
+      "candidate_profiles": "median compound well profiles grouped by broad_sample, pert_iname, target",
+      "state_model": "median/MAD -> PCA -> LedoitWolf -> empirical q95",
+      "calculation_version": "bio-delta-g-restoration-v0.1",
+      "benchmark_boundary": "independent morphology restoration-distance ranking only; not measured rescue"
+    },
+    "claim": {
+      "claim_ceiling": "OBSERVED_PROFILE"
+    },
+    "created_at": "2026-08-13T15:18:33.162512+00:00",
+    "digest": "sha256:f0b1ec663b51b2d72796e01c635976c4f03048749b860dc2ef43cbcf2be371a6"
+  },
+  "fco_verifies": true,
+  "tamper_demo": {
+    "changed_field": "payload.top_restoration_score",
+    "verifies_after_tamper": false
+  },
+  "merkle_root": "3e3a7826ca231ad7a87d5bfb00e88f1da6f5cba3d5d9145a7c0dc750b85540e3"
+}

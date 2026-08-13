@@ -1,0 +1,11 @@
+{
+  "claim_ceiling": "REPURPOSING_HYPOTHESIS",
+  "clinical_trial_rows": 50,
+  "custody_verified": true,
+  "known_pair_rank": 28,
+  "phenotype_opposition": 0.5004939964057833,
+  "reciprocal_rank": 0.03571428571428571,
+  "tamper_test_pass": true,
+  "top_candidate": "desonide",
+  "top_candidate_id": "desonide|PLA2G1B|BRD-K21528677-001-04-4"
+}

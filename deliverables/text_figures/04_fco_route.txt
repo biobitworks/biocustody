@@ -1,0 +1,2 @@
+CPJUMP1 -> perturbation -> StateShift -> candidate drug -> SMILES/target/mechanism/related drug/clinical trial -> REPURPOSING_HYPOTHESIS
+merkle_root=aca0d6dea376b792342cd98a3820766a3b866519d26c9357770832f2b458db6f

@@ -1,0 +1,60 @@
+{
+  "claim_ceiling": "REPURPOSING_HYPOTHESIS",
+  "cpjump1_workflow_status": "PASS",
+  "expansion_allowed": true,
+  "schema": "biocustody.magicstudiobox.baseline.v1",
+  "status": "PASS",
+  "steps": [
+    {
+      "cmd": [
+        "/Users/byron/projects/inbox/biocustody-stateshift-aws-bootstrap-v0.2.0/.venv/bin/python",
+        "scripts/check_env.py"
+      ],
+      "finished_at": "2026-08-13T15:17:19Z",
+      "log": "runs/magicstudiobox/baseline/check_env.log",
+      "name": "check_env",
+      "rc": 0,
+      "sha256": "sha256:5a3ca80d92be5295048e023e50607456e1d6024098a5d2b60a344996b80603e3",
+      "started_at": "2026-08-13T15:17:19Z"
+    },
+    {
+      "cmd": [
+        "/Users/byron/projects/inbox/biocustody-stateshift-aws-bootstrap-v0.2.0/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "finished_at": "2026-08-13T15:17:51Z",
+      "log": "runs/magicstudiobox/baseline/pytest.log",
+      "name": "pytest",
+      "rc": 0,
+      "sha256": "sha256:7dc973bfe1da836d6e7b48ec576ca067fbe7cb71a859d7da4c6270403811a162",
+      "started_at": "2026-08-13T15:17:19Z"
+    },
+    {
+      "cmd": [
+        "/Users/byron/projects/inbox/biocustody-stateshift-aws-bootstrap-v0.2.0/.venv/bin/python",
+        "scripts/demo_synthetic.py"
+      ],
+      "finished_at": "2026-08-13T15:17:53Z",
+      "log": "runs/magicstudiobox/baseline/demo_synthetic.log",
+      "name": "demo_synthetic",
+      "rc": 0,
+      "sha256": "sha256:22573ef085b558a07d677dcc90c569565076a6651d07aecced6bd947c68fc76a",
+      "started_at": "2026-08-13T15:17:51Z"
+    },
+    {
+      "cmd": [
+        "/Users/byron/projects/inbox/biocustody-stateshift-aws-bootstrap-v0.2.0/.venv/bin/python",
+        "scripts/demo_cpjump1_benchmark.py"
+      ],
+      "finished_at": "2026-08-13T15:18:33Z",
+      "log": "runs/magicstudiobox/baseline/demo_cpjump1_benchmark.log",
+      "name": "demo_cpjump1_benchmark",
+      "rc": 0,
+      "sha256": "sha256:572a58eea5864d199d3c7db1d2c262b165808ea96eefad553c12aba718404ad6",
+      "started_at": "2026-08-13T15:17:53Z"
+    }
+  ],
+  "ts_utc": "2026-08-13T15:18:33Z"
+}
