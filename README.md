@@ -1,6 +1,6 @@
 # BioCustody — Cross-Device Chain of Custody Terminal
 
-**Stanford × DeepMind Hackathon 2026 Submission**  
+**Stanford × DeepMind Hackathon 2026 Submission**
 - Deployed Web Prototype: [https://biocustody-n6iqdjsn.sauna.new/](https://biocustody-n6iqdjsn.sauna.new/)
 - Code Repository (this repo): [https://github.com/biobitworks/biocustody](https://github.com/biobitworks/biocustody)
 - FCG Root (Sealed Submission): `7acd4129f15bd1f237aad2b0c5cf07e6e41124ee7061d821b9cc734a4c0a445a`
@@ -14,6 +14,22 @@
 **BioCustody** is a decentralized data provenance and remote biosurveillance platform that secures biological fieldwork and pathogen tracking. By combining lightweight, quantized structural protein folding running locally on Android devices (using ExecuTorch) with cryptographic **Fractal Custody Objects (FCOs)** bound to an investigator's Ed25519 key, BioCustody creates a tamper-proof chain of custody (Fractal Custody Graph - FCG) for biosecurity threat detection—completely offline.
 
 This repository contains the **sauna.ai Track / Google AI Studio & Cloud Run** hosted prototype. It acts as the central administrative registry where auditors view the overall graph history, use Gemini to check sequence vulnerabilities, and verify the cryptographic integrity of pre-sealed FCOs synced from remote devices (such as Android phones running ExecuTorch or parallel Replit instances).
+
+### Current Route-To-Market Goal
+
+BioCustody / StateShift is now being extended as an IP-aware evidence and commercialization routing system for biopharma research. The target product is the custody and decision infrastructure, not a claim to own or commercialize any specific molecule.
+
+```text
+protein -> peptide -> rare disease -> novel drug hypothesis
+       -> scientific evidence lane
+       -> licensing / IP / FTO lane
+       -> commercialization route
+```
+
+The FCG must separate scientific support from licensing, patent, exclusivity, and freedom-to-operate status. Public database availability can support research evidence, but it does not prove commercialization freedom. See:
+
+- `docs/IP_AWARE_FCG_COMMERCIALIZATION.md`
+- `docs/TEAM_BUILD_PROMPT_CORE_DATABASES.md`
 
 ---
 
@@ -34,7 +50,7 @@ We believe in absolute technical honesty. Here is the exact audit of what is imp
 
 ### 🟡 Documented Trajectory (Future Plans / Mocked)
 - **On-Device ExecuTorch (Android Track):** The Android Jetpack Compose codebase lives in the parallel `/android` folder. It is designed to compile and run Gemma 4 E2B-it-qat-mobile-ct on the Qualcomm Hexagon NPU natively via ExecuTorch. This is documented and use-case proposed, not built into this web prototype.
-- **Google Drive / Gmail private-key Vault:** As documented in the *Future Architecture* section of our submission package, we propose using Google Drive's `changes.list` as the FCG event-bus and a Google Drive folder as the private-key vault, integrated with Gmail/KG indexing.
+- **Key Management:** Production private keys must never be committed, copied into FCO payloads, or stored in shared folders. The repository may contain public keys, public-key fingerprints, placeholders, and clearly marked example/test key fixtures only. Any Google Drive / Gmail key workflow is experimental and limited to public-key material or encrypted test keys until reviewed.
 - **AlphaTensor, Phenaki, AlphaProteo, USM, DolphinGemma:** Surfaced as display-only model/research artifacts in the Folding screen to contextualize the scientific lineage. Not actively executed.
 
 ---

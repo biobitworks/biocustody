@@ -17,6 +17,9 @@ Rejected by default:
 - local clinical data;
 - proprietary data whose sharing/use rights have not been checked;
 - secrets, API keys, access tokens, credentials.
+- production private keys, developer private keys, seed phrases, encrypted
+  production keys, or any private key copied into source files, FCO payloads,
+  logs, slides, notebooks, or generated artifacts.
 
 ## Required source metadata
 
@@ -52,3 +55,53 @@ rights checked?
 ```
 
 The code must never copy secrets into an FCO payload.
+
+## Licensing / IP / FTO rule
+
+Source availability and commercialization freedom are separate facts.
+
+Public records from Open Targets, ChEMBL, PubMed / PMC OA, AlphaFold DB,
+CPJUMP1, and similar sources may support scientific evidence only under their
+recorded source terms. They do not prove that any protein, peptide, molecule,
+method of use, formulation, disease indication, or commercialization route is
+free of third-party patent rights, regulatory exclusivity, contract limits, or
+licensing requirements.
+
+Every imported source should preserve:
+
+```json
+{
+  "source_terms_url": "...",
+  "license_or_terms": "...",
+  "rights_status": "PUBLIC_DATA_AVAILABLE",
+  "patent_status": "PATENT_REVIEW_REQUIRED",
+  "exclusivity_status": "EXCLUSIVITY_REVIEW_REQUIRED",
+  "fto_status": "FTO_REVIEW_REQUIRED"
+}
+```
+
+The FCG must keep scientific evidence and licensing / IP / FTO evidence in
+separate lanes until a commercialization decision is explicitly reviewed.
+
+## Key material rule
+
+Allowed in the repository:
+
+- public keys;
+- public-key fingerprints;
+- placeholder private-key paths;
+- generated test keys;
+- fixtures clearly named `test`, `example`, or `fixture`.
+
+Not allowed in the repository:
+
+- production private keys;
+- developer private keys;
+- private keys for shared accounts;
+- encrypted production keys;
+- seed phrases;
+- API tokens or cloud credentials.
+
+Use an untracked local path for test signing keys, for example
+`.secrets/local-test-ed25519`. Production signing must use a real secret manager,
+OS keychain, HSM, or cloud KMS.
