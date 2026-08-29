@@ -1,0 +1,7 @@
+{
+  "lattice_audit": "audits/AUD-FCG-DOCUMENT-LATTICE-001",
+  "manuscript_source": "paper/newinml2026/manuscript/main.tex",
+  "predecessor_audit": "audits/AUD-FCG-ATOM-SOT-ROUNDTRIP-002",
+  "sealed_pdf_mutation": "FORBIDDEN",
+  "source_commit": "4a372a5c459ad60cd23b850709011cbfd0e516b4"
+}

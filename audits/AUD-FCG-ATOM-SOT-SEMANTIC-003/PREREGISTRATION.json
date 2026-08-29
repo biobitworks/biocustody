@@ -1,0 +1,23 @@
+{
+  "allowed_terminals": [
+    "PASS",
+    "NEGATIVE",
+    "NULL",
+    "UNDERPOWERED",
+    "FAILED",
+    "BLOCKED",
+    "QUARANTINED",
+    "ABSTAIN",
+    "NOT_APPLICABLE",
+    "NOT_ESTABLISHED"
+  ],
+  "audit_id": "AUD-FCG-ATOM-SOT-SEMANTIC-003",
+  "host": "magicSTUDIObox.local",
+  "no_n_inflation_after_outcomes": true,
+  "no_optional_stopping": true,
+  "post_hoc_label": "POST_HOC",
+  "predecessor_audit": "AUD-FCG-ATOM-SOT-ROUNDTRIP-002",
+  "primary_question": "Does semantic SOT support validation + full pipeline outperform custody-only baselines?",
+  "registered_at_utc": "2026-08-29T10:07:13Z",
+  "source_commit": "4a372a5c459ad60cd23b850709011cbfd0e516b4"
+}

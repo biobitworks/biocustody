@@ -1,0 +1,17 @@
+{
+  "H0-A-CUSTODY-SUFFICIENCY": {
+    "comparison": "B3 vs B0",
+    "endpoint": "CORRECT_SEMANTIC_DISPOSITION"
+  },
+  "H0-B-STRUCTURE-SUFFICIENCY": {
+    "comparison": "B3 vs B1",
+    "endpoint": "CORRECT_SEMANTIC_DISPOSITION"
+  },
+  "H0-C-ABSTENTION-VALUE": {
+    "comparison": "B3 vs B2",
+    "endpoint": "FALSE_CLAIM_ACCEPTANCE_RATE"
+  },
+  "H0-SEMANTIC-SOT-SUPPORT": {
+    "endpoint": "SOT semantic support terminal accounting"
+  }
+}

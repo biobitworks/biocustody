@@ -12,3 +12,4 @@ data/external/*
 *.wav
 .DS_Store
 audits/**/seedgraph_runtime/
+node/fcg_core/node_modules/

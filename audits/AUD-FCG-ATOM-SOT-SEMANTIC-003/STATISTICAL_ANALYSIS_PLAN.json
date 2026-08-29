@@ -1,0 +1,10 @@
+{
+  "alpha": 0.05,
+  "bootstrap_seed": 20260829,
+  "clustered_sensitivity": "GEE binary cluster=BASE_OBJECT_ID",
+  "minimum_practical_improvement": 0.15,
+  "multiple_comparison": "Holm FWER",
+  "omnibus": "Cochran Q",
+  "pairwise": "Exact McNemar all 6 pipeline pairs",
+  "target_power": 0.8
+}

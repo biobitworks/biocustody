@@ -1,0 +1,6 @@
+{
+  "B0_CRYPTO_CUSTODY_ONLY": "SHA-256 byte/manifest seal only",
+  "B1_STRUCTURAL_LATTICE": "Lattice identity/parent/order without AtomV2\u2192AOK\u2192SOT",
+  "B2_VERIFY_ONLY_NO_ABSTAIN": "Full checks but forced VERIFY/REJECT",
+  "B3_FULL_VERIFY_OR_ABSTAIN": "AtomV2+AOK+SOT+abstention+contradiction+ceilings"
+}

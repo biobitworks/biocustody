@@ -1,0 +1,10 @@
+{
+  "alpha": 0.05,
+  "minimum_practical_improvement": 0.15,
+  "note": "Same frozen corpus; no post-hoc N inflation",
+  "planned_mutation_cases": 13,
+  "predecessor_actual_n": 13,
+  "predecessor_terminal": "UNDERPOWERED",
+  "rng_seed": 20260829,
+  "target_power": 0.8
+}

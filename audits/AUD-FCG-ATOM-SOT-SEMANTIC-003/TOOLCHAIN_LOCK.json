@@ -1,0 +1,9 @@
+{
+  "biocustody_head": "481189b216705c82bdaab140ed94fd21da748bf0",
+  "numpy": "2.5.1",
+  "pandas": "3.0.3",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "python": "3.14.7",
+  "scipy": "1.18.0",
+  "statsmodels": "0.15.0"
+}
