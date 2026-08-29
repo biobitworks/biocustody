@@ -1,0 +1,19 @@
+{
+  "B3_minus_B0_semantic_disposition": {
+    "ci_95_bca_approx": [
+      0.19999999999999996,
+      0.75
+    ],
+    "mean": 0.46637638574660634
+  },
+  "B3_minus_B4_semantic_disposition": {
+    "ci_95_bca_approx": [
+      0.3571428571428571,
+      0.8461538461538461
+    ],
+    "mean": 0.6127651071967248
+  },
+  "n_bootstrap": 2000,
+  "rng_seed": 20260829,
+  "status": "COMPUTED"
+}

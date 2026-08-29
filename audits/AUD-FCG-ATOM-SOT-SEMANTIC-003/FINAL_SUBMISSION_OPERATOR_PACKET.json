@@ -1,0 +1,16 @@
+{
+  "Title": "Protein Hinge: Cryptographic Custody Is Necessary but Not Sufficient",
+  "Abstract": "Operator: bind from manuscript main.tex projection at source commit 4a372a5c.",
+  "Authors": "OPERATOR_INFORMATION_REQUIRED",
+  "Keywords": ["provenance", "knowledge graphs", "abstention", "SeedGraph", "FCG"],
+  "License": "OPERATOR_VERIFY",
+  "OpenReview_seal": "READY_FOR_OPERATOR_SUBMISSION",
+  "PDF": "NOT_BUILT_THIS_RUN",
+  "Readers": "OPERATOR_VERIFY",
+  "Signatures": "OPERATOR_VERIFY",
+  "TL;DR": "Verify-or-abstain semantic pipeline outperforms custody-only baselines descriptively; inferential gates UNDERPOWERED at N=13.",
+  "audit_id": "AUD-FCG-ATOM-SOT-SEMANTIC-003",
+  "final_validation_color": "YELLOW",
+  "preregistration_sha256": "7638b5bae382c44c889cb80004e6adad49778ba29a8fe1914dcbcc24fa5796c8",
+  "source_git_sha": "4a372a5c459ad60cd23b850709011cbfd0e516b4"
+}

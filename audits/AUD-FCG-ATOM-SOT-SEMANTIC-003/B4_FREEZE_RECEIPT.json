@@ -1,0 +1,18 @@
+{
+  "audit_id": "AUD-FCG-ATOM-SOT-SEMANTIC-003",
+  "comparator_id": "ANTIGENCE-AIS-COMPARATOR",
+  "do_not_retrain": true,
+  "frozen_antigence_git_sha": "1f12b3c2b2f7df90e11753f74443e4add48d5b46",
+  "frozen_at_utc": "2026-08-29T16:05:00Z",
+  "preserved_statistics": {
+    "B3_semantic_disposition": "13/13",
+    "B4_semantic_disposition": "5/13",
+    "B3_vs_B4_holm_adjusted_p": 0.266,
+    "B3_false_claim_acceptance": "0%",
+    "B4_false_claim_acceptance": "0%",
+    "gee_sensitivity_status": "NOT_ESTIMABLE",
+    "gee_sensitivity_reason": "perfect_separation_or_unstable_gee_at_N=13"
+  },
+  "schema": "biocustody.antigence_b4_freeze_receipt.v1",
+  "terminal": "FROZEN"
+}

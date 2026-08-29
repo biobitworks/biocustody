@@ -156,13 +156,26 @@ def run_b3_full_verify_abstain(gt: dict[str, Any], mutated: dict[str, Any]) -> d
     }
 
 
-def evaluate_mutation(mutation: dict[str, Any], baseline_obj: dict[str, Any] | None = None) -> list[dict[str, Any]]:
+def evaluate_mutation(mutation: dict[str, Any], baseline_obj: dict[str, Any] | None = None, b4_runtime: Any | None = None) -> list[dict[str, Any]]:
     gt = mutation
     mutated = mutation.get("mutated_payload", {})
     baseline_obj = baseline_obj or {}
-    return [
+    outcomes = [
         run_b0_crypto_only(gt, mutated),
         run_b1_structural_lattice(gt, mutated, baseline_obj),
         run_b2_verify_no_abstain(gt, mutated),
         run_b3_full_verify_abstain(gt, mutated),
     ]
+    if b4_runtime is not None:
+        from fcg_core.antigence_b4 import run_b4_antigence
+
+        outcomes.append(
+            run_b4_antigence(
+                mutated,
+                baseline_obj,
+                mutation.get("BASE_OBJECT_TYPE", "Sentence"),
+                b4_runtime,
+                gt,
+            )
+        )
+    return outcomes

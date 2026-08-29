@@ -1,0 +1,16 @@
+{
+  "note": "Sensitivity only; primary inference remains exact McNemar",
+  "pipelines": [
+    "B3_FULL_VERIFY_OR_ABSTAIN",
+    "B4_ANTIGENCE_TRAINED_AIS"
+  ],
+  "reason": "perfect_separation_or_unstable_gee_at_N=13",
+  "status": "NOT_ESTIMABLE",
+  "warnings": [
+    "Perfect separation or prediction detected, parameter may not be identified",
+    "Perfect separation or prediction detected, parameter may not be identified",
+    "Perfect separation or prediction detected, parameter may not be identified",
+    "Perfect separation or prediction detected, parameter may not be identified",
+    "Perfect separation or prediction detected, parameter may not be identified"
+  ]
+}

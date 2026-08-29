@@ -24,6 +24,7 @@ PIPELINES = [
     "B1_STRUCTURAL_LATTICE",
     "B2_VERIFY_ONLY_NO_ABSTAIN",
     "B3_FULL_VERIFY_OR_ABSTAIN",
+    "B4_ANTIGENCE_TRAINED_AIS",
 ]
 EFFECT_THRESHOLD = 0.15
 RNG_SEED = 20260829
@@ -157,6 +158,8 @@ def analyze_pipeline_results(results: list[dict]) -> dict[str, Any]:
         row["B3_minus_B0"] = row.get("B3_FULL_VERIFY_OR_ABSTAIN", 0) - row.get("B0_CRYPTO_CUSTODY_ONLY", 0)
         row["B3_minus_B1"] = row.get("B3_FULL_VERIFY_OR_ABSTAIN", 0) - row.get("B1_STRUCTURAL_LATTICE", 0)
         row["B3_minus_B2"] = row.get("B3_FULL_VERIFY_OR_ABSTAIN", 0) - row.get("B2_VERIFY_ONLY_NO_ABSTAIN", 0)
+        row["B3_minus_B4"] = row.get("B3_FULL_VERIFY_OR_ABSTAIN", 0) - row.get("B4_ANTIGENCE_TRAINED_AIS", 0)
+        row["B4_minus_B3"] = row.get("B4_ANTIGENCE_TRAINED_AIS", 0) - row.get("B3_FULL_VERIFY_OR_ABSTAIN", 0)
         family_rows.append(row)
 
     return {
@@ -232,6 +235,14 @@ def _hypothesis_tests(pairwise: list[dict], summary: dict, benign_rate: float, b
             "terminal": "PASS" if benign_rate <= 0.05 else "FAIL",
         },
         "H0-SEEDGRAPH-LOSS": {"terminal": "DEFERRED_TO_CONFORMANCE"},
+        "H0-B3-VS-B4-SEMANTIC": {
+            "comparison": find("B3_FULL_VERIFY_OR_ABSTAIN", "B4_ANTIGENCE_TRAINED_AIS"),
+            "terminal": terminal(find("B3_FULL_VERIFY_OR_ABSTAIN", "B4_ANTIGENCE_TRAINED_AIS")),
+        },
+        "H0-B3-VS-B4-FALSE-ACCEPT": {
+            "comparison": find("B3_FULL_VERIFY_OR_ABSTAIN", "B4_ANTIGENCE_TRAINED_AIS", "false_claim_acceptance"),
+            "terminal": terminal(find("B3_FULL_VERIFY_OR_ABSTAIN", "B4_ANTIGENCE_TRAINED_AIS", "false_claim_acceptance"), "less"),
+        },
     }
 
 
@@ -239,16 +250,39 @@ def _gee_sensitivity(df: pd.DataFrame) -> dict:
     if not HAS_STATSMODELS or df.empty:
         return {"status": "FAILED", "reason": "statsmodels unavailable or empty df"}
     try:
-        sub = df[df["pipeline"] == "B3_FULL_VERIFY_OR_ABSTAIN"].copy()
+        import warnings
+
+        sub = df[df["pipeline"].isin(["B3_FULL_VERIFY_OR_ABSTAIN", "B4_ANTIGENCE_TRAINED_AIS"])].copy()
         if sub.empty:
-            return {"status": "NOT_ESTIMABLE", "reason": "no B3 rows"}
+            return {"status": "NOT_ESTIMABLE", "reason": "no B3/B4 rows"}
         sub["y"] = sub["correct_semantic_disposition"].astype(int)
-        sub["pipeline_code"] = 1
+        sub["is_b4"] = (sub["pipeline"] == "B4_ANTIGENCE_TRAINED_AIS").astype(int)
         fam_dummies = pd.get_dummies(sub["MUTATION_FAMILY"], prefix="fam", drop_first=True)
-        exog = sm.add_constant(fam_dummies)
+        exog = sm.add_constant(pd.concat([sub[["is_b4"]], fam_dummies], axis=1))
         model = GEE(sub["y"], exog, groups=sub["CLUSTER_ID"], family=Binomial())
-        res = model.fit()
-        return {"status": "ESTIMATED", "params": res.params.to_dict(), "pvalues": res.pvalues.to_dict()}
+        with warnings.catch_warnings(record=True) as caught:
+            warnings.simplefilter("always")
+            res = model.fit()
+        perfect_sep = any(
+            "PerfectSeparation" in str(w.message) or "perfect separation" in str(w.message).lower()
+            for w in caught
+        )
+        params = res.params.to_dict()
+        unstable = perfect_sep or max((abs(v) for v in params.values()), default=0.0) > 20.0
+        if unstable:
+            return {
+                "status": "NOT_ESTIMABLE",
+                "reason": "perfect_separation_or_unstable_gee_at_N=13",
+                "pipelines": ["B3_FULL_VERIFY_OR_ABSTAIN", "B4_ANTIGENCE_TRAINED_AIS"],
+                "warnings": [str(w.message) for w in caught if issubclass(w.category, Warning)],
+                "note": "Sensitivity only; primary inference remains exact McNemar",
+            }
+        return {
+            "status": "ESTIMATED",
+            "pipelines": ["B3_FULL_VERIFY_OR_ABSTAIN", "B4_ANTIGENCE_TRAINED_AIS"],
+            "params": params,
+            "pvalues": res.pvalues.to_dict(),
+        }
     except Exception as exc:  # noqa: BLE001
         return {"status": "FAILED", "reason": str(exc)}
 
@@ -258,22 +292,31 @@ def _cluster_bootstrap(df: pd.DataFrame, n_boot: int = 2000) -> dict:
     clusters = df["CLUSTER_ID"].unique()
     if len(clusters) == 0:
         return {"status": "NOT_ESTIMABLE"}
-    diffs = []
+    diffs_b3_b0 = []
+    diffs_b3_b4 = []
     for _ in range(n_boot):
         sampled = rng.choice(clusters, size=len(clusters), replace=True)
         boot = pd.concat([df[df["CLUSTER_ID"] == c] for c in sampled], ignore_index=True)
         b0 = boot[(boot["pipeline"] == "B0_CRYPTO_CUSTODY_ONLY")]["correct_semantic_disposition"].mean()
         b3 = boot[(boot["pipeline"] == "B3_FULL_VERIFY_OR_ABSTAIN")]["correct_semantic_disposition"].mean()
-        diffs.append(b3 - b0)
-    diffs_arr = np.array(diffs)
-    lo, hi = np.percentile(diffs_arr, [2.5, 97.5])
+        b4 = boot[(boot["pipeline"] == "B4_ANTIGENCE_TRAINED_AIS")]["correct_semantic_disposition"].mean()
+        diffs_b3_b0.append(b3 - b0)
+        diffs_b3_b4.append(b3 - b4)
+    arr_b0 = np.array(diffs_b3_b0)
+    arr_b4 = np.array(diffs_b3_b4)
+    lo0, hi0 = np.percentile(arr_b0, [2.5, 97.5])
+    lo4, hi4 = np.percentile(arr_b4, [2.5, 97.5])
     return {
         "status": "COMPUTED",
         "n_bootstrap": n_boot,
         "rng_seed": RNG_SEED,
         "B3_minus_B0_semantic_disposition": {
-            "mean": float(np.mean(diffs_arr)),
-            "ci_95_bca_approx": [float(lo), float(hi)],
+            "mean": float(np.mean(arr_b0)),
+            "ci_95_bca_approx": [float(lo0), float(hi0)],
+        },
+        "B3_minus_B4_semantic_disposition": {
+            "mean": float(np.mean(arr_b4)),
+            "ci_95_bca_approx": [float(lo4), float(hi4)],
         },
     }
 

@@ -1,0 +1,38 @@
+{
+  "B3_false_claim_acceptance_rate": 0.0,
+  "B3_semantic_disposition_rate": 1.0,
+  "B3_vs_B4_semantic_disposition": {
+    "accuracy_a": 1.0,
+    "accuracy_b": 0.38461538461538464,
+    "discordant_a_correct_b_wrong": 8,
+    "discordant_a_wrong_b_correct": 0,
+    "effect_threshold_met": true,
+    "endpoint": "correct_semantic_disposition",
+    "holm_adjusted_p": 0.265625,
+    "mcnemar_raw_p": 0.0078125,
+    "n_paired": 13,
+    "pipeline_a": "B3_FULL_VERIFY_OR_ABSTAIN",
+    "pipeline_b": "B4_ANTIGENCE_TRAINED_AIS",
+    "risk_difference_b_minus_a": -0.6153846153846154,
+    "statistical_terminal": "NOT_SIGNIFICANT"
+  },
+  "B4_false_claim_acceptance_rate": 0.0,
+  "B4_semantic_disposition_rate": 0.38461538461538464,
+  "audit_id": "ANTIGENCE-AIS-COMPARATOR",
+  "blind_to_mutation_truth": true,
+  "canonical_antibodies_verified": true,
+  "endpoint_distinction": [
+    "ANOMALY_DETECTION",
+    "SEMANTIC_DISPOSITION",
+    "CAUSAL_LOCALIZATION",
+    "CLAIM_CEILING_DISPOSITION"
+  ],
+  "frozen_antigence_git_sha": "1f12b3c2b2f7df90e11753f74443e4add48d5b46",
+  "gee_sensitivity_reason": "perfect_separation_or_unstable_gee_at_N=13",
+  "gee_sensitivity_status": "NOT_ESTIMABLE",
+  "load_errors": {},
+  "mutation_manifest": "/Users/byron/projects/active/biocustody/audits/AUD-FCG-ATOM-SOT-SEMANTIC-003/MUTATION_MANIFEST.jsonl",
+  "n_mutations": 13,
+  "recorded_at_utc": "2026-08-29T15:47:55Z",
+  "scifact_cells_status": "PASS"
+}
