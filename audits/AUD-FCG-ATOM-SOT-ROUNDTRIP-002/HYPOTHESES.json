@@ -1,0 +1,23 @@
+{
+  "H0-ABSTENTION-NO-VALUE": {
+    "alternative": "B3 false-acceptance < B2",
+    "comparison": "B3 vs B2",
+    "endpoint": "FALSE_CLAIM_ACCEPTANCE_RATE"
+  },
+  "H0-BENIGN-INVARIANCE": {
+    "target": "false_semantic_promotion <= 0.05"
+  },
+  "H0-CUSTODY-SUFFICIENCY": {
+    "alternative": "B3 > B0 with practical effect >= 0.15",
+    "comparison": "B3 vs B0",
+    "endpoint": "CORRECT_SEMANTIC_DISPOSITION"
+  },
+  "H0-SEEDGRAPH-LOSS": {
+    "evaluation": "deterministic conformance roundtrip"
+  },
+  "H0-STRUCTURE-SUFFICIENCY": {
+    "alternative": "B3 > B1 with practical effect >= 0.15",
+    "comparison": "B3 vs B1",
+    "endpoint": "CORRECT_SEMANTIC_DISPOSITION"
+  }
+}

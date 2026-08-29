@@ -1,0 +1,10 @@
+{
+  "biocustody_branch": "audit/fcg-atom-sot-roundtrip-002-20260829",
+  "biocustody_head": "17f38c693424147fe1ca922e5d1ec6cb185c799d",
+  "numpy": "2.5.1",
+  "pandas": "3.0.3",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "python": "3.14.7",
+  "scipy": "1.18.0",
+  "statsmodels": "NOT_INSTALLED"
+}

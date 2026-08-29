@@ -1,0 +1,19 @@
+{
+  "cluster_rule": "CLUSTER_ID = BASE_OBJECT_ID",
+  "deterministic": true,
+  "families": [
+    "synonymous",
+    "substitution",
+    "insertion",
+    "deletion",
+    "duplication",
+    "transposition",
+    "recombination",
+    "gain-of-function",
+    "contradiction",
+    "provenance",
+    "table/figure",
+    "attestation"
+  ],
+  "generator": "fcg_core.mutation_benchmark.generate_mutation_manifest"
+}

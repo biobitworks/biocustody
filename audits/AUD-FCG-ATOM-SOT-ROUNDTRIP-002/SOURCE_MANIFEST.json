@@ -1,0 +1,7 @@
+{
+  "atomization_path": "audits/AUD-FCG-DOCUMENT-LATTICE-001/SEEDGRAPH_ATOMIZATION",
+  "lattice_audit_path": "audits/AUD-FCG-DOCUMENT-LATTICE-001",
+  "pdf_for_atom_extract": "paper/newinml2026/manuscript/main_smoke.pdf",
+  "sealed_pdf_mutation": "FORBIDDEN",
+  "source_commit": "4a372a5c459ad60cd23b850709011cbfd0e516b4"
+}

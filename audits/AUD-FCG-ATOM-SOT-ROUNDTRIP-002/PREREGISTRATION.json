@@ -1,0 +1,21 @@
+{
+  "allowed_terminals": [
+    "PASS",
+    "NEGATIVE",
+    "NULL",
+    "UNDERPOWERED",
+    "FAILED",
+    "BLOCKED",
+    "QUARANTINED"
+  ],
+  "audit_id": "AUD-FCG-ATOM-SOT-ROUNDTRIP-002",
+  "host": "magicSTUDIObox.local",
+  "no_optional_stopping": true,
+  "note": "Builds on AUD-FCG-DOCUMENT-LATTICE-001 frozen corpus",
+  "post_hoc_label": "POST_HOC_ANALYSIS",
+  "primary_question": "Does FULL verify-or-abstain materially outperform crypto-only and structural baselines on semantic/provenance disposition?",
+  "prior_lattice_audit": "AUD-FCG-DOCUMENT-LATTICE-001",
+  "prior_lattice_id": "AUD-FCG-ATOM-SOT-ROUNDTRIP-001",
+  "registered_at_utc": "2026-08-29T10:00:29Z",
+  "source_commit": "4a372a5c459ad60cd23b850709011cbfd0e516b4"
+}

@@ -1,0 +1,12 @@
+{
+  "alpha": 0.05,
+  "note": "Pre-outcome simulation only; actual N recorded at execution",
+  "planned_mutation_cases_min": 10,
+  "planned_mutation_cases_simulation_n": 12,
+  "rng_seed": 20260829,
+  "simulated_p_b0": 0.42,
+  "simulated_p_b3": 0.88,
+  "simulated_power_estimate": 0.9688,
+  "simulated_practical_threshold": 0.15,
+  "target_power": 0.8
+}

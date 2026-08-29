@@ -1,0 +1,27 @@
+{
+  "alpha": 0.05,
+  "bootstrap": {
+    "ci": "95% BCa",
+    "clusters": "BASE_OBJECT_ID",
+    "seed": 20260829
+  },
+  "clustered_sensitivity": "statsmodels GEE binary family cluster=BASE_OBJECT_ID",
+  "conformance_endpoints_no_pvalue": [
+    "UNMUTATED_ROUNDTRIP_IDENTITY",
+    "PROVENANCE_PRESERVATION",
+    "CONTRADICTION_PRESERVATION",
+    "TERMINAL_ACCOUNTING",
+    "SECRET_SAFETY"
+  ],
+  "effect_threshold_absolute": 0.15,
+  "multiple_comparison": "Holm FWER",
+  "omnibus": "Cochran Q",
+  "pairwise": "Exact McNemar",
+  "primary_endpoints": [
+    "CORRECT_SEMANTIC_DISPOSITION",
+    "CORRECT_DOWNSTREAM_LOCALIZATION",
+    "FALSE_SEMANTIC_PROMOTION_RATE",
+    "FALSE_CLAIM_ACCEPTANCE_RATE",
+    "TERMINAL_ACCOUNTING_RATE"
+  ]
+}
