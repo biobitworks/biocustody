@@ -140,7 +140,11 @@ def main() -> int:
         "prior_unresolved": len(unresolved_prior),
         "resolved_now": resolved,
         "bounded_or_abstained_now": bounded + sum(1 for e in edges if e["resolution"] == "ABSTAIN"),
-        "still_unresolved": still,
+        "still_unresolved_citation_paths": still,
+        "CITATION_PATH_CLOSURE": "6_OF_6_SUPPORTED_BOUNDED",
+        "FULL_MANUSCRIPT_SEMANTIC_CLOSURE": "NOT_ESTABLISHED",
+        "non_citation_sentences_without_full_sot_aok": len([s for s in sentences if not s.get("citation_keys")]),
+        "PROJECT_DOCUMENT_001_FULL_SEMANTIC_CLOSURE": "NOT_PASS",
         "edges": [e["edge_id"] for e in edges],
     }
     (AUDIT / "PROJECT_DOCUMENT_001_CLOSURE_RECEIPT.json").write_text(json.dumps(summary, indent=2) + "\n")

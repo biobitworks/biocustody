@@ -1,9 +1,9 @@
 {
   "schema": "biocustody.temporal_control_plane_receipt.v1",
-  "recorded_at_utc": "2026-08-29T09:00:47Z",
+  "recorded_at_utc": "2026-08-29T09:02:05Z",
   "branch": "audit/custody-portability-core-20260829",
-  "TURN_ID": "TURN-20260829-TCP-004",
-  "TURN_SEQUENCE": 4,
+  "TURN_ID": "TURN-20260829-TCP-005",
+  "TURN_SEQUENCE": 5,
   "HYDRADG_SCORING_IMPLEMENTATION": "hydradg/hydralamp/context_score.py (HydraLamp routing diagnostic; NOT universal DG_CONTEXT)",
   "HYDRADG_SCORING_SOURCE_SHA": "ec466ec31bb2dfb9cdd12954ed0b1fa8dd015a488725d6a33650e6b5cdaf35e6",
   "HYDRADG_SCORING_RULESET_SHA": "17a88ab076c09fcb6a21de9902ba6d153724e8f752386c8c91279e7427b187d1",
@@ -15,14 +15,20 @@
   "priority_rows": 9,
   "document_001_sentences": 24,
   "document_001_unresolved_proposition_paths": 0,
+  "CITATION_PATH_CLOSURE": "6_OF_6_SUPPORTED_BOUNDED",
+  "FULL_MANUSCRIPT_SEMANTIC_CLOSURE": "NOT_ESTABLISHED",
   "document_001_closure": {
     "schema": "biocustody.project_document_001_closure.v1",
-    "recorded_at_utc": "2026-08-29T08:59:02Z",
+    "recorded_at_utc": "2026-08-29T09:02:04Z",
     "sentence_baseline": 24,
     "prior_unresolved": 6,
     "resolved_now": 6,
     "bounded_or_abstained_now": 6,
-    "still_unresolved": 0,
+    "still_unresolved_citation_paths": 0,
+    "CITATION_PATH_CLOSURE": "6_OF_6_SUPPORTED_BOUNDED",
+    "FULL_MANUSCRIPT_SEMANTIC_CLOSURE": "NOT_ESTABLISHED",
+    "non_citation_sentences_without_full_sot_aok": 18,
+    "PROJECT_DOCUMENT_001_FULL_SEMANTIC_CLOSURE": "NOT_PASS",
     "edges": [
       "EDGE-PD001-S-0008",
       "EDGE-PD001-S-0009",
@@ -36,9 +42,5 @@
   "DAYTONA_AUTH": "VERIFIED_USABLE",
   "KAGGLE_AUTH": "VERIFIED_USABLE",
   "MISTRAL_AUTH": "NOT_FOUND",
-  "sealed_pdf_modified": false,
-  "GIT_COMMIT_WAVE": {
-    "biocustody": "10af42410490d69e8600df2b5d7e2cfaf6921c86",
-    "hydradg": "edd3ed39a8f675830c685de10d908200f1b26ac7"
-  }
+  "sealed_pdf_modified": false
 }

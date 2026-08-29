@@ -1,22 +1,60 @@
 {
-  "schema": "biocustody.cfmo_delta_receipt.v1",
-  "batch_id": "CFMO-BATCH-76fef2ed0cafce1b",
-  "recorded_at_utc": "2026-08-29T08:59:03Z",
-  "CFMO_BEFORE": "CFMO-BATCH-58f020308719471e",
+  "schema": "biocustody.cfmo_delta_receipt.v2",
+  "batch_id": "CFMO-BATCH-defbe4b9653da093",
+  "recorded_at_utc": "2026-08-29T09:02:05Z",
+  "CFMO_LINEAGE_CLASS": "NEW_ISOLATED_NAMESPACE",
+  "CFMO_NAMESPACE": "CUSTODY_PORTABILITY_AUDIT_TEMPORAL_CONTROL_PLANE",
+  "CFMO_INITIALIZATION": "NEW_ISOLATED_NAMESPACE",
+  "PREVIOUS_PROJECT_CFMO": "NOT_PART_OF_THIS_NAMESPACE",
+  "EXTERNAL_CFMO_REFERENCES": [
+    {
+      "repo": "hydradg",
+      "path": "/Users/byron/projects/active/hydradg/eval/newinml_final_daisy_20260829/execution/lane6_seedgraph/BATCH003_CFMO_UPDATE.json",
+      "content_id": "4494c4f2f3e5135a211388e35cd97e25bcedff9cbb154b403b8a2a831bf2615d",
+      "in_namespace": "false"
+    },
+    {
+      "repo": "hydradg",
+      "path": "/Users/byron/projects/active/hydradg/eval/newinml_final_daisy_20260829/execution/lane6_seedgraph/BATCH004_CFMO_UPDATE.json",
+      "content_id": "7002016532b6b01e9b05966ea70090a0fd113d94c5d7a1627dc5526bb3a3515b",
+      "in_namespace": "false"
+    },
+    {
+      "repo": "hydradg",
+      "path": "/Users/byron/projects/active/hydradg/eval/newinml_final_daisy_20260829/execution/lane6_seedgraph/BATCH_CFMO_UPDATE.json",
+      "content_id": "4c675eb04669cd4aa2f1660e5d712bca7c6a22978e01a6d1ce0adb9027e7bdff",
+      "in_namespace": "false"
+    }
+  ],
+  "CFMO_BEFORE": "CFMO-NAMESPACE-ROOT",
+  "CFMO_AFTER": "CFMO-BATCH-defbe4b9653da093",
+  "PREDECESSOR_BATCH_ID": "CFMO-BATCH-58f020308719471e",
+  "PREDECESSOR_RECEIPT_SHA256": "bc3453438b9edc5bc90da8d5bfd3751d5fd5f390a475ecee6de0fa03e391bb3b",
+  "PREDECESSOR_SHA256_NOTE": "SHA-256 of archived genesis receipt object, not MMR root",
+  "SUPERSEDED_RECEIPTS": [
+    {
+      "batch_id": "CFMO-BATCH-58f020308719471e",
+      "defect": "CFMO_BEFORE=EMPTY without namespace fields"
+    },
+    {
+      "batch_id": "CFMO-BATCH-76fef2ed0cafce1b",
+      "defect": "duplicate regeneration without lineage repair"
+    }
+  ],
   "NEW_SOURCE_SET": [
     {
       "path": "/Users/byron/projects/active/biocustody/audits/TEMPORAL_CONTROL_PLANE/CREDENTIAL_CAPABILITY_RECEIPT.json",
-      "content_id": "4bc117c5783f7faf7d6bb887cfb6816f07c56b1ad763c24a5140c7e3b2444e53",
+      "content_id": "ae479079aba6b507e3d0ea2940ccffa0f45e65d34754b1af914fce6d444b2f16",
       "secret_bytes": 0
     },
     {
       "path": "/Users/byron/projects/active/biocustody/control/CREDENTIAL_DISCOVERY_RECEIPT.json",
-      "content_id": "90ff58a46020076f96863abf3691eed1b370d2940ac5ec93a07385381458ca70",
+      "content_id": "0d7ba2e76ee302f4d83fb12c59063135e51d965012db51b4a71c3d7a4d5d2e85",
       "secret_bytes": 0
     },
     {
       "path": "/Users/byron/projects/active/biocustody/audits/TEMPORAL_CONTROL_PLANE/PROJECT_DOCUMENT_001_CLOSURE_RECEIPT.json",
-      "content_id": "bd65e286a9cfed5204060742765f99ea628313a33a3f026228336c0873e52f4d",
+      "content_id": "0fe68d1f4dc3757e3d8e8f99b5b242a4f8e9a82f497306d5b37c0698c65bb287",
       "secret_bytes": 0
     }
   ],
@@ -66,9 +104,65 @@
       "edge": "capability_probe"
     }
   ],
+  "PROOF_DOMAIN_MATRIX": [
+    {
+      "proof_domain": "SEEDGRAPH_OBJECT_PROOF",
+      "proof_subject": "custody_portability_import_objects",
+      "proof_state": "PENDING",
+      "verified_count": 0,
+      "pending_count": 21
+    },
+    {
+      "proof_domain": "CAPABILITY_AUTH_PROOF",
+      "proof_subject": "DAYTONA_API",
+      "proof_state": "VERIFIED_USABLE"
+    },
+    {
+      "proof_domain": "CAPABILITY_AUTH_PROOF",
+      "proof_subject": "KAGGLE_API",
+      "proof_state": "VERIFIED_USABLE"
+    },
+    {
+      "proof_domain": "CAPABILITY_AUTH_PROOF",
+      "proof_subject": "MISTRAL_API",
+      "proof_state": "NOT_FOUND"
+    }
+  ],
   "CONTRADICTIONS": [],
   "ABSTENTIONS": [],
   "ANTICUBE_DELTAS": [
+    {
+      "object_id": "AOK-ORG-NOTICE-001",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "EDGE-PD001-S-0008",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "AOK-CAP-MISTRAL-001",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "SOT-008",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "SOT-014",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "REFERENCE_INTEGRITY_DELTA_20260829",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "AOK-CAP-DAYTONA-001",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "AOK-CAP-KAGGLE-001",
+      "classification": "NOT_APPLICABLE"
+    },
     {
       "object_id": "AOK-ORG-NOTICE-001",
       "classification": "NOT_APPLICABLE"
@@ -148,6 +242,13 @@
       "note": "HydraLamp scorer exists but not applied to this row; claim_ceiling=CONTEXT_ROUTING_DIAGNOSTIC_ONLY",
       "object_id": "ROW-OPENREVIEW",
       "ruleset_sha256": "17a88ab076c09fcb6a21de9902ba6d153724e8f752386c8c91279e7427b187d1"
+    },
+    {
+      "DG_CONTEXT_SCORE": "NOT_ESTABLISHED",
+      "assessment_event": "NOT_RUN",
+      "note": "HydraLamp scorer exists but not applied to this row; claim_ceiling=CONTEXT_ROUTING_DIAGNOSTIC_ONLY",
+      "object_id": "ROW-OPENREVIEW",
+      "ruleset_sha256": "17a88ab076c09fcb6a21de9902ba6d153724e8f752386c8c91279e7427b187d1"
     }
   ],
   "CREDENTIAL_STATES": {
@@ -157,12 +258,16 @@
   },
   "DOCUMENT_CLOSURE": {
     "schema": "biocustody.project_document_001_closure.v1",
-    "recorded_at_utc": "2026-08-29T08:59:02Z",
+    "recorded_at_utc": "2026-08-29T09:02:04Z",
     "sentence_baseline": 24,
     "prior_unresolved": 6,
     "resolved_now": 6,
     "bounded_or_abstained_now": 6,
-    "still_unresolved": 0,
+    "still_unresolved_citation_paths": 0,
+    "CITATION_PATH_CLOSURE": "6_OF_6_SUPPORTED_BOUNDED",
+    "FULL_MANUSCRIPT_SEMANTIC_CLOSURE": "NOT_ESTABLISHED",
+    "non_citation_sentences_without_full_sot_aok": 18,
+    "PROJECT_DOCUMENT_001_FULL_SEMANTIC_CLOSURE": "NOT_PASS",
     "edges": [
       "EDGE-PD001-S-0008",
       "EDGE-PD001-S-0009",
@@ -173,6 +278,6 @@
     ]
   },
   "SECRET_BYTES_INGESTED": 0,
-  "CFMO_AFTER": "CFMO-BATCH-76fef2ed0cafce1b",
-  "MMR_CLAIMED": false
+  "MMR_CLAIMED": false,
+  "receipt_sha256": "eca3b58b8b319629d6dcd8db8428e00d1516273a5c18e8435468a390f885a972"
 }

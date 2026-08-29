@@ -1,12 +1,12 @@
 {
-  "recorded_at_utc": "2026-08-29T08:59:03Z",
-  "TURN_ID": "TURN-20260829-TCP-003",
+  "recorded_at_utc": "2026-08-29T09:02:05Z",
+  "TURN_ID": "TURN-20260829-TCP-005",
   "P0": [
     {
-      "ROW_ID": "ROW-715d653141ec",
+      "ROW_ID": "ROW-8e5cf8905e56",
       "SEMANTIC_ID": "034b1d938d9eb14a0f0eeb5e58e5cbb65a95c1f5cdd11f67a0ce7c34516cf144",
-      "TURN_ID": "TURN-20260829-TCP-003",
-      "TURN_SEQUENCE": 3,
+      "TURN_ID": "TURN-20260829-TCP-005",
+      "TURN_SEQUENCE": 5,
       "SOURCE_TYPE": "AGENT_RESULT",
       "GOAL_ID": "CUSTODY-TEMPORAL-001",
       "PLAN_ID": "AUD-TCP-20260829",
@@ -41,21 +41,21 @@
     }
   ],
   "P1": [
-    "ROW-88d0e31623df"
+    "ROW-adf5bc7b826d"
   ],
   "blocked_secret_rows": [
-    "ROW-d7f2e511c33b"
+    "ROW-42785b1c15eb"
   ],
   "CURRENT_OPERATOR_BLOCKERS": [
     {
-      "ROW_ID": "ROW-d7f2e511c33b",
+      "ROW_ID": "ROW-42785b1c15eb",
       "SECRET_TYPE": "MISTRAL_API_KEY",
       "SECRET_STATE": "REQUIRED_UNAVAILABLE",
       "PRIORITY_TIER": "P5",
       "SECRET_WAIT_TURNS": 1,
       "blocks": "MISTRAL_API_KEY",
       "value_logged": "NO",
-      "recorded_at_utc": "2026-08-29T08:59:03Z"
+      "recorded_at_utc": "2026-08-29T09:02:05Z"
     }
   ]
 }

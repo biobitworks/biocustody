@@ -346,6 +346,12 @@ def main() -> int:
         "DAYTONA_AUTH": daytona,
         "KAGGLE_AUTH": kaggle,
         "MISTRAL_AUTH": mistral,
+        "PROOF_DOMAIN_MATRIX": [
+            {"proof_domain": "SEEDGRAPH_OBJECT_PROOF", "proof_subject": "custody_portability_import_objects", "proof_state": "PENDING", "verified_count": 0, "pending_count": 21},
+            {"proof_domain": "CAPABILITY_AUTH_PROOF", "proof_subject": "DAYTONA_API", "proof_state": daytona},
+            {"proof_domain": "CAPABILITY_AUTH_PROOF", "proof_subject": "KAGGLE_API", "proof_state": kaggle},
+            {"proof_domain": "CAPABILITY_AUTH_PROOF", "proof_subject": "MISTRAL_API", "proof_state": mistral},
+        ],
         "variable_names_discovered_count": len(var_names),
         "provider_selection": provider_selection(daytona, kaggle),
         "HYDRADG_SCORING_NOTE": "DG_CONTEXT unchanged — NOT_ESTABLISHED on custody rows",

@@ -1,6 +1,6 @@
 # Temporal Control Plane Report
 
-Generated: 2026-08-29T08:59:03Z  
+Generated: 2026-08-29T09:02:05Z  
 Branch: `audit/custody-portability-core-20260829` (biocustody)  
 Sealed NewInML PDF: **NOT MODIFIED**
 
