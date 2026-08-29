@@ -1,0 +1,3 @@
+{"auth_canary": "daytona organization list", "credential_names": ["DAYTONA_API_KEY"], "provider": "DAYTONA", "terminal_verified": "VERIFIED_USABLE"}
+{"auth_canary": "kaggle api datasets/list", "credential_names": ["KAGGLE_USERNAME", "KAGGLE_KEY"], "provider": "KAGGLE", "terminal_verified": "VERIFIED_USABLE"}
+{"auth_canary": "mistral v1/models", "credential_names": ["MISTRAL_API_KEY"], "provider": "MISTRAL", "terminal_verified": "NOT_FOUND"}

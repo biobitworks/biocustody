@@ -1,0 +1,24 @@
+{
+  "object_counts": {
+    "captions": 2,
+    "citations": 0,
+    "documents": 1,
+    "edges": 68,
+    "figure_elements": 7,
+    "figure_panels": 1,
+    "figures": 1,
+    "paragraphs": 9,
+    "reference_entries": 8,
+    "sections": 9,
+    "sentences": 33,
+    "spans": 9,
+    "table_cells": 42,
+    "table_columns": 6,
+    "table_rows": 7,
+    "tables": 1
+  },
+  "recorded_at_utc": "2026-08-29T09:19:13Z",
+  "root_hash": "7383945d3c7983a96bc133b229ddff4c067ecc436857b83d2a9a72e28d8bd246",
+  "schema": "biocustody.pre_ingest_root.v1",
+  "source_commit": "4a372a5c459ad60cd23b850709011cbfd0e516b4"
+}

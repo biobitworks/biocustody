@@ -1,0 +1,19 @@
+{
+  "CONTENT_ID": "2a5b298705d1add5de24d826b775ea89cc561a5ebde85e47f96fde871e31b314",
+  "IMPORT_STATE": "IMPORTED_REFERENCE",
+  "OCCURRENCE_ID": "4ab20f5691256a9c5fbe81141c1b14efea2a00870a0e854561c1a9496ae4f5a6",
+  "PROOF_STATE": "PENDING",
+  "SEMANTIC_ID": "a138e252a2070b366709cbce2d17eb47d059cb344c68fee04e7783bdfa19e41b",
+  "object_id": "DOC-a138e252a2070b36",
+  "object_type": "Document",
+  "ordinal": 0,
+  "parent_id": null,
+  "seedgraph_hash": "a7bd4eafe3f8c30b8cbf455b1cf78a678c09de3a781f0003212d46f193e662a8",
+  "source_blob_sha": "18fd25bef4afa8165ed243978c685f8d875ba116",
+  "source_commit": "4a372a5c459ad60cd23b850709011cbfd0e516b4",
+  "source_file": "paper/newinml2026/manuscript/main.tex",
+  "source_span": {
+    "byte_end": 10322,
+    "byte_start": 0
+  }
+}

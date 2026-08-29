@@ -1,0 +1,17 @@
+{
+  "included_files": [
+    {
+      "blob_sha": "cf9e79618e4c4ff6c25bd51e143f652e43043e6a",
+      "path": "paper/newinml2026/manuscript/sections/terminology.tex"
+    },
+    {
+      "blob_sha": "cf18e70b1ee8a670e0de37962de041da69d3d345",
+      "path": "paper/newinml2026/manuscript/checklist.tex"
+    }
+  ],
+  "main_tex_blob_sha": "18fd25bef4afa8165ed243978c685f8d875ba116",
+  "references_bib_blob_sha": "0fcc9470bfedb4c01a45c02d31d535fb4440e2dc",
+  "sealed_pdf_mutation": "FORBIDDEN",
+  "source_commit": "4a372a5c459ad60cd23b850709011cbfd0e516b4",
+  "tree_sha": "a053625f6f114f27e1a9d2adfff50fa02f640aa3"
+}

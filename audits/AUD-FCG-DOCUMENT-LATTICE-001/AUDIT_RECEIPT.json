@@ -1,0 +1,759 @@
+{
+  "DELTA_CFMO": "isolated namespace extension; no project-wide CFMO rewrite",
+  "DELTA_CLAIMS": "NONE",
+  "DELTA_CONTEXT": "structural custody mapping improved; DG_CONTEXT NOT_ESTABLISHED",
+  "DELTA_FCG": "document lattice PRE/POST objects + edges materialized",
+  "DELTA_PRIORITY": "PROJECT_DOCUMENT_001_FULL_SEMANTIC_AUDIT remains P2",
+  "PRE_POST_ROUNDTRIP": {
+    "classifications": [
+      {
+        "classification": "IDENTICAL",
+        "object_id": "DOC-a138e252a2070b36",
+        "object_type": "Document"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEC-d8e6a8ad740f1ee2",
+        "object_type": "Section"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEC-f962f0dbf09bce52",
+        "object_type": "Section"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEC-d0117eead63a70cf",
+        "object_type": "Section"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEC-a537604c5a256c18",
+        "object_type": "Section"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEC-e7378f63022e5cc4",
+        "object_type": "Section"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEC-cfce8a8a72791f2e",
+        "object_type": "Section"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEC-614dc73e0fe0c63c",
+        "object_type": "Section"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEC-c4b4107155c3534b",
+        "object_type": "Section"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEC-200b35a5fc35d7c5",
+        "object_type": "Section"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "PAR-b23a524df99176b2",
+        "object_type": "Paragraph"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "PAR-a3f86dc138eac8f3",
+        "object_type": "Paragraph"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "PAR-1ec3f7c44f2e6b65",
+        "object_type": "Paragraph"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "PAR-d760dd117d83887a",
+        "object_type": "Paragraph"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "PAR-4aba639b779cade0",
+        "object_type": "Paragraph"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "PAR-25de377f50ab5003",
+        "object_type": "Paragraph"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "PAR-ce99c586f55963df",
+        "object_type": "Paragraph"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "PAR-c5f6c6cfbdfdd675",
+        "object_type": "Paragraph"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "PAR-0c60162edaede912",
+        "object_type": "Paragraph"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-9137cc18e81cf227",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-9f072ab264bfdcf3",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-b1af3956da02fb7a",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-951fa66ac6a997b2",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-5102b9ac2f669709",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-7026077715ddb8a3",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-18e3e5e6302bc921",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-a5591c7f617b4e27",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-4974339fe2cd09cf",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-21b8a2ae39836ec1",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-3da888b862a765ca",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-acf16356de5b3031",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-e5d2ff91aa045673",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-0590083d6c0c98e7",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-bfe205df0c3bb88f",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-77a80a99858c32de",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-7baae531f579b78a",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-36fd06943257de3d",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-68c1d3cbdee75dfb",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-74a78fc53f661ede",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-e7d8d61785804e68",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-5475534be2fcb1e8",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-485122650af6618c",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-72516101ab002e57",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-026e54c8ec86e3b8",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-eda4fa9abfa5655c",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-4c60045b6784b713",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-511c0840dd947344",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-6c85ee0945a2695a",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-29df24ecda37bdf9",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-cc1cac464d56f137",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-2416c1219436be50",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SEN-f12f4005a73cfaab",
+        "object_type": "Sentence"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SPN-fcba2602baf92348",
+        "object_type": "Span"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SPN-36b2e2025bfbd9ef",
+        "object_type": "Span"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SPN-df350e67272e0d63",
+        "object_type": "Span"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SPN-cee6de61d50ced52",
+        "object_type": "Span"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SPN-bce2e788d5e6a400",
+        "object_type": "Span"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SPN-a068ae59f36d9ebc",
+        "object_type": "Span"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SPN-c356d4888a250aa9",
+        "object_type": "Span"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SPN-196e57871e37680a",
+        "object_type": "Span"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "SPN-f73a53c736e4b0d2",
+        "object_type": "Span"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "REF-1503e999e6b9639c",
+        "object_type": "ReferenceEntry"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "REF-b4b24e10353ebdd4",
+        "object_type": "ReferenceEntry"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "REF-cc7345bcf0089f63",
+        "object_type": "ReferenceEntry"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "REF-9921ac3f34b18cb3",
+        "object_type": "ReferenceEntry"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "REF-3b952603683c1b82",
+        "object_type": "ReferenceEntry"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "REF-a0e6d5a4cb31bab0",
+        "object_type": "ReferenceEntry"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "REF-e12007810e46d43d",
+        "object_type": "ReferenceEntry"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "REF-b303aee3fabe799a",
+        "object_type": "ReferenceEntry"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TBL-b6cfeaac564514dc",
+        "object_type": "Table"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TROW-871d3e1a84cdf654",
+        "object_type": "TableRow"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TROW-a4ea012af199a07a",
+        "object_type": "TableRow"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TROW-2cc54d3189e37eb3",
+        "object_type": "TableRow"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TROW-f117f0f4d8f07941",
+        "object_type": "TableRow"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TROW-3784bb21cc17d91d",
+        "object_type": "TableRow"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TROW-dab06cdd0f257087",
+        "object_type": "TableRow"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TROW-e3748a99f0e81f4c",
+        "object_type": "TableRow"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCOL-86ec9b0ab8a92712",
+        "object_type": "TableColumn"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCOL-8a137e422b144be2",
+        "object_type": "TableColumn"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCOL-50ee1fb2fb9e9bb8",
+        "object_type": "TableColumn"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCOL-91584e6bcff04697",
+        "object_type": "TableColumn"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCOL-da191b24fadace49",
+        "object_type": "TableColumn"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCOL-164f7990b4148dbc",
+        "object_type": "TableColumn"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-49c4f1fab93d348a",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-4f35dbcc0600b946",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-4866fbe9d53e4172",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-ec6ce995443bb94b",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-ab0cc30f29b45645",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-16201da8b428ef4d",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-c416da3db13fe535",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-6852adafce57a653",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-3f022b567fac6d59",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-bea9e8a865e4cada",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-79c2c61bfa2f03b9",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-a1e643e6678f7654",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-06402f39b2b6ebb6",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-1473045cc6d7d122",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-5bbdbcc9f3b77dd2",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-e952c75558893cfe",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-e167aa7f447758e3",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-c79112e895423f23",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-30e672daae2c8726",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-8b4e651ab5a51da3",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-b367e4cd505f4490",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-f9cd290d4331b7a9",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-38cf1fd42cc70a50",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-a10994397dd7bc5c",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-b21cb7c8cc112016",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-c96e9e094fdf2f48",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-c7444746db3bf0b3",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-a5ad3bf4286d0801",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-4e29a54195a4df50",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-5efd9b4f5f67bc38",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-80b05b4838d3080f",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-7d0729864694f89b",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-0dd17375896c560c",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-38734c6a0397ef1b",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-d9550d15d9edd548",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-8b7dc8cb1aace628",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-55c7d63b82d45cca",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-5145327f8faf6449",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-6757b8486ea828ad",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-82d64728f2352b1d",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-7f823c14ab75c449",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "TCEL-effcf79d7c05eaad",
+        "object_type": "TableCell"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "FIG-1f00887dc17919d1",
+        "object_type": "Figure"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "FPNL-a2068dc7a89b9096",
+        "object_type": "FigurePanel"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "VEL-368331effd093e02",
+        "object_type": "VisualElement"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "VEL-b7882adbe505f7f7",
+        "object_type": "VisualElement"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "VEL-9e53e5b6ca98bc2f",
+        "object_type": "VisualElement"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "VEL-8d8434855d637a27",
+        "object_type": "VisualElement"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "VEL-79a148b51167aa16",
+        "object_type": "VisualElement"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "VEL-7e496b5a5469039d",
+        "object_type": "VisualElement"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "VEL-31742dc3e5380e72",
+        "object_type": "VisualElement"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "CAP-99672ca40aefccd1",
+        "object_type": "TableCaption"
+      },
+      {
+        "classification": "IDENTICAL",
+        "object_id": "FCAP-6bf2348af9d4e8b0",
+        "object_type": "FigureCaption"
+      }
+    ],
+    "identical": 136,
+    "mismatch": 0,
+    "terminal_accounting": 136,
+    "total_pre": 136
+  },
+  "SECRET_BYTES_INGESTED": 0,
+  "SOURCE_COMMIT": "4a372a5c459ad60cd23b850709011cbfd0e516b4",
+  "audit_id": "AUD-FCG-DOCUMENT-LATTICE-001",
+  "coverage": {
+    "AOK_SOURCE_CLOSURE": "50/56",
+    "CITATION_PROPOSITION_CLOSURE": "9 callsites",
+    "FIGURE_PROPOSITIONAL_ELEMENT_CLOSURE": "3 elements",
+    "GIT_TO_FCG_MAPPING_COVERAGE": "SOURCE_COMMIT_FROZEN",
+    "PARAGRAPH_COVERAGE": 9,
+    "PRE_POST_EDGE_COVERAGE": 68,
+    "PRE_POST_IDENTITY_COVERAGE": "136/136",
+    "PROPOSITION_COVERAGE": 56,
+    "SENTENCE_COVERAGE": 33,
+    "SOT_AOK_CLOSURE": "4/21",
+    "SOURCE_BYTE_COVERAGE": "PARTIAL_MANUSCRIPT_TEX_ONLY",
+    "STRUCTURAL_OBJECT_COVERAGE": 136,
+    "TABLE_PROPOSITIONAL_CELL_CLOSURE": "21 cells PENDING",
+    "TERMINAL_ACCOUNTING_COVERAGE": "100%"
+  },
+  "document_closure": {
+    "CITATION_PATH_CLOSURE": "6_OF_6_SUPPORTED_BOUNDED",
+    "FULL_MANUSCRIPT_SEMANTIC_CLOSURE": "NOT_ESTABLISHED",
+    "non_citation_sentences_without_full_sot_aok": 18
+  },
+  "gates": {
+    "AOK_CLOSURE_GATE": "PARTIAL",
+    "API_KEY_HARMONIZATION_GATE": "PASS",
+    "DETERMINISTIC_TOOLING_GATE": "PASS",
+    "DOCUMENT_LATTICE_STRUCTURAL_GATE": "PASS",
+    "FIGURE_CLOSURE_GATE": "PARTIAL",
+    "GIT_FCG_DELTA_GATE": "PASS",
+    "PRE_POST_ROUNDTRIP_GATE": "PASS",
+    "SEEDGRAPH_IMPORT_GATE": "PASS",
+    "SEEDGRAPH_PROOF_GATE": "PENDING",
+    "SOT_CLOSURE_GATE": "PARTIAL",
+    "TABLE_CLOSURE_GATE": "PARTIAL"
+  },
+  "proof_domain_matrix": {
+    "CAPABILITY_AUTH_PROOF": [
+      {
+        "proof_domain": "CAPABILITY_AUTH_PROOF",
+        "proof_state": "VERIFIED_USABLE",
+        "proof_subject": "DAYTONA"
+      },
+      {
+        "proof_domain": "CAPABILITY_AUTH_PROOF",
+        "proof_state": "VERIFIED_USABLE",
+        "proof_subject": "KAGGLE"
+      },
+      {
+        "proof_domain": "CAPABILITY_AUTH_PROOF",
+        "proof_state": "NOT_FOUND",
+        "proof_subject": "MISTRAL"
+      }
+    ],
+    "SEEDGRAPH_OBJECT_PROOF": {
+      "pending": 136,
+      "proof_domain": "SEEDGRAPH_OBJECT_PROOF",
+      "verified": 0
+    }
+  },
+  "recorded_at_utc": "2026-08-29T09:19:13Z",
+  "schema": "biocustody.aud_fcg_document_lattice_receipt.v1",
+  "sealed_pdf_modified": false
+}
