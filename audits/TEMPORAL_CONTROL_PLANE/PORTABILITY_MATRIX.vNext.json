@@ -104,7 +104,7 @@
   ],
   "terminal": "PARTIAL \u2014 H1 not yet demonstrated across full matrix",
   "temporal_control_plane": {
-    "added_at_utc": "2026-08-29T09:02:05Z",
+    "added_at_utc": "2026-08-29T09:19:29Z",
     "dimensions_executed_this_turn": [
       "actor:deterministic_script",
       "data:JSON"
