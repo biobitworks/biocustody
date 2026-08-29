@@ -57,3 +57,13 @@ def test_seedgraph_live_import_receipt_when_present():
     assert receipt["production_neo4j_touched"] is False
     assert receipt["objects_imported"] == 136
     assert receipt["contract_mismatches"] == 0
+
+
+def test_seedgraph_atomization_receipt_when_present():
+    receipt_path = AUDIT / "SEEDGRAPH_ATOMIZATION" / "ATOMIZATION_RECEIPT.json"
+    if not receipt_path.is_file():
+        return
+    receipt = json.loads(receipt_path.read_text())
+    assert receipt["gates"]["ATOM_EXTRACT_GATE"] == "PASS"
+    assert receipt["atom_counts"]["sentence"] > 0
+    assert receipt["production_neo4j_touched"] is False
