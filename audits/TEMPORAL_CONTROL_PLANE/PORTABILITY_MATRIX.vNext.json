@@ -1,0 +1,113 @@
+{
+  "audit_id": "AUD-CUSTODY-PORTABILITY-001",
+  "hypothesis_h0": "At least one tested substrate change requires different provenance semantics or produces incompatible semantic identities",
+  "hypothesis_h1": "Core custody semantics remain invariant; only context/adapters change",
+  "recorded_at_utc": "2026-08-29T08:30:00Z",
+  "claim_ceiling": "PARTIAL_EVIDENCE \u2014 conformance matrix incomplete; portability claim NOT VERIFIED",
+  "dimensions": {
+    "actors": [
+      {
+        "id": "deterministic_script",
+        "status": "PASS",
+        "evidence": "fcg_core pytest golden vectors"
+      },
+      {
+        "id": "human_mediated_run",
+        "status": "NOT_EXECUTED"
+      },
+      {
+        "id": "agent_mediated_run",
+        "status": "NOT_EXECUTED"
+      }
+    ],
+    "runtime": [
+      {
+        "id": "macos_arm64_python",
+        "status": "PASS",
+        "host": "magicSTUDIObox.local"
+      },
+      {
+        "id": "linux_x86_64_python",
+        "status": "NOT_EXECUTED"
+      },
+      {
+        "id": "node_canonicalization_parity",
+        "status": "PARTIAL",
+        "note": "Node canonicalize vs Python rfc8785 \u2014 cross-runtime vector pending lockstep CI"
+      }
+    ],
+    "provider": [
+      {
+        "id": "LOCAL_FILE",
+        "status": "PASS",
+        "adapter": "fcg_core.adapters.base.LocalFileAdapter"
+      },
+      {
+        "id": "HTTP_FROZEN",
+        "status": "PASS",
+        "adapter": "fcg_core.adapters.base.FrozenHttpAdapter"
+      },
+      {
+        "id": "GITHUB",
+        "status": "DESIGN_ONLY"
+      },
+      {
+        "id": "CROSSREF",
+        "status": "DESIGN_ONLY"
+      },
+      {
+        "id": "HUGGING_FACE",
+        "status": "NOT_FOUND"
+      },
+      {
+        "id": "PYPI",
+        "status": "NOT_FOUND"
+      },
+      {
+        "id": "NPM",
+        "status": "NOT_FOUND"
+      },
+      {
+        "id": "OCI_IMAGE",
+        "status": "NOT_FOUND"
+      }
+    ],
+    "data": [
+      {
+        "id": "JSON",
+        "status": "PASS"
+      },
+      {
+        "id": "CSV",
+        "status": "NOT_EXECUTED"
+      },
+      {
+        "id": "PDF",
+        "status": "DESIGN_ONLY"
+      },
+      {
+        "id": "image_OCR",
+        "status": "DESIGN_ONLY"
+      },
+      {
+        "id": "model_config",
+        "status": "NOT_EXECUTED"
+      }
+    ]
+  },
+  "negative_fixtures": [
+    "v1_sentence_tuple_collision",
+    "v1_citation_author_sort",
+    "import_pass_proof_blocked",
+    "sentence_false_edge_references_substring",
+    "file_existence_citation_map_gate"
+  ],
+  "terminal": "PARTIAL \u2014 H1 not yet demonstrated across full matrix",
+  "temporal_control_plane": {
+    "added_at_utc": "2026-08-29T09:19:29Z",
+    "dimensions_executed_this_turn": [
+      "actor:deterministic_script",
+      "data:JSON"
+    ]
+  }
+}

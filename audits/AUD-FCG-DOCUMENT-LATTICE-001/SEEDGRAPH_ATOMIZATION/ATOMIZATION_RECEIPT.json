@@ -1,0 +1,43 @@
+{
+  "PROMPT_020_STEP1": "INTERIM_BRIDGE_NOT_LIVE_CLAIM_TIER",
+  "SOURCE_COMMIT": "4a372a5c459ad60cd23b850709011cbfd0e516b4",
+  "atom_counts": {
+    "entity": 70,
+    "equation": 0,
+    "figure": 2,
+    "sentence": 259,
+    "table": 0
+  },
+  "audit_id": "AUD-FCG-DOCUMENT-LATTICE-001",
+  "claim_ceiling": "REPURPOSING_HYPOTHESIS",
+  "extraction_summary": {
+    "citations": 20,
+    "entities": 70,
+    "equations": 0,
+    "errors": [],
+    "figures": 2,
+    "sentences": 259,
+    "tables": 0
+  },
+  "gates": {
+    "ATOM_EXTRACT_GATE": "PASS",
+    "ATOM_IMPORT_GATE": "PASS",
+    "LATTICE_BRIDGE_GATE": "PASS",
+    "SENTENCE_DIAGRAM_GATE": "PASS",
+    "SOT_ATOM_COMPOSITION_GATE": "PASS"
+  },
+  "graph_mode": "live_audit_neo4j",
+  "lattice_atoms_linked": 32,
+  "map_error": null,
+  "pdf_path": "/Users/byron/projects/active/protein-hinge/paper/newinml2026/manuscript/main_smoke.pdf",
+  "pdf_role": "manuscript_smoke",
+  "pdf_sha256": "87487fd9c700ee37f82c50d65c945e7931b1c2633f709e27341d270b54178516",
+  "production_neo4j_touched": false,
+  "recorded_at_utc": "2026-08-29T09:57:45Z",
+  "schema": "biocustody.seedgraph_atomization_receipt.v1",
+  "sealed_submission_pdf_mutated": false,
+  "seed_id": "907ba0f240bd8eb00e77062a8e488b0a71244947cb472c141139beb0f8fd0e93",
+  "sot_composed": 15,
+  "sot_refused_no_atoms": 4,
+  "source_sha256": "87487fd9c700ee37f82c50d65c945e7931b1c2633f709e27341d270b54178516"
+}

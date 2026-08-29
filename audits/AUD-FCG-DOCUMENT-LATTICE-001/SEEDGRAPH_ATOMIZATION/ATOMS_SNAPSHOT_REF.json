@@ -1,0 +1,13 @@
+{
+  "atom_counts": {
+    "entity": 70,
+    "equation": 0,
+    "figure": 2,
+    "sentence": 259,
+    "table": 0
+  },
+  "seed_id": "907ba0f240bd8eb00e77062a8e488b0a71244947cb472c141139beb0f8fd0e93",
+  "sidecar_path": "87/87487fd9c700ee37f82c50d65c945e7931b1c2633f709e27341d270b54178516/atoms.snapshot.json",
+  "source_sha256": "87487fd9c700ee37f82c50d65c945e7931b1c2633f709e27341d270b54178516",
+  "store_root": "/Users/byron/projects/active/biocustody/audits/AUD-FCG-DOCUMENT-LATTICE-001/seedgraph_runtime/store"
+}

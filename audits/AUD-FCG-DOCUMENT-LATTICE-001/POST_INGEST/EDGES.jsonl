@@ -1,0 +1,68 @@
+{"edge_id": "EDGE-DOC-a138e252a2070b36-SEC-d8e6a8ad740f1ee2", "edge_type": "CONTAINS", "from": "DOC-a138e252a2070b36", "ordinal": 1, "to": "SEC-d8e6a8ad740f1ee2"}
+{"edge_id": "EDGE-SEC-d8e6a8ad740f1ee2-PAR-b23a524df99176b2", "edge_type": "CONTAINS", "from": "SEC-d8e6a8ad740f1ee2", "ordinal": 1, "to": "PAR-b23a524df99176b2"}
+{"edge_id": "EDGE-PAR-b23a524df99176b2-SEN-9137cc18e81cf227", "edge_type": "CONTAINS", "from": "PAR-b23a524df99176b2", "ordinal": 1, "to": "SEN-9137cc18e81cf227"}
+{"edge_id": "EDGE-PAR-b23a524df99176b2-SEN-9f072ab264bfdcf3", "edge_type": "CONTAINS", "from": "PAR-b23a524df99176b2", "ordinal": 2, "to": "SEN-9f072ab264bfdcf3"}
+{"edge_id": "EDGE-PAR-b23a524df99176b2-SEN-b1af3956da02fb7a", "edge_type": "CONTAINS", "from": "PAR-b23a524df99176b2", "ordinal": 3, "to": "SEN-b1af3956da02fb7a"}
+{"edge_id": "EDGE-PAR-b23a524df99176b2-SEN-951fa66ac6a997b2", "edge_type": "CONTAINS", "from": "PAR-b23a524df99176b2", "ordinal": 4, "to": "SEN-951fa66ac6a997b2"}
+{"edge_id": "EDGE-PAR-b23a524df99176b2-SEN-5102b9ac2f669709", "edge_type": "CONTAINS", "from": "PAR-b23a524df99176b2", "ordinal": 5, "to": "SEN-5102b9ac2f669709"}
+{"edge_id": "EDGE-DOC-a138e252a2070b36-SEC-f962f0dbf09bce52", "edge_type": "CONTAINS", "from": "DOC-a138e252a2070b36", "ordinal": 2, "to": "SEC-f962f0dbf09bce52"}
+{"edge_id": "EDGE-SEC-f962f0dbf09bce52-PAR-a3f86dc138eac8f3", "edge_type": "CONTAINS", "from": "SEC-f962f0dbf09bce52", "ordinal": 1, "to": "PAR-a3f86dc138eac8f3"}
+{"edge_id": "EDGE-PAR-a3f86dc138eac8f3-SEN-7026077715ddb8a3", "edge_type": "CONTAINS", "from": "PAR-a3f86dc138eac8f3", "ordinal": 1, "to": "SEN-7026077715ddb8a3"}
+{"edge_id": "EDGE-PAR-a3f86dc138eac8f3-SEN-18e3e5e6302bc921", "edge_type": "CONTAINS", "from": "PAR-a3f86dc138eac8f3", "ordinal": 2, "to": "SEN-18e3e5e6302bc921"}
+{"edge_id": "EDGE-PAR-a3f86dc138eac8f3-SEN-a5591c7f617b4e27", "edge_type": "CONTAINS", "from": "PAR-a3f86dc138eac8f3", "ordinal": 3, "to": "SEN-a5591c7f617b4e27"}
+{"citation_key": "prov_dm", "edge_id": "EDGE-SEN-a5591c7f617b4e27-SPN-fcba2602baf92348", "edge_type": "CITES", "from": "SEN-a5591c7f617b4e27", "ordinal": 0, "to": "SPN-fcba2602baf92348"}
+{"citation_key": "stodden2016", "edge_id": "EDGE-SEN-a5591c7f617b4e27-SPN-36b2e2025bfbd9ef", "edge_type": "CITES", "from": "SEN-a5591c7f617b4e27", "ordinal": 0, "to": "SPN-36b2e2025bfbd9ef"}
+{"edge_id": "EDGE-DOC-a138e252a2070b36-SEC-d0117eead63a70cf", "edge_type": "CONTAINS", "from": "DOC-a138e252a2070b36", "ordinal": 3, "to": "SEC-d0117eead63a70cf"}
+{"edge_id": "EDGE-SEC-d0117eead63a70cf-PAR-1ec3f7c44f2e6b65", "edge_type": "CONTAINS", "from": "SEC-d0117eead63a70cf", "ordinal": 1, "to": "PAR-1ec3f7c44f2e6b65"}
+{"edge_id": "EDGE-PAR-1ec3f7c44f2e6b65-SEN-4974339fe2cd09cf", "edge_type": "CONTAINS", "from": "PAR-1ec3f7c44f2e6b65", "ordinal": 1, "to": "SEN-4974339fe2cd09cf"}
+{"citation_key": "chow1970", "edge_id": "EDGE-SEN-4974339fe2cd09cf-SPN-df350e67272e0d63", "edge_type": "CITES", "from": "SEN-4974339fe2cd09cf", "ordinal": 0, "to": "SPN-df350e67272e0d63"}
+{"citation_key": "geifman2017", "edge_id": "EDGE-SEN-4974339fe2cd09cf-SPN-cee6de61d50ced52", "edge_type": "CITES", "from": "SEN-4974339fe2cd09cf", "ordinal": 0, "to": "SPN-cee6de61d50ced52"}
+{"edge_id": "EDGE-PAR-1ec3f7c44f2e6b65-SEN-21b8a2ae39836ec1", "edge_type": "CONTAINS", "from": "PAR-1ec3f7c44f2e6b65", "ordinal": 2, "to": "SEN-21b8a2ae39836ec1"}
+{"citation_key": "prov_dm", "edge_id": "EDGE-SEN-21b8a2ae39836ec1-SPN-bce2e788d5e6a400", "edge_type": "CITES", "from": "SEN-21b8a2ae39836ec1", "ordinal": 0, "to": "SPN-bce2e788d5e6a400"}
+{"edge_id": "EDGE-PAR-1ec3f7c44f2e6b65-SEN-3da888b862a765ca", "edge_type": "CONTAINS", "from": "PAR-1ec3f7c44f2e6b65", "ordinal": 3, "to": "SEN-3da888b862a765ca"}
+{"citation_key": "hgnc2021", "edge_id": "EDGE-SEN-3da888b862a765ca-SPN-a068ae59f36d9ebc", "edge_type": "CITES", "from": "SEN-3da888b862a765ca", "ordinal": 0, "to": "SPN-a068ae59f36d9ebc"}
+{"citation_key": "uniprot2023", "edge_id": "EDGE-SEN-3da888b862a765ca-SPN-c356d4888a250aa9", "edge_type": "CITES", "from": "SEN-3da888b862a765ca", "ordinal": 0, "to": "SPN-c356d4888a250aa9"}
+{"edge_id": "EDGE-PAR-1ec3f7c44f2e6b65-SEN-acf16356de5b3031", "edge_type": "CONTAINS", "from": "PAR-1ec3f7c44f2e6b65", "ordinal": 4, "to": "SEN-acf16356de5b3031"}
+{"citation_key": "nas2019", "edge_id": "EDGE-SEN-acf16356de5b3031-SPN-196e57871e37680a", "edge_type": "CITES", "from": "SEN-acf16356de5b3031", "ordinal": 0, "to": "SPN-196e57871e37680a"}
+{"edge_id": "EDGE-PAR-1ec3f7c44f2e6b65-SEN-e5d2ff91aa045673", "edge_type": "CONTAINS", "from": "PAR-1ec3f7c44f2e6b65", "ordinal": 5, "to": "SEN-e5d2ff91aa045673"}
+{"citation_key": "fda_rwe", "edge_id": "EDGE-SEN-e5d2ff91aa045673-SPN-f73a53c736e4b0d2", "edge_type": "CITES", "from": "SEN-e5d2ff91aa045673", "ordinal": 0, "to": "SPN-f73a53c736e4b0d2"}
+{"edge_id": "EDGE-DOC-a138e252a2070b36-SEC-a537604c5a256c18", "edge_type": "CONTAINS", "from": "DOC-a138e252a2070b36", "ordinal": 4, "to": "SEC-a537604c5a256c18"}
+{"edge_id": "EDGE-SEC-a537604c5a256c18-PAR-d760dd117d83887a", "edge_type": "CONTAINS", "from": "SEC-a537604c5a256c18", "ordinal": 1, "to": "PAR-d760dd117d83887a"}
+{"edge_id": "EDGE-PAR-d760dd117d83887a-SEN-0590083d6c0c98e7", "edge_type": "CONTAINS", "from": "PAR-d760dd117d83887a", "ordinal": 1, "to": "SEN-0590083d6c0c98e7"}
+{"edge_id": "EDGE-PAR-d760dd117d83887a-SEN-bfe205df0c3bb88f", "edge_type": "CONTAINS", "from": "PAR-d760dd117d83887a", "ordinal": 2, "to": "SEN-bfe205df0c3bb88f"}
+{"edge_id": "EDGE-DOC-a138e252a2070b36-SEC-e7378f63022e5cc4", "edge_type": "CONTAINS", "from": "DOC-a138e252a2070b36", "ordinal": 5, "to": "SEC-e7378f63022e5cc4"}
+{"edge_id": "EDGE-SEC-e7378f63022e5cc4-PAR-4aba639b779cade0", "edge_type": "CONTAINS", "from": "SEC-e7378f63022e5cc4", "ordinal": 1, "to": "PAR-4aba639b779cade0"}
+{"edge_id": "EDGE-PAR-4aba639b779cade0-SEN-77a80a99858c32de", "edge_type": "CONTAINS", "from": "PAR-4aba639b779cade0", "ordinal": 1, "to": "SEN-77a80a99858c32de"}
+{"edge_id": "EDGE-PAR-4aba639b779cade0-SEN-7baae531f579b78a", "edge_type": "CONTAINS", "from": "PAR-4aba639b779cade0", "ordinal": 2, "to": "SEN-7baae531f579b78a"}
+{"edge_id": "EDGE-PAR-4aba639b779cade0-SEN-36fd06943257de3d", "edge_type": "CONTAINS", "from": "PAR-4aba639b779cade0", "ordinal": 3, "to": "SEN-36fd06943257de3d"}
+{"edge_id": "EDGE-PAR-4aba639b779cade0-SEN-68c1d3cbdee75dfb", "edge_type": "CONTAINS", "from": "PAR-4aba639b779cade0", "ordinal": 4, "to": "SEN-68c1d3cbdee75dfb"}
+{"edge_id": "EDGE-PAR-4aba639b779cade0-SEN-74a78fc53f661ede", "edge_type": "CONTAINS", "from": "PAR-4aba639b779cade0", "ordinal": 5, "to": "SEN-74a78fc53f661ede"}
+{"edge_id": "EDGE-PAR-4aba639b779cade0-SEN-e7d8d61785804e68", "edge_type": "CONTAINS", "from": "PAR-4aba639b779cade0", "ordinal": 6, "to": "SEN-e7d8d61785804e68"}
+{"edge_id": "EDGE-DOC-a138e252a2070b36-SEC-cfce8a8a72791f2e", "edge_type": "CONTAINS", "from": "DOC-a138e252a2070b36", "ordinal": 6, "to": "SEC-cfce8a8a72791f2e"}
+{"edge_id": "EDGE-SEC-cfce8a8a72791f2e-PAR-25de377f50ab5003", "edge_type": "CONTAINS", "from": "SEC-cfce8a8a72791f2e", "ordinal": 1, "to": "PAR-25de377f50ab5003"}
+{"edge_id": "EDGE-PAR-25de377f50ab5003-SEN-5475534be2fcb1e8", "edge_type": "CONTAINS", "from": "PAR-25de377f50ab5003", "ordinal": 1, "to": "SEN-5475534be2fcb1e8"}
+{"edge_id": "EDGE-DOC-a138e252a2070b36-SEC-614dc73e0fe0c63c", "edge_type": "CONTAINS", "from": "DOC-a138e252a2070b36", "ordinal": 7, "to": "SEC-614dc73e0fe0c63c"}
+{"edge_id": "EDGE-SEC-614dc73e0fe0c63c-PAR-ce99c586f55963df", "edge_type": "CONTAINS", "from": "SEC-614dc73e0fe0c63c", "ordinal": 1, "to": "PAR-ce99c586f55963df"}
+{"edge_id": "EDGE-PAR-ce99c586f55963df-SEN-485122650af6618c", "edge_type": "CONTAINS", "from": "PAR-ce99c586f55963df", "ordinal": 1, "to": "SEN-485122650af6618c"}
+{"edge_id": "EDGE-PAR-ce99c586f55963df-SEN-72516101ab002e57", "edge_type": "CONTAINS", "from": "PAR-ce99c586f55963df", "ordinal": 2, "to": "SEN-72516101ab002e57"}
+{"edge_id": "EDGE-DOC-a138e252a2070b36-SEC-c4b4107155c3534b", "edge_type": "CONTAINS", "from": "DOC-a138e252a2070b36", "ordinal": 8, "to": "SEC-c4b4107155c3534b"}
+{"edge_id": "EDGE-SEC-c4b4107155c3534b-PAR-c5f6c6cfbdfdd675", "edge_type": "CONTAINS", "from": "SEC-c4b4107155c3534b", "ordinal": 1, "to": "PAR-c5f6c6cfbdfdd675"}
+{"edge_id": "EDGE-PAR-c5f6c6cfbdfdd675-SEN-026e54c8ec86e3b8", "edge_type": "CONTAINS", "from": "PAR-c5f6c6cfbdfdd675", "ordinal": 1, "to": "SEN-026e54c8ec86e3b8"}
+{"edge_id": "EDGE-PAR-c5f6c6cfbdfdd675-SEN-eda4fa9abfa5655c", "edge_type": "CONTAINS", "from": "PAR-c5f6c6cfbdfdd675", "ordinal": 2, "to": "SEN-eda4fa9abfa5655c"}
+{"edge_id": "EDGE-PAR-c5f6c6cfbdfdd675-SEN-4c60045b6784b713", "edge_type": "CONTAINS", "from": "PAR-c5f6c6cfbdfdd675", "ordinal": 3, "to": "SEN-4c60045b6784b713"}
+{"edge_id": "EDGE-PAR-c5f6c6cfbdfdd675-SEN-511c0840dd947344", "edge_type": "CONTAINS", "from": "PAR-c5f6c6cfbdfdd675", "ordinal": 4, "to": "SEN-511c0840dd947344"}
+{"edge_id": "EDGE-PAR-c5f6c6cfbdfdd675-SEN-6c85ee0945a2695a", "edge_type": "CONTAINS", "from": "PAR-c5f6c6cfbdfdd675", "ordinal": 5, "to": "SEN-6c85ee0945a2695a"}
+{"edge_id": "EDGE-PAR-c5f6c6cfbdfdd675-SEN-29df24ecda37bdf9", "edge_type": "CONTAINS", "from": "PAR-c5f6c6cfbdfdd675", "ordinal": 6, "to": "SEN-29df24ecda37bdf9"}
+{"edge_id": "EDGE-PAR-c5f6c6cfbdfdd675-SEN-cc1cac464d56f137", "edge_type": "CONTAINS", "from": "PAR-c5f6c6cfbdfdd675", "ordinal": 7, "to": "SEN-cc1cac464d56f137"}
+{"edge_id": "EDGE-DOC-a138e252a2070b36-SEC-200b35a5fc35d7c5", "edge_type": "CONTAINS", "from": "DOC-a138e252a2070b36", "ordinal": 9, "to": "SEC-200b35a5fc35d7c5"}
+{"edge_id": "EDGE-SEC-200b35a5fc35d7c5-PAR-0c60162edaede912", "edge_type": "CONTAINS", "from": "SEC-200b35a5fc35d7c5", "ordinal": 1, "to": "PAR-0c60162edaede912"}
+{"edge_id": "EDGE-PAR-0c60162edaede912-SEN-2416c1219436be50", "edge_type": "CONTAINS", "from": "PAR-0c60162edaede912", "ordinal": 1, "to": "SEN-2416c1219436be50"}
+{"edge_id": "EDGE-PAR-0c60162edaede912-SEN-f12f4005a73cfaab", "edge_type": "CONTAINS", "from": "PAR-0c60162edaede912", "ordinal": 2, "to": "SEN-f12f4005a73cfaab"}
+{"edge_id": "EDGE-DOC-REF-prov_dm", "edge_type": "REFERENCES", "from": "DOC-a138e252a2070b36", "ordinal": 1, "to": "REF-1503e999e6b9639c"}
+{"edge_id": "EDGE-DOC-REF-chow1970", "edge_type": "REFERENCES", "from": "DOC-a138e252a2070b36", "ordinal": 2, "to": "REF-b4b24e10353ebdd4"}
+{"edge_id": "EDGE-DOC-REF-geifman2017", "edge_type": "REFERENCES", "from": "DOC-a138e252a2070b36", "ordinal": 3, "to": "REF-cc7345bcf0089f63"}
+{"edge_id": "EDGE-DOC-REF-nas2019", "edge_type": "REFERENCES", "from": "DOC-a138e252a2070b36", "ordinal": 4, "to": "REF-9921ac3f34b18cb3"}
+{"edge_id": "EDGE-DOC-REF-fda_rwe", "edge_type": "REFERENCES", "from": "DOC-a138e252a2070b36", "ordinal": 5, "to": "REF-3b952603683c1b82"}
+{"edge_id": "EDGE-DOC-REF-hgnc2021", "edge_type": "REFERENCES", "from": "DOC-a138e252a2070b36", "ordinal": 6, "to": "REF-a0e6d5a4cb31bab0"}
+{"edge_id": "EDGE-DOC-REF-uniprot2023", "edge_type": "REFERENCES", "from": "DOC-a138e252a2070b36", "ordinal": 7, "to": "REF-e12007810e46d43d"}
+{"edge_id": "EDGE-DOC-REF-stodden2016", "edge_type": "REFERENCES", "from": "DOC-a138e252a2070b36", "ordinal": 8, "to": "REF-b303aee3fabe799a"}

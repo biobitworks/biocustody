@@ -11,3 +11,4 @@ data/external/*
 *.mp3
 *.wav
 .DS_Store
+audits/**/seedgraph_runtime/

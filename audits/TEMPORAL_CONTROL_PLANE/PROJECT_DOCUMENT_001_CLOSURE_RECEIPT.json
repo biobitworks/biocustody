@@ -1,0 +1,21 @@
+{
+  "schema": "biocustody.project_document_001_closure.v1",
+  "recorded_at_utc": "2026-08-29T09:02:04Z",
+  "sentence_baseline": 24,
+  "prior_unresolved": 6,
+  "resolved_now": 6,
+  "bounded_or_abstained_now": 6,
+  "still_unresolved_citation_paths": 0,
+  "CITATION_PATH_CLOSURE": "6_OF_6_SUPPORTED_BOUNDED",
+  "FULL_MANUSCRIPT_SEMANTIC_CLOSURE": "NOT_ESTABLISHED",
+  "non_citation_sentences_without_full_sot_aok": 18,
+  "PROJECT_DOCUMENT_001_FULL_SEMANTIC_CLOSURE": "NOT_PASS",
+  "edges": [
+    "EDGE-PD001-S-0008",
+    "EDGE-PD001-S-0009",
+    "EDGE-PD001-S-0010",
+    "EDGE-PD001-S-0011",
+    "EDGE-PD001-S-0012",
+    "EDGE-PD001-S-0013"
+  ]
+}

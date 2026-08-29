@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://biocustody.local/schemas/receipt.schema.json",
+  "title": "CustodyReceipt",
+  "type": "object",
+  "required": ["schema_version", "receipt_id", "bound_hashes"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "receipt_id": { "type": "string" },
+    "bound_hashes": {
+      "type": "object",
+      "properties": {
+        "source_manifest_sha256": { "type": "string" },
+        "schemas_sha256": { "type": "string" },
+        "ruleset_sha256": { "type": "string" },
+        "validation_core_sha256": { "type": "string" },
+        "dependency_locks_sha256": { "type": "string" },
+        "citation_authority_receipt_sha256": { "type": "string" },
+        "semantic_sentence_citation_receipt_sha256": { "type": "string" },
+        "seedgraph_import_receipt_sha256": { "type": "string" },
+        "proof_closure_receipt_sha256": { "type": "string" },
+        "final_artifact_sha256": { "type": "string" },
+        "bundle_manifest_sha256": { "type": "string" }
+      }
+    },
+    "git_sha": { "type": "string" },
+    "note": { "type": "string" }
+  },
+  "additionalProperties": false
+}

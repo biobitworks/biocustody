@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://biocustody.local/schemas/semantic_atom.schema.json",
+  "title": "SemanticAtom",
+  "type": "object",
+  "required": ["schema_version", "domain", "semantic_id", "semantic_payload"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "domain": { "type": "string" },
+    "semantic_id": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "semantic_payload": { "type": "object" },
+    "canonicalization": {
+      "type": "string",
+      "const": "rfc8785_jcs_v2"
+    }
+  },
+  "additionalProperties": false
+}

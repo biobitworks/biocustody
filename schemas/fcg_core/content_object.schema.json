@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://biocustody.local/schemas/content_object.schema.json",
+  "title": "ContentObject",
+  "type": "object",
+  "required": ["schema_version", "content_id", "byte_count", "media_type"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "content_id": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "byte_count": { "type": "integer", "minimum": 0 },
+    "media_type": { "type": "string" },
+    "canonicalization": {
+      "type": "string",
+      "enum": ["seedgraph_canonical_v1", "rfc8785_jcs_v2", "raw_bytes"]
+    }
+  },
+  "additionalProperties": false
+}
