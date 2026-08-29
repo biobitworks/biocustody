@@ -1,0 +1,84 @@
+{
+  "recorded_at_utc": "2026-08-29T08:42:14Z",
+  "TURN_ID": "TURN-20260829-TCP-001",
+  "P0": [
+    {
+      "ROW_ID": "ROW-adf8ebbf3c84",
+      "SEMANTIC_ID": "034b1d938d9eb14a0f0eeb5e58e5cbb65a95c1f5cdd11f67a0ce7c34516cf144",
+      "TURN_ID": "TURN-20260829-TCP-001",
+      "TURN_SEQUENCE": 1,
+      "SOURCE_TYPE": "AGENT_RESULT",
+      "GOAL_ID": "CUSTODY-TEMPORAL-001",
+      "PLAN_ID": "AUD-TCP-20260829",
+      "WORKSTREAM": "fcg_temporal_control_plane",
+      "TASK": "OPENREVIEW_OPERATOR_UPLOAD",
+      "EXPECTED_OUTPUT": "terminal closure for OPENREVIEW_OPERATOR_UPLOAD",
+      "PRIORITY_TIER": "P0",
+      "PRIORITY_REASON": "Submission seal READY_FOR_OPERATOR_SUBMISSION; upload blocks final PASS",
+      "CRITICAL_PATH": true,
+      "DEADLINE": "2026-08-29T08:59:00Z",
+      "SECRET_STATE": "NOT_REQUIRED",
+      "SECRET_TYPE": null,
+      "SECRET_WAIT_TURNS": 0,
+      "DEPENDENCY_ROWS": [],
+      "BLOCKED_BY": [],
+      "DG_CONTEXT_SCORE": "NOT_ESTABLISHED",
+      "DG_CONTEXT_DELTA": null,
+      "DG_CONTEXT_RULESET": null,
+      "ANTICUBE_CLASS": "NOT_EVALUATED",
+      "ANTICUBE_RECEIPT_ID": null,
+      "EVIDENCE_CLASS": "DETERMINISTIC_COMPUTATION",
+      "IMPORT_STATE": "IMPORTED_CONTENT",
+      "PROOF_STATE": "PENDING",
+      "AOK_IDS": [],
+      "SOT_IDS": [],
+      "FCO_IDS": [],
+      "FCG_EDGES": [],
+      "CLAIM_CEILING": "OPERATOR_GATE",
+      "TERMINAL_STATE": "ACTIVE",
+      "SUPERSEDES_ROW": null,
+      "SUPERSEDED_BY_ROW": null
+    }
+  ],
+  "P1": [
+    "ROW-113514d83d1e",
+    "ROW-0563d8182d2a",
+    "ROW-90ee97182f85"
+  ],
+  "blocked_secret_rows": [
+    "ROW-0563d8182d2a",
+    "ROW-90ee97182f85"
+  ],
+  "CURRENT_OPERATOR_BLOCKERS": [
+    {
+      "ROW_ID": "ROW-0563d8182d2a",
+      "SECRET_TYPE": "DAYTONA_API_KEY",
+      "SECRET_STATE": "REQUIRED_UNAVAILABLE",
+      "PRIORITY_TIER": "P1",
+      "SECRET_WAIT_TURNS": 1,
+      "blocks": "SGLANG_REMOTE_CANARY",
+      "value_logged": "NO",
+      "recorded_at_utc": "2026-08-29T08:42:14Z"
+    },
+    {
+      "ROW_ID": "ROW-90ee97182f85",
+      "SECRET_TYPE": "KAGGLE_AUTH",
+      "SECRET_STATE": "REQUIRED_UNAVAILABLE",
+      "PRIORITY_TIER": "P1",
+      "SECRET_WAIT_TURNS": 1,
+      "blocks": "KAGGLE_AUTH",
+      "value_logged": "NO",
+      "recorded_at_utc": "2026-08-29T08:42:14Z"
+    },
+    {
+      "ROW_ID": "ROW-c3580fc9f1d0",
+      "SECRET_TYPE": "MISTRAL_API_KEY",
+      "SECRET_STATE": "REQUIRED_UNAVAILABLE",
+      "PRIORITY_TIER": "P3",
+      "SECRET_WAIT_TURNS": 1,
+      "blocks": "MISTRAL_API_KEY",
+      "value_logged": "NO",
+      "recorded_at_utc": "2026-08-29T08:42:14Z"
+    }
+  ]
+}

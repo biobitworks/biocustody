@@ -1,0 +1,17 @@
+{
+  "schema": "biocustody.temporal_control_plane_receipt.v1",
+  "recorded_at_utc": "2026-08-29T08:42:14Z",
+  "branch": "audit/custody-portability-core-20260829",
+  "HYDRADG_SCORING_IMPLEMENTATION": "hydradg/hydralamp/context_score.py (HydraLamp routing diagnostic; NOT universal DG_CONTEXT)",
+  "HYDRADG_SCORING_SOURCE_SHA": "ec466ec31bb2dfb9cdd12954ed0b1fa8dd015a488725d6a33650e6b5cdaf35e6",
+  "HYDRADG_SCORING_RULESET_SHA": "17a88ab076c09fcb6a21de9902ba6d153724e8f752386c8c91279e7427b187d1",
+  "HYDRADG_REPO_SHA": "94801dc3b58ddc874f336a016d0aba0477c2b191",
+  "ANTICUBE_IMPLEMENTATION": "hydradg/scripts/classify_ic_failure_anticube.py (IC failure-learning scoped)",
+  "ANTICUBE_RULESET_SHA": "d48e1daa8582cc1ee938b931c8a4852e0d2b759f4c39d80266d559af3a8681b4",
+  "ANTICUBE_CLASSIFIER_VERSION": "hydradg-ic-failure-anticube-1.0.0",
+  "DG_CONTEXT_SCORING_CLAIM_CEILING": "NOT_ESTABLISHED for custody-plane rows unless HydraLamp scorer invoked",
+  "priority_rows": 9,
+  "document_001_sentences": 24,
+  "document_001_unresolved_proposition_paths": 6,
+  "sealed_pdf_modified": false
+}

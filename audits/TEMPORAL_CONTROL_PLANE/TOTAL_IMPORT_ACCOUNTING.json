@@ -1,0 +1,19 @@
+{
+  "scope": "CUSTODY_PORTABILITY_AUDIT",
+  "explicit_scope_note": "NOT TOTAL_PROJECT_IMPORT",
+  "candidate_sources": 17,
+  "unique_source_content_ids": 17,
+  "imported": 17,
+  "duplicates": 0,
+  "excluded": 0,
+  "unavailable": 0,
+  "failed": 0,
+  "quarantined": 0,
+  "proof_verified": 0,
+  "proof_pending": 17,
+  "proof_blocked": 0,
+  "orphan_atoms": 0,
+  "orphan_edges": 0,
+  "seedgraph_head_custody_sha256": "6807b1960dd1e981afbf13e79c2f29c3d803b79a",
+  "replay_binding": "PENDING_SOURCE_TREE_PACKAGE"
+}
