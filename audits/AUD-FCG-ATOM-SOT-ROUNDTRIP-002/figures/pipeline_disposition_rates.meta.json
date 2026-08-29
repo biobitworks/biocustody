@@ -1,0 +1,8 @@
+{
+  "figure": "pipeline_disposition_rates.png",
+  "generator": "/Users/byron/projects/active/biocustody/scripts/run_atom_sot_roundtrip_002.py",
+  "generator_sha256": "90b8d3c4faec41a28a980b8e0fa5b21ddbe52c5658a23795adb39aecf158174a",
+  "input_data_sha256": "826500db07889dcd7b419f594cfdc2c6b04528c584d7f069552a8ac0120bbc9d",
+  "rendered_sha256": "df5d3698572c9cddd76849e93f0723a3f167bd6cfb66af0972831be4983c3329",
+  "transformation_id": "FIG-PIPELINE-DISPOSITION-001"
+}

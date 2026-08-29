@@ -1,0 +1,22 @@
+{
+  "FINAL_VALIDATION_COLOR": "YELLOW",
+  "conformance_pass": true,
+  "gates": {
+    "A_lattice_intact": true,
+    "B_atom_v2_deterministic": true,
+    "C_identifier_fixtures": true,
+    "D_aok_lineage": true,
+    "E_sot_lineage": true,
+    "F_sot_008_014_bounded": true,
+    "G_seedgraph_roundtrip_complete": true,
+    "H_no_unexplained_loss": true,
+    "I_terminal_accounting_100": true,
+    "J_b3_superior_b0": false,
+    "K_b3_superior_b1": false,
+    "L_b3_reduces_false_accept_vs_b2": true,
+    "M_benign_target": true,
+    "N_secret_safety": true,
+    "O_no_production_contamination": true
+  },
+  "inferential_pass": false
+}

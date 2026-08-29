@@ -1,0 +1,48 @@
+{
+  "pipeline_summary": {
+    "B0_CRYPTO_CUSTODY_ONLY": {
+      "ci_95": [
+        0.2914343243183205,
+        0.7679424569851186
+      ],
+      "correct_semantic_disposition_rate": 0.5384615384615384,
+      "false_claim_acceptance_rate": 0.23076923076923078,
+      "false_semantic_promotion_rate": 0.15384615384615385,
+      "n": 13,
+      "terminal_accounting_rate": 1.0
+    },
+    "B1_STRUCTURAL_LATTICE": {
+      "ci_95": [
+        0.12680497161618087,
+        0.5763111218666236
+      ],
+      "correct_semantic_disposition_rate": 0.3076923076923077,
+      "false_claim_acceptance_rate": 0.23076923076923078,
+      "false_semantic_promotion_rate": 0.0,
+      "n": 13,
+      "terminal_accounting_rate": 1.0
+    },
+    "B2_VERIFY_ONLY_NO_ABSTAIN": {
+      "ci_95": [
+        0.0,
+        0.22810184305529166
+      ],
+      "correct_semantic_disposition_rate": 0.0,
+      "false_claim_acceptance_rate": 0.46153846153846156,
+      "false_semantic_promotion_rate": 0.23076923076923078,
+      "n": 13,
+      "terminal_accounting_rate": 1.0
+    },
+    "B3_FULL_VERIFY_OR_ABSTAIN": {
+      "ci_95": [
+        0.7718981569447083,
+        1.0
+      ],
+      "correct_semantic_disposition_rate": 1.0,
+      "false_claim_acceptance_rate": 0.0,
+      "false_semantic_promotion_rate": 0.0,
+      "n": 13,
+      "terminal_accounting_rate": 1.0
+    }
+  }
+}

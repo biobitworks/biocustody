@@ -1,0 +1,21 @@
+{
+  "identical": 179,
+  "post_count": 175,
+  "pre_count": 179,
+  "receipt": {
+    "IMPORT_STATE": "IMPORTED_LIVE",
+    "PROOF_STATE": "VERIFIED",
+    "attempted": 179,
+    "audit_id": "AUD-FCG-ATOM-SOT-ROUNDTRIP-002",
+    "expected": 179,
+    "ledger_db": "/Users/byron/projects/active/biocustody/audits/AUD-FCG-ATOM-SOT-ROUNDTRIP-002/seedgraph_runtime/provenance_roundtrip_002.db",
+    "neo4j_uri": "bolt://localhost:17687",
+    "production_neo4j_touched": false,
+    "read_back": 175,
+    "recorded_at_utc": "2026-08-29T10:04:27Z",
+    "schema": "biocustody.seedgraph_atom_v2_roundtrip.v1",
+    "terminal_accounting_rate": 1.0,
+    "terminal_identical": 179,
+    "written": 179
+  }
+}

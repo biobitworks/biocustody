@@ -1,0 +1,13 @@
+mutation_family,N,B0_CRYPTO_CUSTODY_ONLY,B1_STRUCTURAL_LATTICE,B2_VERIFY_ONLY_NO_ABSTAIN,B3_FULL_VERIFY_OR_ABSTAIN,B3_minus_B0,B3_minus_B1,B3_minus_B2
+attestation,1,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+contradiction,1,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+deletion,1,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+duplication,1,1.0,1.0,0.0,1.0,0.0,0.0,1.0
+gain-of-function,1,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+insertion,1,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+provenance,1,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+recombination,1,0.0,0.0,0.0,1.0,1.0,1.0,1.0
+substitution,1,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+synonymous,2,0.0,1.0,0.0,1.0,1.0,0.0,1.0
+table/figure,1,1.0,0.0,0.0,1.0,0.0,1.0,1.0
+transposition,1,0.0,1.0,0.0,1.0,1.0,0.0,1.0

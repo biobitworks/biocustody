@@ -1,0 +1,23 @@
+# FCG Atom/SOT Statistical Validation
+
+Audit: `AUD-FCG-ATOM-SOT-ROUNDTRIP-002`
+Recorded: 2026-08-29T10:04:32Z
+
+## Mutation benchmark
+- N mutations: 13
+- Cluster count: 12
+
+## Pipeline summary
+- **B0_CRYPTO_CUSTODY_ONLY**: semantic disposition 53.85% (95% CI (0.2914343243183205, 0.7679424569851186))
+- **B1_STRUCTURAL_LATTICE**: semantic disposition 30.77% (95% CI (0.12680497161618087, 0.5763111218666236))
+- **B2_VERIFY_ONLY_NO_ABSTAIN**: semantic disposition 0.00% (95% CI (0.0, 0.22810184305529166))
+- **B3_FULL_VERIFY_OR_ABSTAIN**: semantic disposition 100.00% (95% CI (0.7718981569447083, 1.0))
+
+## Hypothesis terminals
+- **H0-CUSTODY-SUFFICIENCY**: FAIL_TO_REJECT_H0
+- **H0-STRUCTURE-SUFFICIENCY**: FAIL_TO_REJECT_H0
+- **H0-ABSTENTION-NO-VALUE**: FAIL_TO_REJECT_H0
+- **H0-BENIGN-INVARIANCE**: PASS
+- **H0-SEEDGRAPH-LOSS**: DEFERRED_TO_CONFORMANCE
+
+## Final validation color: **YELLOW**

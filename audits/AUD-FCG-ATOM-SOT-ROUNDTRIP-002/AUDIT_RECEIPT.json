@@ -1,0 +1,35 @@
+{
+  "FINAL_VALIDATION_COLOR": "YELLOW",
+  "PREREGISTRATION_GIT_SHA": "17f38c693424147fe1ca922e5d1ec6cb185c799d",
+  "PREREGISTRATION_SHA256": "60389d29dad42f14f48d4d0de42744bc74db90de441027c9be2c327cf6a7ff7d",
+  "aok_v2_count": 77,
+  "atom_v2_count": 81,
+  "audit_id": "AUD-FCG-ATOM-SOT-ROUNDTRIP-002",
+  "execution_git_sha": "f51116434bbf00c733da72f2e1e2746fddf23558",
+  "host": "magicSTUDIObox.local",
+  "mutation_n": 13,
+  "recorded_at_utc": "2026-08-29T10:04:32Z",
+  "schema": "biocustody.audit_receipt.v1",
+  "scientific_terminal": "UNDERPOWERED",
+  "secret_scan": {
+    "SECRET_SAFETY": "PASS",
+    "hits": []
+  },
+  "seedgraph_live": {
+    "IMPORT_STATE": "IMPORTED_LIVE",
+    "PROOF_STATE": "VERIFIED",
+    "attempted": 179,
+    "audit_id": "AUD-FCG-ATOM-SOT-ROUNDTRIP-002",
+    "expected": 179,
+    "ledger_db": "/Users/byron/projects/active/biocustody/audits/AUD-FCG-ATOM-SOT-ROUNDTRIP-002/seedgraph_runtime/provenance_roundtrip_002.db",
+    "neo4j_uri": "bolt://localhost:17687",
+    "production_neo4j_touched": false,
+    "read_back": 175,
+    "recorded_at_utc": "2026-08-29T10:04:27Z",
+    "schema": "biocustody.seedgraph_atom_v2_roundtrip.v1",
+    "terminal_accounting_rate": 1.0,
+    "terminal_identical": 179,
+    "written": 179
+  },
+  "sot_v2_count": 21
+}

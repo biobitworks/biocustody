@@ -1,0 +1,4 @@
+{
+  "reason": "statsmodels unavailable or empty df",
+  "status": "FAILED"
+}

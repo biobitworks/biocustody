@@ -212,10 +212,22 @@ def generate_mutation_manifest(
     rows: list[dict[str, Any]] = []
     idx = 0
 
-    def add(family: str, base: dict, base_type: str, operator: str, fn: Callable[..., tuple], *args: Any) -> None:
+    def add(
+        family: str,
+        base: dict,
+        base_type: str,
+        operator: str,
+        fn: Callable[..., tuple],
+        fn_args: tuple[Any, ...] | None = None,
+    ) -> None:
         nonlocal idx
         idx += 1
-        mutated, gt = fn(*args) if args else fn(base)
+        if fn_args is None:
+            mutated, gt = fn(base)
+        elif len(fn_args) == 0:
+            mutated, gt = fn()
+        else:
+            mutated, gt = fn(*fn_args)
         mid = _mid("MUT", base.get("object_id") or base.get("SOT_ID") or "ctx", family, idx)
         rows.append(
             {
@@ -233,29 +245,43 @@ def generate_mutation_manifest(
 
     if sentences:
         s0, s1, s2, s3 = sentences[0], sentences[1], sentences[2], sentences[3]
-        add("synonymous", s0, "Sentence", "whitespace", mutate_whitespace_synonymous, s0)
-        add("substitution", s1, "Sentence", "numeric_term", mutate_substitution_numeric, s1)
-        add("insertion", s2, "Sentence", "unsupported_qualifier", mutate_insertion_unsupported_claim, s2)
-        add("duplication", s3, "Sentence", "reingest_alias", mutate_duplication_reingest, s3)
+        add("synonymous", s0, "Sentence", "whitespace", mutate_whitespace_synonymous, fn_args=(s0,))
+        add("substitution", s1, "Sentence", "numeric_term", mutate_substitution_numeric, fn_args=(s1,))
+        add("insertion", s2, "Sentence", "unsupported_qualifier", mutate_insertion_unsupported_claim, fn_args=(s2,))
+        add("duplication", s3, "Sentence", "reingest_alias", mutate_duplication_reingest, fn_args=(s3,))
         if len(sentences) > 4:
-            add("transposition", sentences[4], "Sentence", "wrong_parent", mutate_transposition_parent, sentences[4], wrong_parent)
+            add("transposition", sentences[4], "Sentence", "wrong_parent", mutate_transposition_parent, fn_args=(sentences[4], wrong_parent))
         if len(sentences) > 5:
-            add("gain-of-function", sentences[5], "Atom", "pending_to_verified", mutate_gain_of_function_verify, sentences[5])
+            add("gain-of-function", sentences[5], "Atom", "pending_to_verified", mutate_gain_of_function_verify, fn_args=(sentences[5],))
         if len(sentences) > 6:
-            add("provenance", sentences[6], "Sentence", "wrong_git_commit", mutate_provenance_wrong_commit, sentences[6])
+            add("provenance", sentences[6], "Sentence", "wrong_git_commit", mutate_provenance_wrong_commit, fn_args=(sentences[6],))
 
-    add("synonymous", {"presentation": "doi:10.1038/s41586-019-1799-4"}, "Identifier", "doi_presentation", mutate_doi_presentation_synonymous)
+    add(
+        "synonymous",
+        {"presentation": "doi:10.1038/s41586-019-1799-4", "object_id": "ID-doi-fixture"},
+        "Identifier",
+        "doi_presentation",
+        mutate_doi_presentation_synonymous,
+        fn_args=(),
+    )
 
     if table_cells:
-        add("table/figure", table_cells[0], "TableCell", "cell_value", mutate_table_cell_value, table_cells[0])
+        add("table/figure", table_cells[0], "TableCell", "cell_value", mutate_table_cell_value, fn_args=(table_cells[0],))
 
     sot_keys = list(sot_ctx.keys())
     if sot_keys:
         sk = sot_keys[0]
-        add("deletion", sot_ctx[sk], "SOT", "remove_support_edges", mutate_deletion_evidence_edge, sot_ctx[sk])
-        add("contradiction", sot_ctx[sk], "SOT", "inject_contradiction", mutate_contradiction_insert, sot_ctx[sk])
+        add("deletion", sot_ctx[sk], "SOT", "remove_support_edges", mutate_deletion_evidence_edge, fn_args=(sot_ctx[sk],))
+        add("contradiction", sot_ctx[sk], "SOT", "inject_contradiction", mutate_contradiction_insert, fn_args=(sot_ctx[sk],))
 
-    add("attestation", {"attestation_key_fingerprint": "valid"}, "Manifest", "wrong_signing_key", mutate_attestation_wrong_key, {"attestation_key_fingerprint": "valid"})
+    add(
+        "attestation",
+        {"attestation_key_fingerprint": "valid", "object_id": "MANIFEST-attest"},
+        "Manifest",
+        "wrong_signing_key",
+        mutate_attestation_wrong_key,
+        fn_args=({"attestation_key_fingerprint": "valid"},),
+    )
 
     # Recombination: attach wrong citation to proposition (simulated)
     if len(sentences) > 7:
