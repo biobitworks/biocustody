@@ -714,7 +714,10 @@
   "document_closure": {
     "CITATION_PATH_CLOSURE": "6_OF_6_SUPPORTED_BOUNDED",
     "FULL_MANUSCRIPT_SEMANTIC_CLOSURE": "NOT_ESTABLISHED",
-    "non_citation_sentences_without_full_sot_aok": 18
+    "non_citation_abstain": 4,
+    "non_citation_bounded": 13,
+    "non_citation_sentences_without_full_sot_aok": 18,
+    "non_citation_terminal_closure": "PASS"
   },
   "gates": {
     "AOK_CLOSURE_GATE": "PARTIAL",
@@ -725,7 +728,7 @@
     "GIT_FCG_DELTA_GATE": "PASS",
     "PRE_POST_ROUNDTRIP_GATE": "PASS",
     "SEEDGRAPH_IMPORT_GATE": "PASS",
-    "SEEDGRAPH_PROOF_GATE": "PENDING",
+    "SEEDGRAPH_PROOF_GATE": "PASS",
     "SOT_CLOSURE_GATE": "PARTIAL",
     "TABLE_CLOSURE_GATE": "PARTIAL"
   },
@@ -748,12 +751,28 @@
       }
     ],
     "SEEDGRAPH_OBJECT_PROOF": {
-      "pending": 136,
+      "pending": 0,
       "proof_domain": "SEEDGRAPH_OBJECT_PROOF",
-      "verified": 0
+      "verified": 136
     }
   },
-  "recorded_at_utc": "2026-08-29T09:19:13Z",
+  "recorded_at_utc": "2026-08-29T09:41:11Z",
   "schema": "biocustody.aud_fcg_document_lattice_receipt.v1",
-  "sealed_pdf_modified": false
+  "sealed_pdf_modified": false,
+  "seedgraph_live_import": {
+    "IMPORT_STATE": "IMPORTED_LIVE",
+    "PROOF_STATE": "VERIFIED_STRUCTURAL",
+    "audit_id": "AUD-FCG-DOCUMENT-LATTICE-001",
+    "container": {
+      "action": "created",
+      "container": "seedgraph-neo4j-audit-lattice"
+    },
+    "contract_mismatches": 0,
+    "mismatches": [],
+    "neo4j_uri": "bolt://localhost:17687",
+    "objects_imported": 136,
+    "production_neo4j_touched": false,
+    "recorded_at_utc": "2026-08-29T09:41:11Z",
+    "schema": "biocustody.seedgraph_live_import_receipt.v1"
+  }
 }
