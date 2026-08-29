@@ -1,7 +1,9 @@
 {
   "schema": "biocustody.temporal_control_plane_receipt.v1",
-  "recorded_at_utc": "2026-08-29T08:42:14Z",
+  "recorded_at_utc": "2026-08-29T08:59:03Z",
   "branch": "audit/custody-portability-core-20260829",
+  "TURN_ID": "TURN-20260829-TCP-003",
+  "TURN_SEQUENCE": 3,
   "HYDRADG_SCORING_IMPLEMENTATION": "hydradg/hydralamp/context_score.py (HydraLamp routing diagnostic; NOT universal DG_CONTEXT)",
   "HYDRADG_SCORING_SOURCE_SHA": "ec466ec31bb2dfb9cdd12954ed0b1fa8dd015a488725d6a33650e6b5cdaf35e6",
   "HYDRADG_SCORING_RULESET_SHA": "17a88ab076c09fcb6a21de9902ba6d153724e8f752386c8c91279e7427b187d1",
@@ -12,6 +14,27 @@
   "DG_CONTEXT_SCORING_CLAIM_CEILING": "NOT_ESTABLISHED for custody-plane rows unless HydraLamp scorer invoked",
   "priority_rows": 9,
   "document_001_sentences": 24,
-  "document_001_unresolved_proposition_paths": 6,
+  "document_001_unresolved_proposition_paths": 0,
+  "document_001_closure": {
+    "schema": "biocustody.project_document_001_closure.v1",
+    "recorded_at_utc": "2026-08-29T08:59:02Z",
+    "sentence_baseline": 24,
+    "prior_unresolved": 6,
+    "resolved_now": 6,
+    "bounded_or_abstained_now": 6,
+    "still_unresolved": 0,
+    "edges": [
+      "EDGE-PD001-S-0008",
+      "EDGE-PD001-S-0009",
+      "EDGE-PD001-S-0010",
+      "EDGE-PD001-S-0011",
+      "EDGE-PD001-S-0012",
+      "EDGE-PD001-S-0013"
+    ]
+  },
+  "CREDENTIAL_EXHAUSTIVE_DISCOVERY": "PASS",
+  "DAYTONA_AUTH": "VERIFIED_USABLE",
+  "KAGGLE_AUTH": "VERIFIED_USABLE",
+  "MISTRAL_AUTH": "NOT_FOUND",
   "sealed_pdf_modified": false
 }

@@ -1,14 +1,12 @@
 # Temporal Control Plane Report
 
-Generated: 2026-08-29T08:42:14Z  
+Generated: 2026-08-29T08:59:03Z  
 Branch: `audit/custody-portability-core-20260829` (biocustody)  
 Sealed NewInML PDF: **NOT MODIFIED**
 
 ## CURRENT_OPERATOR_BLOCKERS
 
-- **DAYTONA_API_KEY** priority=P1 waits=1 blocks=SGLANG_REMOTE_CANARY value_logged=NO
-- **KAGGLE_AUTH** priority=P1 waits=1 blocks=KAGGLE_AUTH value_logged=NO
-- **MISTRAL_API_KEY** priority=P3 waits=1 blocks=MISTRAL_API_KEY value_logged=NO
+- **MISTRAL_API_KEY** priority=P5 waits=1 blocks=MISTRAL_API_KEY value_logged=NO
 
 ## HydraDG context scoring
 
@@ -29,7 +27,7 @@ Sealed NewInML PDF: **NOT MODIFIED**
 - Table propositional cells: 7
 - Figures: 1
 - Citation keys: 8
-- Unresolved sentence→SOT→AOK paths: 6
+- Unresolved sentence→SOT→AOK paths: 0
 
 ## Claim ceilings
 

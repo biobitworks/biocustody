@@ -1,0 +1,17 @@
+{
+  "schema": "biocustody.project_document_001_closure.v1",
+  "recorded_at_utc": "2026-08-29T08:59:02Z",
+  "sentence_baseline": 24,
+  "prior_unresolved": 6,
+  "resolved_now": 6,
+  "bounded_or_abstained_now": 6,
+  "still_unresolved": 0,
+  "edges": [
+    "EDGE-PD001-S-0008",
+    "EDGE-PD001-S-0009",
+    "EDGE-PD001-S-0010",
+    "EDGE-PD001-S-0011",
+    "EDGE-PD001-S-0012",
+    "EDGE-PD001-S-0013"
+  ]
+}

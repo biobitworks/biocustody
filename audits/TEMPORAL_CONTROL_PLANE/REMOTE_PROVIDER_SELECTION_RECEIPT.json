@@ -1,0 +1,21 @@
+{
+  "schema": "biocustody.remote_provider_selection_receipt.v1",
+  "recorded_at_utc": "2026-08-29T08:59:02Z",
+  "post_openreview_gate": true,
+  "PRIMARY_REMOTE_CUDA_PROVIDER": "KAGGLE",
+  "FALLBACK_REMOTE_CUDA_PROVIDER": "DAYTONA",
+  "rationale": "Kaggle preregistered for NewInML SGLang stress; Daytona H200 previously blocked provisioning",
+  "comparison": {
+    "credential_state": {
+      "DAYTONA": "VERIFIED_USABLE",
+      "KAGGLE": "VERIFIED_USABLE"
+    },
+    "GPU_availability": "KAGGLE preregistered; Daytona org list OK",
+    "required_VRAM": "SGLang stress TBD at canary",
+    "runtime_compatibility": "Both CUDA-capable when provisioned",
+    "SGLang_compatibility": "PENDING_1_CELL_CANARY",
+    "startup_latency": "Kaggle preferred for queue familiarity",
+    "artifact_retrieval": "FCG custody receipts required either path",
+    "expected_cost": "Canary minimal; full matrix deferred"
+  }
+}

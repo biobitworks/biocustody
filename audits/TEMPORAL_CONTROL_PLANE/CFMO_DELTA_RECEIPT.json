@@ -1,0 +1,178 @@
+{
+  "schema": "biocustody.cfmo_delta_receipt.v1",
+  "batch_id": "CFMO-BATCH-76fef2ed0cafce1b",
+  "recorded_at_utc": "2026-08-29T08:59:03Z",
+  "CFMO_BEFORE": "CFMO-BATCH-58f020308719471e",
+  "NEW_SOURCE_SET": [
+    {
+      "path": "/Users/byron/projects/active/biocustody/audits/TEMPORAL_CONTROL_PLANE/CREDENTIAL_CAPABILITY_RECEIPT.json",
+      "content_id": "4bc117c5783f7faf7d6bb887cfb6816f07c56b1ad763c24a5140c7e3b2444e53",
+      "secret_bytes": 0
+    },
+    {
+      "path": "/Users/byron/projects/active/biocustody/control/CREDENTIAL_DISCOVERY_RECEIPT.json",
+      "content_id": "90ff58a46020076f96863abf3691eed1b370d2940ac5ec93a07385381458ca70",
+      "secret_bytes": 0
+    },
+    {
+      "path": "/Users/byron/projects/active/biocustody/audits/TEMPORAL_CONTROL_PLANE/PROJECT_DOCUMENT_001_CLOSURE_RECEIPT.json",
+      "content_id": "bd65e286a9cfed5204060742765f99ea628313a33a3f026228336c0873e52f4d",
+      "secret_bytes": 0
+    }
+  ],
+  "NEW_AOK_SET": [
+    "AOK-CAP-DAYTONA-001",
+    "AOK-CAP-KAGGLE-001",
+    "AOK-CAP-MISTRAL-001",
+    "AOK-ORG-NOTICE-001"
+  ],
+  "NEW_SOT_SET": [
+    "SOT-001",
+    "SOT-002",
+    "SOT-003",
+    "SOT-004",
+    "SOT-005",
+    "SOT-006",
+    "SOT-007",
+    "SOT-008",
+    "SOT-009",
+    "SOT-010",
+    "SOT-011",
+    "SOT-012",
+    "SOT-013",
+    "SOT-014",
+    "SOT-015",
+    "SOT-016",
+    "SOT-017",
+    "SOT-018",
+    "SOT-019",
+    "SOT-020",
+    "SOT-PR1"
+  ],
+  "NEW_GRAPH_EDGES": [
+    {
+      "from": "CREDENTIAL_CAPABILITY_RECEIPT",
+      "to": "AOK-CAP-DAYTONA-001",
+      "edge": "capability_probe"
+    },
+    {
+      "from": "CREDENTIAL_CAPABILITY_RECEIPT",
+      "to": "AOK-CAP-KAGGLE-001",
+      "edge": "capability_probe"
+    },
+    {
+      "from": "CREDENTIAL_CAPABILITY_RECEIPT",
+      "to": "AOK-CAP-MISTRAL-001",
+      "edge": "capability_probe"
+    }
+  ],
+  "CONTRADICTIONS": [],
+  "ABSTENTIONS": [],
+  "ANTICUBE_DELTAS": [
+    {
+      "object_id": "AOK-ORG-NOTICE-001",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "EDGE-PD001-S-0008",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "AOK-CAP-MISTRAL-001",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "SOT-008",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "SOT-014",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "REFERENCE_INTEGRITY_DELTA_20260829",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "AOK-CAP-DAYTONA-001",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "AOK-CAP-KAGGLE-001",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "AOK-ORG-NOTICE-001",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "EDGE-PD001-S-0008",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "AOK-CAP-MISTRAL-001",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "SOT-008",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "SOT-014",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "REFERENCE_INTEGRITY_DELTA_20260829",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "AOK-CAP-DAYTONA-001",
+      "classification": "NOT_APPLICABLE"
+    },
+    {
+      "object_id": "AOK-CAP-KAGGLE-001",
+      "classification": "NOT_APPLICABLE"
+    }
+  ],
+  "CONTEXT_DELTAS": [
+    {
+      "DG_CONTEXT_SCORE": "NOT_ESTABLISHED",
+      "assessment_event": "NOT_RUN",
+      "note": "HydraLamp scorer exists but not applied to this row; claim_ceiling=CONTEXT_ROUTING_DIAGNOSTIC_ONLY",
+      "object_id": "ROW-OPENREVIEW",
+      "ruleset_sha256": "17a88ab076c09fcb6a21de9902ba6d153724e8f752386c8c91279e7427b187d1"
+    },
+    {
+      "DG_CONTEXT_SCORE": "NOT_ESTABLISHED",
+      "assessment_event": "NOT_RUN",
+      "note": "HydraLamp scorer exists but not applied to this row; claim_ceiling=CONTEXT_ROUTING_DIAGNOSTIC_ONLY",
+      "object_id": "ROW-OPENREVIEW",
+      "ruleset_sha256": "17a88ab076c09fcb6a21de9902ba6d153724e8f752386c8c91279e7427b187d1"
+    }
+  ],
+  "CREDENTIAL_STATES": {
+    "DAYTONA": "VERIFIED_USABLE",
+    "KAGGLE": "VERIFIED_USABLE",
+    "MISTRAL": "NOT_FOUND"
+  },
+  "DOCUMENT_CLOSURE": {
+    "schema": "biocustody.project_document_001_closure.v1",
+    "recorded_at_utc": "2026-08-29T08:59:02Z",
+    "sentence_baseline": 24,
+    "prior_unresolved": 6,
+    "resolved_now": 6,
+    "bounded_or_abstained_now": 6,
+    "still_unresolved": 0,
+    "edges": [
+      "EDGE-PD001-S-0008",
+      "EDGE-PD001-S-0009",
+      "EDGE-PD001-S-0010",
+      "EDGE-PD001-S-0011",
+      "EDGE-PD001-S-0012",
+      "EDGE-PD001-S-0013"
+    ]
+  },
+  "SECRET_BYTES_INGESTED": 0,
+  "CFMO_AFTER": "CFMO-BATCH-76fef2ed0cafce1b",
+  "MMR_CLAIMED": false
+}

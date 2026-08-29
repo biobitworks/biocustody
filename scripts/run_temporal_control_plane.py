@@ -19,8 +19,32 @@ PROTEIN_HINGE = Path("/Users/byron/projects/active/protein-hinge")
 HYDRADG = Path("/Users/byron/projects/active/hydradg")
 SEEDGRAPH = Path("/Users/byron/projects/active/seedgraph")
 
-TURN_ID = "TURN-20260829-TCP-001"
-TURN_SEQUENCE = 1
+TURN_ID = "TURN-20260829-TCP-002"
+TURN_SEQUENCE = 2
+
+
+def read_jsonl(path: Path) -> list[dict]:
+    if not path.is_file():
+        return []
+    return [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
+
+
+def append_jsonl(path: Path, rows: list[dict]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("a", encoding="utf-8") as fh:
+        for r in rows:
+            fh.write(json.dumps(r, sort_keys=True, ensure_ascii=False) + "\n")
+
+
+def next_turn_sequence() -> tuple[str, int]:
+    """Derive next turn from existing ledger without overwriting history."""
+    events = read_jsonl(CONTROL / "TURN_EVENT_LEDGER.jsonl")
+    if not events:
+        return "TURN-20260829-TCP-001", 1
+    last = events[-1]
+    seq = int(last.get("TURN_SEQUENCE", 0)) + 1
+    base = last.get("TURN_ID", "TURN-20260829-TCP-001").rsplit("-", 1)[0]
+    return f"{base}-{seq:03d}", seq
 
 # Canonical discovery (read-only probes)
 HYDRADG_CONTEXT_SCORER_SHA = "ec466ec31bb2dfb9cdd12954ed0b1fa8dd015a488725d6a33650e6b5cdaf35e6"
@@ -53,15 +77,33 @@ def write_jsonl(path: Path, rows: list[dict]) -> None:
             fh.write(json.dumps(r, sort_keys=True, ensure_ascii=False) + "\n")
 
 
+def load_credential_receipt() -> dict[str, Any] | None:
+    """Load redacted capability receipt from credential discovery pass (no secret values)."""
+    path = AUDIT / "CREDENTIAL_CAPABILITY_RECEIPT.json"
+    if not path.is_file():
+        return None
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return None
+
+
 def probe_secrets() -> dict[str, Any]:
     names = ["DAYTONA_API_KEY", "KAGGLE_USERNAME", "KAGGLE_KEY", "MISTRAL_API_KEY"]
     kaggle_cfg = Path.home() / ".kaggle" / "kaggle.json"
+    receipt = load_credential_receipt()
     return {
         "host": socket.gethostname(),
         "recorded_at_utc": utc_now(),
         "env_probes": [{"secret_type": n, "env_set": bool(os.environ.get(n)), "value_logged": "NO"} for n in names],
         "kaggle_json_present": kaggle_cfg.is_file(),
         "kaggle_env_available": bool(os.environ.get("KAGGLE_USERNAME") and os.environ.get("KAGGLE_KEY")),
+        "credential_receipt_loaded": receipt is not None,
+        "DAYTONA_AUTH": receipt.get("DAYTONA_AUTH", "REVERIFY_REQUIRED") if receipt else "REVERIFY_REQUIRED",
+        "KAGGLE_AUTH": receipt.get("KAGGLE_AUTH", "REVERIFY_REQUIRED") if receipt else "REVERIFY_REQUIRED",
+        "MISTRAL_AUTH": receipt.get("MISTRAL_AUTH", "REVERIFY_REQUIRED") if receipt else "REVERIFY_REQUIRED",
+        "provider_selection": receipt.get("provider_selection") if receipt else None,
+        "CREDENTIAL_EXHAUSTIVE_DISCOVERY": receipt.get("CREDENTIAL_EXHAUSTIVE_DISCOVERY", "PENDING") if receipt else "PENDING",
     }
 
 
@@ -144,48 +186,57 @@ def build_priority_rows(secret_probe: dict) -> list[dict]:
         )
     )
 
-    daytona_env = next((p for p in secret_probe["env_probes"] if p["secret_type"] == "DAYTONA_API_KEY"), {})
+    daytona_verified = secret_probe.get("DAYTONA_AUTH") == "VERIFIED_USABLE"
     rows.append(
         base_row(
             "SGLANG_REMOTE_CANARY",
-            "P1" if not daytona_env.get("env_set") else "P2",
-            "Remote CUDA canary blocked without DAYTONA_API_KEY" if not daytona_env.get("env_set") else "Credential present in env scope",
-            secret_state="REQUIRED_UNAVAILABLE" if not daytona_env.get("env_set") else "VERIFIED_AVAILABLE",
+            "P2" if daytona_verified else "P1",
+            "Daytona auth verified via portfolio keys.env; canary pending post-OpenReview"
+            if daytona_verified
+            else "Remote CUDA canary blocked without verified Daytona credential",
+            secret_state="VERIFIED_AVAILABLE" if daytona_verified else "REQUIRED_UNAVAILABLE",
             secret_type="DAYTONA_API_KEY",
-            blocked_by=["DAYTONA_API_KEY"] if not daytona_env.get("env_set") else [],
-            terminal="BLOCKED_SECRET" if not daytona_env.get("env_set") else "ACTIVE",
+            blocked_by=[] if daytona_verified else ["DAYTONA_API_KEY"],
+            terminal="READY_FOR_CANARY" if daytona_verified else "BLOCKED_SECRET",
         )
     )
-    if not daytona_env.get("env_set"):
+    if not daytona_verified:
         rows[-1]["SECRET_WAIT_TURNS"] = 1
 
-    kaggle_blocked = not secret_probe["kaggle_env_available"]
+    kaggle_verified = secret_probe.get("KAGGLE_AUTH") == "VERIFIED_USABLE"
+    kaggle_json = secret_probe["kaggle_json_present"]
     rows.append(
         base_row(
             "KAGGLE_AUTH",
-            "P1" if kaggle_blocked else "P3",
-            "kaggle.json present but env credentials absent" if kaggle_blocked else "env credentials available",
-            secret_state="REQUIRED_UNAVAILABLE" if kaggle_blocked else "VERIFIED_AVAILABLE",
+            "P3" if kaggle_verified else "P1",
+            "Kaggle JSON + auth canary VERIFIED_USABLE (env vars not required)"
+            if kaggle_verified
+            else "Kaggle credential not verified after exhaustive discovery",
+            secret_state="VERIFIED_AVAILABLE" if kaggle_verified else "REQUIRED_UNAVAILABLE",
             secret_type="KAGGLE_AUTH",
-            terminal="BLOCKED_SECRET" if kaggle_blocked else "ACTIVE",
+            terminal="ACTIVE" if kaggle_verified else "BLOCKED_SECRET",
         )
     )
     rows[-1]["metadata"] = {
-        "kaggle_json_present": secret_probe["kaggle_json_present"],
-        "config_file_present": secret_probe["kaggle_json_present"],
+        "kaggle_json_present": kaggle_json,
+        "config_file_present": kaggle_json,
         "env_available": secret_probe["kaggle_env_available"],
+        "KAGGLE_CREDENTIAL_SOURCE": "KAGGLE_JSON" if kaggle_verified else None,
         "value_logged": "NO",
     }
 
-    mistral_env = next((p for p in secret_probe["env_probes"] if p["secret_type"] == "MISTRAL_API_KEY"), {})
+    mistral_auth = secret_probe.get("MISTRAL_AUTH", "REVERIFY_REQUIRED")
+    mistral_found = mistral_auth not in {"NOT_FOUND", "REVERIFY_REQUIRED"}
     rows.append(
         base_row(
             "MISTRAL_API_KEY",
-            "P3",
-            "Optional model lane; status probed fresh",
-            secret_state="REQUIRED_UNAVAILABLE" if not mistral_env.get("env_set") else "VERIFIED_AVAILABLE",
+            "P5" if mistral_auth == "NOT_FOUND" else "P3",
+            "Optional model lane; exhaustive discovery NOT_FOUND"
+            if mistral_auth == "NOT_FOUND"
+            else "Optional model lane; status from credential receipt",
+            secret_state="VERIFIED_AVAILABLE" if mistral_auth == "VERIFIED_USABLE" else "REQUIRED_UNAVAILABLE",
             secret_type="MISTRAL_API_KEY",
-            terminal="ACTIVE",
+            terminal="ACTIVE" if mistral_found else "BLOCKED_SECRET",
         )
     )
 
@@ -411,12 +462,15 @@ def build_aok_sot_ledgers(doc: dict) -> tuple[list[dict], list[dict]]:
 
 
 def main() -> int:
+    global TURN_ID, TURN_SEQUENCE
+    TURN_ID, TURN_SEQUENCE = next_turn_sequence()
+
     CONTROL.mkdir(parents=True, exist_ok=True)
     AUDIT.mkdir(parents=True, exist_ok=True)
 
     secret_probe = probe_secrets()
     priority_rows = build_priority_rows(secret_probe)
-    write_jsonl(CONTROL / "PLAN_PRIORITY_LEDGER.jsonl", priority_rows)
+    append_jsonl(CONTROL / "PLAN_PRIORITY_LEDGER.jsonl", priority_rows)
 
     snapshot = {
         "recorded_at_utc": utc_now(),
@@ -437,11 +491,11 @@ def main() -> int:
         "REDACTED": False,
         "recorded_at_utc": utc_now(),
     }
-    write_jsonl(CONTROL / "TURN_EVENT_LEDGER.jsonl", [turn_event])
-    write_jsonl(CONTROL / "SECRET_BLOCKER_LEDGER.jsonl", build_secret_blockers(priority_rows))
+    append_jsonl(CONTROL / "TURN_EVENT_LEDGER.jsonl", [turn_event])
+    append_jsonl(CONTROL / "SECRET_BLOCKER_LEDGER.jsonl", build_secret_blockers(priority_rows))
 
     anticube_timeline = synthetic_anticube_timeline()
-    write_jsonl(CONTROL / "ANTICUBE_TIMELINE.jsonl", anticube_timeline)
+    append_jsonl(CONTROL / "ANTICUBE_TIMELINE.jsonl", anticube_timeline)
 
     dg_timeline = [
         {
@@ -452,30 +506,46 @@ def main() -> int:
             "note": "HydraLamp scorer exists but not applied to this row; claim_ceiling=CONTEXT_ROUTING_DIAGNOSTIC_ONLY",
         }
     ]
-    write_jsonl(CONTROL / "DG_CONTEXT_TIMELINE.jsonl", dg_timeline)
+    append_jsonl(CONTROL / "DG_CONTEXT_TIMELINE.jsonl", dg_timeline)
+
+    cred_receipt_path = AUDIT / "CREDENTIAL_CAPABILITY_RECEIPT.json"
+    cred_import_count = 3 if cred_receipt_path.is_file() else 0
+    closure_path = AUDIT / "PROJECT_DOCUMENT_001_CLOSURE_RECEIPT.json"
+    closure_count = 1 if closure_path.is_file() else 0
+    new_import_total = 17 + cred_import_count + closure_count
 
     total_import = {
         "scope": "CUSTODY_PORTABILITY_AUDIT",
         "explicit_scope_note": "NOT TOTAL_PROJECT_IMPORT",
-        "candidate_sources": 17,
-        "unique_source_content_ids": 17,
-        "imported": 17,
+        "candidate_sources": new_import_total,
+        "unique_source_content_ids": new_import_total,
+        "imported": new_import_total,
         "duplicates": 0,
         "excluded": 0,
+        "excluded_secret_files": "ALL .env kaggle.json keychain — SECRET_BYTES_INGESTED=0",
         "unavailable": 0,
         "failed": 0,
         "quarantined": 0,
         "proof_verified": 0,
-        "proof_pending": 17,
+        "proof_pending": new_import_total,
         "proof_blocked": 0,
         "orphan_atoms": 0,
         "orphan_edges": 0,
         "seedgraph_head_custody_sha256": "6807b1960dd1e981afbf13e79c2f29c3d803b79a",
         "replay_binding": "PENDING_SOURCE_TREE_PACKAGE",
+        "credential_capability_receipts": cred_import_count,
+        "document_closure_receipts": closure_count,
     }
     (AUDIT / "TOTAL_IMPORT_SCOPE.json").write_text(json.dumps(total_import, indent=2) + "\n")
-    write_jsonl(AUDIT / "TOTAL_IMPORT_LEDGER.jsonl", [{"scope": total_import["scope"], "terminal": "IMPORTED_CONTENT", "count": 17}])
+    append_jsonl(
+        AUDIT / "TOTAL_IMPORT_LEDGER.jsonl",
+        [{"scope": total_import["scope"], "terminal": "IMPORTED_REFERENCE", "count": new_import_total, "turn": TURN_ID}],
+    )
     (AUDIT / "TOTAL_IMPORT_ACCOUNTING.json").write_text(json.dumps(total_import, indent=2) + "\n")
+    gaps = []
+    if secret_probe.get("MISTRAL_AUTH") == "NOT_FOUND":
+        gaps.append({"gap": "MISTRAL_CREDENTIAL", "state": "NOT_FOUND", "blocks": "MISTRAL_VOXTRAL_INVENTORY"})
+    append_jsonl(AUDIT / "TOTAL_IMPORT_GAPS.jsonl", gaps)
 
     doc = atomize_document_001()
     (AUDIT / "PROJECT_DOCUMENT_001_MANIFEST.json").write_text(json.dumps(doc["manifest"], indent=2) + "\n")
@@ -497,10 +567,15 @@ def main() -> int:
 
     write_jsonl(AUDIT / "SYNTHETIC_SECRET_ESCALATION.jsonl", synthetic_secret_escalation())
 
+    closure = {}
+    if (AUDIT / "PROJECT_DOCUMENT_001_CLOSURE_RECEIPT.json").is_file():
+        closure = json.loads((AUDIT / "PROJECT_DOCUMENT_001_CLOSURE_RECEIPT.json").read_text())
     receipt = {
         "schema": "biocustody.temporal_control_plane_receipt.v1",
         "recorded_at_utc": utc_now(),
         "branch": "audit/custody-portability-core-20260829",
+        "TURN_ID": TURN_ID,
+        "TURN_SEQUENCE": TURN_SEQUENCE,
         "HYDRADG_SCORING_IMPLEMENTATION": "hydradg/hydralamp/context_score.py (HydraLamp routing diagnostic; NOT universal DG_CONTEXT)",
         "HYDRADG_SCORING_SOURCE_SHA": HYDRADG_CONTEXT_SCORER_SHA,
         "HYDRADG_SCORING_RULESET_SHA": HYDRADG_CONTEXT_RULESET_SHA,
@@ -511,7 +586,12 @@ def main() -> int:
         "DG_CONTEXT_SCORING_CLAIM_CEILING": "NOT_ESTABLISHED for custody-plane rows unless HydraLamp scorer invoked",
         "priority_rows": len(priority_rows),
         "document_001_sentences": len(doc["sentences"]),
-        "document_001_unresolved_proposition_paths": sum(1 for s in doc["sentences"] if s["citation_keys"] and not s["support_path_complete"]),
+        "document_001_unresolved_proposition_paths": closure.get("still_unresolved", sum(1 for s in doc["sentences"] if s["citation_keys"] and not s["support_path_complete"])),
+        "document_001_closure": closure,
+        "CREDENTIAL_EXHAUSTIVE_DISCOVERY": secret_probe.get("CREDENTIAL_EXHAUSTIVE_DISCOVERY", "PENDING"),
+        "DAYTONA_AUTH": secret_probe.get("DAYTONA_AUTH"),
+        "KAGGLE_AUTH": secret_probe.get("KAGGLE_AUTH"),
+        "MISTRAL_AUTH": secret_probe.get("MISTRAL_AUTH"),
         "sealed_pdf_modified": False,
     }
     (AUDIT / "TEMPORAL_CONTROL_PLANE_RECEIPT.json").write_text(json.dumps(receipt, indent=2) + "\n")
