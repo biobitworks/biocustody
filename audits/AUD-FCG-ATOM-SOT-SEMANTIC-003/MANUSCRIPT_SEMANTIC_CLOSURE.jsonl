@@ -1,0 +1,33 @@
+{"section": "abstract", "semantic_terminal": "SUPPORTED_BOUNDED", "sentence_id": "SEN-9137cc18e81cf227", "sentence_role": "BACKGROUND", "terminal_accounted": true}
+{"section": "abstract", "semantic_terminal": "PARTIAL_SUPPORT", "sentence_id": "SEN-9f072ab264bfdcf3", "sentence_role": "BACKGROUND", "terminal_accounted": true}
+{"section": "abstract", "semantic_terminal": "SUPPORTED_BOUNDED", "sentence_id": "SEN-b1af3956da02fb7a", "sentence_role": "INTERPRETATION", "terminal_accounted": true}
+{"section": "abstract", "semantic_terminal": "SUPPORTED_BOUNDED", "sentence_id": "SEN-951fa66ac6a997b2", "sentence_role": "BACKGROUND", "terminal_accounted": true}
+{"section": "abstract", "semantic_terminal": "SUPPORTED_BOUNDED", "sentence_id": "SEN-5102b9ac2f669709", "sentence_role": "BACKGROUND", "terminal_accounted": true}
+{"section": "Introduction", "semantic_terminal": "PARTIAL_SUPPORT", "sentence_id": "SEN-7026077715ddb8a3", "sentence_role": "SYSTEM_DESCRIPTION", "terminal_accounted": true}
+{"section": "Introduction", "semantic_terminal": "SUPPORTED_BOUNDED", "sentence_id": "SEN-18e3e5e6302bc921", "sentence_role": "SYSTEM_DESCRIPTION", "terminal_accounted": true}
+{"section": "Introduction", "semantic_terminal": "PARTIAL_SUPPORT", "sentence_id": "SEN-a5591c7f617b4e27", "sentence_role": "METHOD_DESCRIPTION", "terminal_accounted": true}
+{"section": "Related Work and Terminology", "semantic_terminal": "PARTIAL_SUPPORT", "sentence_id": "SEN-4974339fe2cd09cf", "sentence_role": "BACKGROUND", "terminal_accounted": true}
+{"section": "Related Work and Terminology", "semantic_terminal": "PARTIAL_SUPPORT", "sentence_id": "SEN-21b8a2ae39836ec1", "sentence_role": "BACKGROUND", "terminal_accounted": true}
+{"section": "Related Work and Terminology", "semantic_terminal": "PARTIAL_SUPPORT", "sentence_id": "SEN-3da888b862a765ca", "sentence_role": "BACKGROUND", "terminal_accounted": true}
+{"section": "Related Work and Terminology", "semantic_terminal": "PARTIAL_SUPPORT", "sentence_id": "SEN-acf16356de5b3031", "sentence_role": "BACKGROUND", "terminal_accounted": true}
+{"section": "Related Work and Terminology", "semantic_terminal": "SUPPORTED_BOUNDED", "sentence_id": "SEN-e5d2ff91aa045673", "sentence_role": "LIMITATION", "terminal_accounted": true}
+{"section": "Verify-or-Abstain Architecture", "semantic_terminal": "PARTIAL_SUPPORT", "sentence_id": "SEN-0590083d6c0c98e7", "sentence_role": "METHOD_DESCRIPTION", "terminal_accounted": true}
+{"section": "Verify-or-Abstain Architecture", "semantic_terminal": "PARTIAL_SUPPORT", "sentence_id": "SEN-bfe205df0c3bb88f", "sentence_role": "SYSTEM_DESCRIPTION", "terminal_accounted": true}
+{"section": "Experimental Design", "semantic_terminal": "PARTIAL_SUPPORT", "sentence_id": "SEN-77a80a99858c32de", "sentence_role": "EXPERIMENTAL_RESULT", "terminal_accounted": true}
+{"section": "Experimental Design", "semantic_terminal": "PARTIAL_SUPPORT", "sentence_id": "SEN-7baae531f579b78a", "sentence_role": "EXPERIMENTAL_RESULT", "terminal_accounted": true}
+{"section": "Experimental Design", "semantic_terminal": "PARTIAL_SUPPORT", "sentence_id": "SEN-36fd06943257de3d", "sentence_role": "EXPERIMENTAL_RESULT", "terminal_accounted": true}
+{"section": "Experimental Design", "semantic_terminal": "PARTIAL_SUPPORT", "sentence_id": "SEN-68c1d3cbdee75dfb", "sentence_role": "EXPERIMENTAL_RESULT", "terminal_accounted": true}
+{"section": "Experimental Design", "semantic_terminal": "ABSTAIN", "sentence_id": "SEN-74a78fc53f661ede", "sentence_role": "EXPERIMENTAL_RESULT", "terminal_accounted": true}
+{"section": "Experimental Design", "semantic_terminal": "SUPPORTED_BOUNDED", "sentence_id": "SEN-e7d8d61785804e68", "sentence_role": "EXPERIMENTAL_RESULT", "terminal_accounted": true}
+{"section": "Results", "semantic_terminal": "PARTIAL_SUPPORT", "sentence_id": "SEN-5475534be2fcb1e8", "sentence_role": "METHOD_DESCRIPTION", "terminal_accounted": true}
+{"section": "Discussion and Limitations", "semantic_terminal": "ABSTAIN", "sentence_id": "SEN-485122650af6618c", "sentence_role": "EXPERIMENTAL_RESULT", "terminal_accounted": true}
+{"section": "Discussion and Limitations", "semantic_terminal": "PARTIAL_SUPPORT", "sentence_id": "SEN-72516101ab002e57", "sentence_role": "SYSTEM_DESCRIPTION", "terminal_accounted": true}
+{"section": "Reproducibility and Provenance", "semantic_terminal": "SUPPORTED_BOUNDED", "sentence_id": "SEN-026e54c8ec86e3b8", "sentence_role": "SYSTEM_DESCRIPTION", "terminal_accounted": true}
+{"section": "Reproducibility and Provenance", "semantic_terminal": "PARTIAL_SUPPORT", "sentence_id": "SEN-eda4fa9abfa5655c", "sentence_role": "SYSTEM_DESCRIPTION", "terminal_accounted": true}
+{"section": "Reproducibility and Provenance", "semantic_terminal": "PARTIAL_SUPPORT", "sentence_id": "SEN-4c60045b6784b713", "sentence_role": "SYSTEM_DESCRIPTION", "terminal_accounted": true}
+{"section": "Reproducibility and Provenance", "semantic_terminal": "SUPPORTED_BOUNDED", "sentence_id": "SEN-511c0840dd947344", "sentence_role": "METHOD_DESCRIPTION", "terminal_accounted": true}
+{"section": "Reproducibility and Provenance", "semantic_terminal": "PARTIAL_SUPPORT", "sentence_id": "SEN-6c85ee0945a2695a", "sentence_role": "SYSTEM_DESCRIPTION", "terminal_accounted": true}
+{"section": "Reproducibility and Provenance", "semantic_terminal": "PARTIAL_SUPPORT", "sentence_id": "SEN-29df24ecda37bdf9", "sentence_role": "SYSTEM_DESCRIPTION", "terminal_accounted": true}
+{"section": "Reproducibility and Provenance", "semantic_terminal": "PARTIAL_SUPPORT", "sentence_id": "SEN-cc1cac464d56f137", "sentence_role": "SYSTEM_DESCRIPTION", "terminal_accounted": true}
+{"section": "Conclusion", "semantic_terminal": "SUPPORTED_BOUNDED", "sentence_id": "SEN-2416c1219436be50", "sentence_role": "METHOD_DESCRIPTION", "terminal_accounted": true}
+{"section": "Conclusion", "semantic_terminal": "PARTIAL_SUPPORT", "sentence_id": "SEN-f12f4005a73cfaab", "sentence_role": "SYSTEM_DESCRIPTION", "terminal_accounted": true}

@@ -1,0 +1,18 @@
+{
+  "FINAL_VALIDATION_COLOR": "YELLOW",
+  "conformance_pass": true,
+  "gates": {
+    "AOK_SOURCE_BACKING": true,
+    "ATOM_V2": true,
+    "CITATION_RESOURCE_IDENTITY": true,
+    "LIVE_SEEDGRAPH": true,
+    "PRODUCTION_NEO4J_UNTOUCHED": true,
+    "SECRET_SAFETY": true,
+    "SOT_SEMANTIC_SUPPORT_TERMINAL": true,
+    "STAT_B3_GT_B0": false,
+    "STAT_B3_GT_B1": false,
+    "STAT_B3_LT_B2_FALSE_ACCEPT": true,
+    "STRUCTURAL_LATTICE": true
+  },
+  "inferential_pass": false
+}

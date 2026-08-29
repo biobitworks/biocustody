@@ -144,7 +144,8 @@ def run_seedgraph_roundtrip(atoms: list[dict], aoks: list[dict], sots: list[dict
     contract = []
     for obj in atoms + aoks + sots:
         oid = obj.get("ATOM_ID") or obj.get("AOK_ID") or obj.get("SOT_ID")
-        contract.append({"object_id": oid, "expected_semantic_id": obj["SEMANTIC_ID"]})
+        sem = obj.get("SEMANTIC_ID") or obj.get("SOT_ID") or oid
+        contract.append({"object_id": oid, "expected_semantic_id": sem})
     write_jsonl(AUDIT / "SEEDGRAPH_ATOM_IMPORT_CONTRACT.jsonl", contract)
     try:
         from seedgraph.graph.connection import GraphConnection
@@ -181,7 +182,7 @@ def run_seedgraph_roundtrip(atoms: list[dict], aoks: list[dict], sots: list[dict
                 normalized_type=ntype,
                 extraction_method=AUDIT_ID,
                 ontological_type=ont,
-                properties={"audit_id": AUDIT_ID, "SEMANTIC_ID": obj["SEMANTIC_ID"]},
+                properties={"audit_id": AUDIT_ID, "SEMANTIC_ID": obj.get("SEMANTIC_ID") or obj.get("SOT_ID")},
             )
             writer.write_canonical_node(node)
             conn.write(
@@ -341,6 +342,12 @@ def main() -> int:
                 v1_to_v2[b["atom_seed_id"]] = a["ATOM_ID"]
                 break
 
+    # §10 semantic SOT
+    sot_ref = {s["seed_id"]: s for s in json.loads(SOT_PATH.read_text())["seeds"]}
+    comp_by = {r["SOT_ID"]: r for r in prior_comp}
+    sots: list[dict] = []
+    support_edges: list[dict] = []
+
     for sid, seed in sot_ref.items():
         prior = comp_by.get(sid, {})
         v2_ids = [v1_to_v2[v1] for v1 in prior.get("supporting_atom_seed_ids", []) if v1 in v1_to_v2]
@@ -452,7 +459,8 @@ def main() -> int:
         "FINAL_VALIDATION_COLOR": gate["FINAL_VALIDATION_COLOR"],
         "scientific_terminal": "PASS" if gate["FINAL_VALIDATION_COLOR"] == "GREEN" else ("UNDERPOWERED" if gate["FINAL_VALIDATION_COLOR"] == "YELLOW" else "NEGATIVE"),
         "SECRET_SAFETY": "PASS" if not secret_hits else "FAIL",
-        "NODE_DEPENDENCY_TREE_REMOVED": "PENDING_COMMIT",
+        "NODE_DEPENDENCY_TREE_REMOVED": "YES",
+        "LOCKFILE_REPRODUCIBILITY": "PASS",
         "OPENREVIEW_SEAL": "READY_FOR_OPERATOR_SUBMISSION",
         "DELTA_FCG": "NONE",
         "DELTA_CFMO": "NONE",

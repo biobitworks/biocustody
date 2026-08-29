@@ -1,0 +1,12 @@
+{
+  "IMPORT_STATE": "IMPORTED_LIVE",
+  "PROOF_STATE": "VERIFIED",
+  "audit_id": "AUD-FCG-ATOM-SOT-SEMANTIC-003",
+  "expected": 91,
+  "neo4j_uri": "bolt://localhost:17687",
+  "production_neo4j_touched": false,
+  "read_back": 91,
+  "terminal_accounting_rate": 1.0,
+  "terminal_identical": 91,
+  "written": 91
+}

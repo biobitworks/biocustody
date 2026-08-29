@@ -1,0 +1,22 @@
+{"classification": "SOFTWARE_CITATION", "name": "SeedGraph", "resource_id": "RES-seedgraph"}
+{"classification": "SOFTWARE_CITATION", "name": "BioCustody", "resource_id": "RES-biocustody"}
+{"classification": "SOFTWARE_CITATION", "name": "GettingScienceDone", "resource_id": "RES-gsigmad"}
+{"classification": "SOFTWARE_CITATION", "name": "Neo4j", "resource_id": "RES-neo4j"}
+{"classification": "SOFTWARE_CITATION", "name": "NumPy", "resource_id": "RES-numpy"}
+{"classification": "SOFTWARE_CITATION", "name": "SciPy", "resource_id": "RES-scipy"}
+{"classification": "SOFTWARE_CITATION", "name": "pandas", "resource_id": "RES-pandas"}
+{"classification": "SOFTWARE_CITATION", "name": "statsmodels", "resource_id": "RES-statsmodels"}
+{"classification": "ACKNOWLEDGMENT", "name": "RFC8785 JCS", "resource_id": "RES-rfc8785"}
+{"classification": "ACKNOWLEDGMENT", "name": "W3C PROV", "resource_id": "RES-prov"}
+{"classification": "NOT_USED_IN_ADMITTED_EVIDENCE", "name": "Kaggle", "resource_id": "RES-kaggle"}
+{"classification": "NOT_USED_IN_ADMITTED_EVIDENCE", "name": "Daytona", "resource_id": "RES-daytona"}
+{"classification": "NOT_USED_IN_ADMITTED_EVIDENCE", "name": "SGLang", "resource_id": "RES-sglang"}
+{"classification": "PAPER_CITATION", "name": "ClinVar", "note": "named in manuscript; requires bib closure", "resource_id": "RES-clinvar"}
+{"bib_key": "prov_dm", "classification": "PAPER_CITATION", "resource_id": "REF-1503e999e6b9639c"}
+{"bib_key": "chow1970", "classification": "PAPER_CITATION", "resource_id": "REF-b4b24e10353ebdd4"}
+{"bib_key": "geifman2017", "classification": "PAPER_CITATION", "resource_id": "REF-cc7345bcf0089f63"}
+{"bib_key": "nas2019", "classification": "PAPER_CITATION", "resource_id": "REF-9921ac3f34b18cb3"}
+{"bib_key": "fda_rwe", "classification": "PAPER_CITATION", "resource_id": "REF-3b952603683c1b82"}
+{"bib_key": "hgnc2021", "classification": "PAPER_CITATION", "resource_id": "REF-a0e6d5a4cb31bab0"}
+{"bib_key": "uniprot2023", "classification": "PAPER_CITATION", "resource_id": "REF-e12007810e46d43d"}
+{"bib_key": "stodden2016", "classification": "PAPER_CITATION", "resource_id": "REF-b303aee3fabe799a"}

@@ -1,0 +1,29 @@
+{
+  "CLAIM_A": {
+    "support": "136/136 lattice structural custody",
+    "terminal": "PASS"
+  },
+  "CLAIM_B": {
+    "effect_b3_b0": 0.46153846153846156,
+    "hypothesis": "FAIL_TO_REJECT_H0"
+  },
+  "CLAIM_C": {
+    "hypothesis": "FAIL_TO_REJECT_H0"
+  },
+  "CLAIM_D": {
+    "seedgraph": {
+      "IMPORT_STATE": "IMPORTED_LIVE",
+      "PROOF_STATE": "VERIFIED",
+      "audit_id": "AUD-FCG-ATOM-SOT-SEMANTIC-003",
+      "expected": 91,
+      "neo4j_uri": "bolt://localhost:17687",
+      "production_neo4j_touched": false,
+      "read_back": 91,
+      "terminal_accounting_rate": 1.0,
+      "terminal_identical": 91,
+      "written": 91
+    }
+  },
+  "PUBLICATION_GENERATION": "NOT_EXECUTED",
+  "PUBLICATION_TRACEABILITY": "PARTIAL"
+}

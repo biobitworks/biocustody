@@ -1,0 +1,12 @@
+{
+  "all_pass": true,
+  "fixtures": {
+    "CIT-ID-001": "PASS",
+    "CIT-ID-002": "PASS",
+    "CIT-ID-003": "PASS",
+    "CIT-ID-004": "PASS",
+    "CIT-ID-005": "PASS",
+    "CIT-ID-006": "QUARANTINED_IDENTITY_CONFLICT",
+    "CIT-ID-007": "DUPLICATE_ALIAS"
+  }
+}

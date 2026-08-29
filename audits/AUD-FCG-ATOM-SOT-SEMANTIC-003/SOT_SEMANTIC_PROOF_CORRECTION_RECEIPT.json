@@ -1,0 +1,8 @@
+{
+  "SOT_ATOM_LEXICAL_TRACE": "PASS",
+  "SOT_ATOM_TERMINAL_ACCOUNTING": "PASS",
+  "SOT_SEMANTIC_SUPPORT": "PENDING\u2192EVALUATED",
+  "correction": "keyword-linked proof_state=VERIFIED demoted to TRACEABILITY only",
+  "predecessor_receipt": "audits/AUD-FCG-DOCUMENT-LATTICE-001/SEEDGRAPH_ATOMIZATION/SOT_ATOM_COMPOSITION.jsonl",
+  "preserved_unchanged": true
+}

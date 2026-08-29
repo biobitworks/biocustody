@@ -5,6 +5,8 @@ from __future__ import annotations
 import re
 from typing import Any
 
+from fcg_core.canonical_v2 import canonical_hash_v2
+
 STOPWORDS = frozenset(
     "a an the and or but in on at to for of is are was were be been being with from by as".split()
 )
@@ -91,8 +93,10 @@ def compose_sot_v2_semantic(
         comp_adm = composition_admission
         sot_status = "NOT_ESTABLISHED" if status == "VERIFIED" else status
 
+    sem_id = canonical_hash_v2({"SOT_ID": sot_id, "statement": statement, "schema": "SOT_V2"})
     sot_row = {
         "SOT_ID": sot_id,
+        "SEMANTIC_ID": sem_id,
         "statement": statement,
         "status": sot_status,
         "supporting_atom_ids": supporting_atom_ids,

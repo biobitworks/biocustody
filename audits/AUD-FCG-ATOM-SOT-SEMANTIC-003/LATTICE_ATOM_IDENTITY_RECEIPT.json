@@ -1,0 +1,12 @@
+{
+  "bridge_class": "CANONICAL_IDENTITY",
+  "discovery_bridge_class": "DISCOVERY_BRIDGE",
+  "normalization_ruleset_sha": "document_lattice_text_normalize_v1",
+  "note": "Fuzzy match_score bridge preserved separately; not used for proof",
+  "terminals": {
+    "EXACT_IDENTITY": 4,
+    "NORMALIZED_IDENTITY": 28,
+    "SOURCE_LOCATION_IDENTITY": 1
+  },
+  "total": 33
+}
