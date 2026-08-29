@@ -12,10 +12,18 @@ dependencies = [
   "numpy>=1.26",
   "pandas>=2.2",
   "scikit-learn>=1.5",
-  "networkx>=3.3"
+  "networkx>=3.3",
+  "rfc8785>=0.1.4",
+  "jsonschema>=4.23",
+  "pydantic>=2.8",
+  "bibtexparser==1.4.4",
 ]
 
 [project.optional-dependencies]
+fcg-core-dev = [
+  "pytest>=8.2",
+  "hypothesis>=6.112",
+]
 demo = [
   "streamlit>=1.37",
   "matplotlib>=3.9",
@@ -36,4 +44,4 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
-testpaths = ["tests"]
+testpaths = ["tests", "tests/fcg_core"]

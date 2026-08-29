@@ -1,0 +1,7 @@
+[
+  {
+    "name": "property_reorder",
+    "input": {"domain": "fcg.golden", "schema_version": "1.0.0", "semantic_payload": {"b": 2, "a": 1}},
+    "semantic_hash_v2": "c457c841329e322ce140943f7a5f22631e659fbf5dc5747e5f08a9063bb0c780"
+  }
+]

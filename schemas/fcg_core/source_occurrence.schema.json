@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://biocustody.local/schemas/source_occurrence.schema.json",
+  "title": "SourceOccurrence",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "provider",
+    "content_id",
+    "occurrence_id",
+    "source_locator",
+    "acquired_bytes_sha256"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "provider": { "type": "string" },
+    "content_id": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "occurrence_id": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "source_locator": { "type": "string" },
+    "acquired_bytes_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "frozen_response_sha256": { "type": ["string", "null"] },
+    "metadata": { "type": "object" }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://biocustody.local/schemas/transformation.schema.json",
+  "title": "Transformation",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "transformation_id",
+    "ruleset_sha256",
+    "code_sha256",
+    "ordered_input_ids",
+    "runtime_ref"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "transformation_id": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "ruleset_sha256": { "type": "string" },
+    "code_sha256": { "type": "string" },
+    "ordered_input_ids": { "type": "array", "items": { "type": "string" } },
+    "canonical_parameters": { "type": "object" },
+    "runtime_ref": { "type": "string" },
+    "model_ref": { "type": "string" }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://biocustody.local/schemas/validation_result.schema.json",
+  "title": "ValidationResult",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "input_hashes",
+    "schema_hashes",
+    "ruleset_sha256",
+    "deterministic_outputs",
+    "terminal_classifications",
+    "import_state",
+    "proof_state"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "input_hashes": { "type": "object" },
+    "schema_hashes": { "type": "object" },
+    "ruleset_sha256": { "type": "string" },
+    "deterministic_outputs": { "type": "object" },
+    "terminal_classifications": { "type": "object" },
+    "import_state": {
+      "type": "string",
+      "enum": [
+        "IMPORTED_CONTENT",
+        "IMPORTED_REFERENCE",
+        "DUPLICATE",
+        "EXCLUDED",
+        "UNAVAILABLE",
+        "FAILED",
+        "QUARANTINED"
+      ]
+    },
+    "proof_state": {
+      "type": "string",
+      "enum": [
+        "VERIFIED",
+        "PENDING",
+        "BLOCKED",
+        "CONTRADICTED",
+        "INSUFFICIENT",
+        "NOT_APPLICABLE"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
