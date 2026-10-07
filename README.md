@@ -112,3 +112,5 @@ subject to their original terms and the stricter repository rules in
 `DATA_POLICY.md`. Provider outputs from systems such as onepot, Rowan, muni,
 Convoke, Boltz, or similar services should be treated as local-only or redacted
 until their usage and redistribution rights have been checked.
+
+**License:** Unless otherwise explicitly licensed, original Biobitworks material in this repository is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/); third-party components remain under their respective licenses.
